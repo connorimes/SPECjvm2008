@@ -1,0 +1,8 @@
+AES/CBC/NoPadding: plaincheck=-223 PASS
+AES/CBC/PKCS5Padding: plaincheck=-223 PASS
+DESede/CBC/NoPadding: plaincheck=-223 PASS
+DESede/CBC/PKCS5Padding: plaincheck=-223 PASS
+AES/CBC/NoPadding: plaincheck=-245 PASS
+AES/CBC/PKCS5Padding: plaincheck=-245 PASS
+DESede/CBC/NoPadding: plaincheck=-245 PASS
+DESede/CBC/PKCS5Padding: plaincheck=-245 PASS

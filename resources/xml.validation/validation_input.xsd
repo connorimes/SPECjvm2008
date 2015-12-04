@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+
+<xs:include schemaLocation="sampler.xsd"/>
+<xs:include schemaLocation="docs.xsd"/>
+<xs:include schemaLocation="routes.xsd"/>
+<xs:include schemaLocation="sales.xsd"/>
+
+<xs:element name="workload">
+	<xs:complexType>
+		<xs:choice maxOccurs="unbounded">
+			<xs:element ref="data-sampler-table"/>
+			<xs:element ref="library"/>
+			<xs:element ref="trip"/>
+			<xs:element ref="salesDB-wrapper"/>
+		</xs:choice>
+	</xs:complexType>
+</xs:element>
+
+</xs:schema>

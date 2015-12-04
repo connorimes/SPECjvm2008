@@ -1,0 +1,2424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InstallationLog>
+	<ProductName>SPECjvm2008</ProductName>
+	<Creator>Installed by InstallAnywhere 9.0 Enterprise Build 3431, by Macrovision</Creator>
+	<InstallationDirectory>/local/benchmarks/SPECjvm2008</InstallationDirectory>
+	<StartupInfo>
+		<FreeMemory>157489 kB</FreeMemory>
+		<TotalMemory>171520 kB</TotalMemory>
+		<CommandLineArgs/>
+		<StartupPath name="java.class.path">
+			<PathElement>/local/benchmarks/SPECjvm2008_1_01_setup.jar</PathElement>
+		</StartupPath>
+		<StartupPath name="ZGUtil.CLASS_PATH">
+			<PathElement>/local/benchmarks/SPECjvm2008_1_01_setup.jar</PathElement>
+		</StartupPath>
+		<StartupPath name="sun.boot.class.path">
+			<PathElement>/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar</PathElement>
+			<PathElement>/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar</PathElement>
+			<PathElement>/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar</PathElement>
+			<PathElement>/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar</PathElement>
+			<PathElement>/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar</PathElement>
+			<PathElement>/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar</PathElement>
+			<PathElement>/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar</PathElement>
+			<PathElement>/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar</PathElement>
+			<PathElement>/usr/lib/jvm/java-7-openjdk-amd64/jre/classes</PathElement>
+		</StartupPath>
+		<StartupPath name="java.ext.dirs">
+			<PathElement>/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext</PathElement>
+			<PathElement>/usr/java/packages/lib/ext</PathElement>
+		</StartupPath>
+		<SystemProperty name="java.version">1.7.0_85 (Java 1)</SystemProperty>
+		<SystemProperty name="java.vm.name">OpenJDK 64-Bit Server VM</SystemProperty>
+		<SystemProperty name="java.vm.vendor">Oracle Corporation</SystemProperty>
+		<SystemProperty name="java.vm.version">24.85-b03</SystemProperty>
+		<SystemProperty name="java.vm.specification.name">Java Virtual Machine Specification</SystemProperty>
+		<SystemProperty name="java.vm.specification.vendor">Oracle Corporation</SystemProperty>
+		<SystemProperty name="java.vm.specification.version">1.7</SystemProperty>
+		<SystemProperty name="java.specfication.name"/>
+		<SystemProperty name="java.specification.vendor">Oracle Corporation</SystemProperty>
+		<SystemProperty name="java.specification.version">1.7</SystemProperty>
+		<SystemProperty name="java.vendor">Oracle Corporation</SystemProperty>
+		<SystemProperty name="java.vendor.url">http://java.oracle.com/</SystemProperty>
+		<SystemProperty name="java.class.version">51.0</SystemProperty>
+		<SystemProperty name="java.compiler"/>
+		<SystemProperty name="java.home">/usr/lib/jvm/java-7-openjdk-amd64/jre</SystemProperty>
+		<SystemProperty name="java.io.tmpdir">/tmp</SystemProperty>
+		<SystemProperty name="os.name">Linux</SystemProperty>
+		<SystemProperty name="os.arch">amd64</SystemProperty>
+		<SystemProperty name="os.version">4.2.0-18-generic</SystemProperty>
+		<SystemProperty name="path.separator">:</SystemProperty>
+		<SystemProperty name="file.separator">/</SystemProperty>
+		<SystemProperty name="file.encoding">UTF-8</SystemProperty>
+		<SystemProperty name="user.name">cimes</SystemProperty>
+		<SystemProperty name="user.home">/home/cimes</SystemProperty>
+		<SystemProperty name="user.dir">/</SystemProperty>
+		<SystemProperty name="user.language">en</SystemProperty>
+		<SystemProperty name="user.region"/>
+	</StartupInfo>
+	<UserInteractions>
+		<InteractionGroup name="Choose Install Folder">
+			<InteractionVariable name="USER_INSTALL_DIR">/local/benchmarks/SPECjvm2008</InteractionVariable>
+		</InteractionGroup>
+	</UserInteractions>
+	<InstallationSummary status="Installation: Successful."/>
+	<InstallDuration begin="Fri Dec 04 16:19:51 CST 2015" end="Fri Dec 04 16:19:54 CST 2015"/>
+	<ActionsSummary>
+		<Successes>783</Successes>
+		<Warnings>0</Warnings>
+		<NonFatalErrors>0</NonFatalErrors>
+		<FatalErrors>0</FatalErrors>
+		<ActionNotes>None</ActionNotes>
+	</ActionsSummary>
+	<InstallLogDetails>
+		<action name="Check Disk Space" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008</destination>
+			<AdditionalNotes>
+				<note>Required Disk Space: 97,142,073; Free Disk Space: -1</note>
+			</AdditionalNotes>
+		</action>
+		<action name="Install Directory" target="SPECjvm2008" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008</destination>
+		</action>
+		<action name="Install Directory" target="Uninstall" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/Uninstall</destination>
+		</action>
+		<action name="Install Uninstaller" target="Uninstall_SPECjvm2008" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/Uninstall/</destination>
+		</action>
+		<action name="Install Directory" target="resources" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources</destination>
+		</action>
+		<action name="Install Directory" target="crypto.signverify" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/crypto.signverify</destination>
+		</action>
+		<action name="Install File" target="validity.crypto.signverify.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/crypto.signverify/</destination>
+		</action>
+		<action name="Install File" target="validity.scimark.fft.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/scimark.fft</destination>
+		</action>
+		<action name="Install File" target="track3.mp3" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/crypto</destination>
+		</action>
+		<action name="Install File" target="random1048576.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/crypto</destination>
+		</action>
+		<action name="Install File" target="fredmans21.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/crypto</destination>
+		</action>
+		<action name="Install File" target="random96.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/crypto</destination>
+		</action>
+		<action name="Install File" target="random1024.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/crypto</destination>
+		</action>
+		<action name="Install File" target="random65536.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/crypto</destination>
+		</action>
+		<action name="Install File" target="random4096.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/crypto</destination>
+		</action>
+		<action name="Install File" target="validity.startup.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/startup</destination>
+		</action>
+		<action name="Install File" target="validity.crypto.rsa.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/crypto.rsa</destination>
+		</action>
+		<action name="Install File" target="validity.compress.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/compress</destination>
+		</action>
+		<action name="Install File" target="202.tar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/compress/input</destination>
+		</action>
+		<action name="Install File" target="211.tar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/compress/input</destination>
+		</action>
+		<action name="Install File" target="210.tar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/compress/input</destination>
+		</action>
+		<action name="Install File" target="209.tar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/compress/input</destination>
+		</action>
+		<action name="Install File" target="208.tar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/compress/input</destination>
+		</action>
+		<action name="Install File" target="228.tar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/compress/input</destination>
+		</action>
+		<action name="Install File" target="213x.tar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/compress/input</destination>
+		</action>
+		<action name="Install File" target="misc.tar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/compress/input</destination>
+		</action>
+		<action name="Install File" target="205.tar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/compress/input</destination>
+		</action>
+		<action name="Install File" target="239.tar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/compress/input</destination>
+		</action>
+		<action name="Install File" target="validity.helloworld.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/helloworld</destination>
+		</action>
+		<action name="Install File" target="validity.mpegaudio.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/mpegaudio</destination>
+		</action>
+		<action name="Install File" target="track3.mp3" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/mpegaudio/input</destination>
+		</action>
+		<action name="Install File" target="track5.mp3" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/mpegaudio/input</destination>
+		</action>
+		<action name="Install File" target="track1.mp3" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/mpegaudio/input</destination>
+		</action>
+		<action name="Install File" target="track2.mp3" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/mpegaudio/input</destination>
+		</action>
+		<action name="Install File" target="track0.mp3" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/mpegaudio/input</destination>
+		</action>
+		<action name="Install File" target="track4.mp3" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/mpegaudio/input</destination>
+		</action>
+		<action name="Install File" target="validity.compiler.sunflow.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/compiler.sunflow</destination>
+		</action>
+		<action name="Install File" target="validity.scimark.lu.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/scimark.lu</destination>
+		</action>
+		<action name="Install File" target="validity.check.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/check</destination>
+		</action>
+		<action name="Install File" target="validity.scimark.sor.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/scimark.sor</destination>
+		</action>
+		<action name="Install File" target="validity.serial.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/serial</destination>
+		</action>
+		<action name="Install File" target="validity.scimark.monte_carlo.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/scimark.monte_carlo</destination>
+		</action>
+		<action name="Install File" target="transformations.properties" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform</destination>
+		</action>
+		<action name="Install File" target="recipes.xsl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes</destination>
+		</action>
+		<action name="Install File" target="recipes.xml.DOM.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes</destination>
+		</action>
+		<action name="Install File" target="recipes.xml.SAX.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes</destination>
+		</action>
+		<action name="Install File" target="recipes.xml.Stream.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes</destination>
+		</action>
+		<action name="Install File" target="recipes.xml.DOM.tidy.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes</destination>
+		</action>
+		<action name="Install File" target="recipes.xml.SAX.tidy.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes</destination>
+		</action>
+		<action name="Install File" target="recipes.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes</destination>
+		</action>
+		<action name="Install File" target="recipes.xml.Stream.tidy.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes</destination>
+		</action>
+		<action name="Install File" target="validity.xml.transform.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform</destination>
+		</action>
+		<action name="Install File" target="meeting_minutes.fo" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/meeting</destination>
+		</action>
+		<action name="Install File" target="meeting_minutes.xml.DOM.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/meeting</destination>
+		</action>
+		<action name="Install File" target="meeting_minutes.xml.Stream.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/meeting</destination>
+		</action>
+		<action name="Install File" target="meeting_minutes.xsl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/meeting</destination>
+		</action>
+		<action name="Install File" target="meeting_minutes.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/meeting</destination>
+		</action>
+		<action name="Install File" target="meeting_minutes.xml.SAX.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/meeting</destination>
+		</action>
+		<action name="Install File" target="balance_sheet.fo" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/balance</destination>
+		</action>
+		<action name="Install File" target="balance_sheet.xml.SAX.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/balance</destination>
+		</action>
+		<action name="Install File" target="balance_sheet.xsl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/balance</destination>
+		</action>
+		<action name="Install File" target="balance_sheet.xml.DOM.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/balance</destination>
+		</action>
+		<action name="Install File" target="balance_sheet.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/balance</destination>
+		</action>
+		<action name="Install File" target="balance_sheet.xml.Stream.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/balance</destination>
+		</action>
+		<action name="Install File" target="Kasparov-Karpov.ps" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess</destination>
+		</action>
+		<action name="Install File" target="Kasparov-Karpov.xml.DOM.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess</destination>
+		</action>
+		<action name="Install File" target="url.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess</destination>
+		</action>
+		<action name="Install File" target="Kasparov-Karpov.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess</destination>
+		</action>
+		<action name="Install File" target="chess.xsl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess</destination>
+		</action>
+		<action name="Install File" target="Kasparov-Karpov.xml.Stream.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess</destination>
+		</action>
+		<action name="Install File" target="Kasparov-Karpov.xml.SAX.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess</destination>
+		</action>
+		<action name="Install File" target="Kasparov-Karpov.fo" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess</destination>
+		</action>
+		<action name="Install File" target="index.tmpl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison</destination>
+		</action>
+		<action name="Install File" target="text.tmpl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison</destination>
+		</action>
+		<action name="Install File" target="text.xml.Stream.tidy.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison</destination>
+		</action>
+		<action name="Install File" target="index.xml.SAX.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison</destination>
+		</action>
+		<action name="Install File" target="index.xml.DOM.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison</destination>
+		</action>
+		<action name="Install File" target="text.xml.DOM.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison</destination>
+		</action>
+		<action name="Install File" target="markup.xsl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison</destination>
+		</action>
+		<action name="Install File" target="page.xsl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison</destination>
+		</action>
+		<action name="Install File" target="text.xml.DOM.tidy.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison</destination>
+		</action>
+		<action name="Install File" target="text.xml.Stream.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison</destination>
+		</action>
+		<action name="Install File" target="text.xml.SAX.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison</destination>
+		</action>
+		<action name="Install File" target="markme.xsl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison</destination>
+		</action>
+		<action name="Install File" target="index.xml.Stream.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison</destination>
+		</action>
+		<action name="Install File" target="text.xml.SAX.tidy.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison</destination>
+		</action>
+		<action name="Install File" target="text.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison</destination>
+		</action>
+		<action name="Install File" target="index.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison</destination>
+		</action>
+		<action name="Install File" target="nitf-stylized.xsl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf</destination>
+		</action>
+		<action name="Install File" target="nitf-fishing.xml.DOM.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf</destination>
+		</action>
+		<action name="Install File" target="nitf-fishing.xml.SAX.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf</destination>
+		</action>
+		<action name="Install File" target="nitf-fishing.xml.Stream.tidy.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf</destination>
+		</action>
+		<action name="Install File" target="nitf-fishing.xml.Stream.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf</destination>
+		</action>
+		<action name="Install File" target="nitf-fishing.xml.SAX.tidy.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf</destination>
+		</action>
+		<action name="Install File" target="nitf-fishing.xml.DOM.tidy.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf</destination>
+		</action>
+		<action name="Install File" target="nitf-fishing.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf</destination>
+		</action>
+		<action name="Install File" target="Kasparov-Karpov.xml.DOM.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/chess-fo</destination>
+		</action>
+		<action name="Install File" target="Kasparov-Karpov.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/chess-fo</destination>
+		</action>
+		<action name="Install File" target="chess.xsl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/chess-fo</destination>
+		</action>
+		<action name="Install File" target="Kasparov-Karpov.xml.Stream.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/chess-fo</destination>
+		</action>
+		<action name="Install File" target="Kasparov-Karpov.xml.SAX.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/chess-fo</destination>
+		</action>
+		<action name="Install File" target="Kasparov-Karpov.tmpl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/chess-fo</destination>
+		</action>
+		<action name="Install File" target="xslt.xsl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/spec-html</destination>
+		</action>
+		<action name="Install File" target="multiple.tmpl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/spec-html</destination>
+		</action>
+		<action name="Install File" target="xpath.xsl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/spec-html</destination>
+		</action>
+		<action name="Install File" target="xmlspec.xsl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/spec-html</destination>
+		</action>
+		<action name="Install File" target="multiple.xsl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/spec-html</destination>
+		</action>
+		<action name="Install File" target="REC-xml-19980210.xml.Stream.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/shared</destination>
+		</action>
+		<action name="Install File" target="REC-xml-19980210.xml.DOM.tidy.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/shared</destination>
+		</action>
+		<action name="Install File" target="REC-xml-19980210.xml.SAX.tidy.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/shared</destination>
+		</action>
+		<action name="Install File" target="REC-xml-19980210.tmpl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/shared</destination>
+		</action>
+		<action name="Install File" target="REC-xml-19980210.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/shared</destination>
+		</action>
+		<action name="Install File" target="REC-xml-19980210.xml.Stream.tidy.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/shared</destination>
+		</action>
+		<action name="Install File" target="spec.dtd" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/shared</destination>
+		</action>
+		<action name="Install File" target="REC-xml-19980210.xml.DOM.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/shared</destination>
+		</action>
+		<action name="Install File" target="REC-xml-19980210.xml.SAX.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/shared</destination>
+		</action>
+		<action name="Install File" target="version.xsl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/shared</destination>
+		</action>
+		<action name="Install File" target="article.xml.DOM.tidy.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd</destination>
+		</action>
+		<action name="Install File" target="article.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd</destination>
+		</action>
+		<action name="Install File" target="article.xml.DOM.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd</destination>
+		</action>
+		<action name="Install File" target="article.xml.Stream.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd</destination>
+		</action>
+		<action name="Install File" target="article.xml.SAX.tidy.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd</destination>
+		</action>
+		<action name="Install File" target="article.xml.Stream.tidy.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd</destination>
+		</action>
+		<action name="Install File" target="article.xml.SAX.canon" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd</destination>
+		</action>
+		<action name="Install File" target="article2html.xsl" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd</destination>
+		</action>
+		<action name="Install File" target="validity.compiler.compiler.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/compiler.compiler</destination>
+		</action>
+		<action name="Install File" target="validity.sunflow.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/sunflow</destination>
+		</action>
+		<action name="Install File" target="validity.crypto.aes.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/crypto.aes</destination>
+		</action>
+		<action name="Install File" target="validity.scimark.sparse.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/scimark.sparse</destination>
+		</action>
+		<action name="Install File" target="validity.xml.validation.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="personal.xsd" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="personal.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="periodic_table.xsd" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="po.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="sampler.xsd" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="structure.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="play.xsd" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="periodicxsd.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="structure.xsd" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="routes.xsd" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="validation_input.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="sales.xsd" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="docs.xsd" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="xml.xsd" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="workload.xsd" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="validation_input.xsd" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="po.xsd" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="much_adoxsd.xml" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/xml.validation</destination>
+		</action>
+		<action name="Install File" target="calls.bin" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/derby</destination>
+		</action>
+		<action name="Install File" target="validity.derby.dat" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/derby</destination>
+		</action>
+		<action name="Install File" target="specs.bin" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/resources/derby</destination>
+		</action>
+		<action name="Install File" target="overview-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc</destination>
+		</action>
+		<action name="Install File" target="index-2.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-23.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-17.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-15.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-12.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-5.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-6.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-18.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-13.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-19.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-9.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-11.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-16.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-10.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-3.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-20.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-4.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-14.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-7.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-1.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-24.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-8.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-22.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="index-21.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/index-files</destination>
+		</action>
+		<action name="Install File" target="constant-values.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc</destination>
+		</action>
+		<action name="Install File" target="deprecated-list.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc</destination>
+		</action>
+		<action name="Install File" target="inherit.gif" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/resources</destination>
+		</action>
+		<action name="Install File" target="allclasses-noframe.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc</destination>
+		</action>
+		<action name="Install File" target="overview-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc</destination>
+		</action>
+		<action name="Install File" target="help-doc.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc</destination>
+		</action>
+		<action name="Install File" target="allclasses-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc</destination>
+		</action>
+		<action name="Install File" target="serialized-form.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc</destination>
+		</action>
+		<action name="Install File" target="package-list" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc</destination>
+		</action>
+		<action name="Install File" target="DigestDefinition.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity</destination>
+		</action>
+		<action name="Install File" target="Digests.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity</destination>
+		</action>
+		<action name="Install File" target="DigestDefinition.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity/class-use</destination>
+		</action>
+		<action name="Install File" target="Digests.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io</destination>
+		</action>
+		<action name="Install File" target="FileCache.CachedFile.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io</destination>
+		</action>
+		<action name="Install File" target="FileCache.CachedFile.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io/class-use</destination>
+		</action>
+		<action name="Install File" target="ValidityCheckOutputStream.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io/class-use</destination>
+		</action>
+		<action name="Install File" target="FileCache.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io/class-use</destination>
+		</action>
+		<action name="Install File" target="ValidityCheckOutputStream.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io</destination>
+		</action>
+		<action name="Install File" target="FileCache.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io</destination>
+		</action>
+		<action name="Install File" target="PollingAnalyzerExample.NumberOfOperations.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="CallbackAnalyzerExample.TheNumberGenerator.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="TempSensor.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="HeapMemoryTotalAnalyzer.HeapMemoryTotal.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="HeapMemoryFreeAnalyzer.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="PollingAnalyzerExample.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="PowerAnalyzer.PowerConsumtionResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="CallbackAnalyzerExample.NumberInfo.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="TempAnalyzer.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="AnalyzerResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="HeapMemoryFreeAnalyzer.HeapMemoryFree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="HeapMemoryTotalAnalyzer.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="TYInfo.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="AnalyzersRunner.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="CallbackAnalyzerExample.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="PowerMeter.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="PollingAnalyzerExample.NumberOfOperations.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="CallbackAnalyzerExample.TheNumberGenerator.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="TempSensor.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="HeapMemoryTotalAnalyzer.HeapMemoryTotal.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="HeapMemoryFreeAnalyzer.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="PollingAnalyzerExample.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="PowerAnalyzer.PowerConsumtionResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="CallbackAnalyzerExample.NumberInfo.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="TempAnalyzer.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="AnalyzerResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="HeapMemoryFreeAnalyzer.HeapMemoryFree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="HeapMemoryTotalAnalyzer.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="TYInfo.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="AnalyzersRunner.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="CallbackAnalyzerExample.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="PowerMeter.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="PowerAnalyzer.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="CallbackAnalyzerExample.NumberResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="TempAnalyzer.TemperatureResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="AnalyzerBase.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use</destination>
+		</action>
+		<action name="Install File" target="PowerAnalyzer.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="CallbackAnalyzerExample.NumberResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="TempAnalyzer.TemperatureResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="AnalyzerBase.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="Util.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="BenchmarkThread.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="IterationResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results</destination>
+		</action>
+		<action name="Install File" target="SuiteResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results</destination>
+		</action>
+		<action name="Install File" target="TestResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results</destination>
+		</action>
+		<action name="Install File" target="IterationResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/class-use</destination>
+		</action>
+		<action name="Install File" target="SuiteResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/class-use</destination>
+		</action>
+		<action name="Install File" target="TestResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/class-use</destination>
+		</action>
+		<action name="Install File" target="BenchmarkResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/class-use</destination>
+		</action>
+		<action name="Install File" target="LoopResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/class-use</destination>
+		</action>
+		<action name="Install File" target="BenchmarkResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results</destination>
+		</action>
+		<action name="Install File" target="LoopResult.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results</destination>
+		</action>
+		<action name="Install File" target="SpecJVMBenchmark.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="KnownIssues.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="Launch.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="Constants.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="Context.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="VMVersionTest.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="StopBenchmarkException.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="Util.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use</destination>
+		</action>
+		<action name="Install File" target="BenchmarkThread.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use</destination>
+		</action>
+		<action name="Install File" target="SpecJVMBenchmark.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use</destination>
+		</action>
+		<action name="Install File" target="KnownIssues.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use</destination>
+		</action>
+		<action name="Install File" target="Launch.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use</destination>
+		</action>
+		<action name="Install File" target="Constants.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use</destination>
+		</action>
+		<action name="Install File" target="Context.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use</destination>
+		</action>
+		<action name="Install File" target="VMVersionTest.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use</destination>
+		</action>
+		<action name="Install File" target="StopBenchmarkException.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use</destination>
+		</action>
+		<action name="Install File" target="Configuration.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use</destination>
+		</action>
+		<action name="Install File" target="CommandLineParser.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use</destination>
+		</action>
+		<action name="Install File" target="SpecJVMBenchmarkBase.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use</destination>
+		</action>
+		<action name="Install File" target="ProgramRunner.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use</destination>
+		</action>
+		<action name="Install File" target="Configuration.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="CommandLineParser.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="SpecJVMBenchmarkBase.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="ProgramRunner.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor</destination>
+		</action>
+		<action name="Install File" target="SOR.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor</destination>
+		</action>
+		<action name="Install File" target="SOR.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor/class-use</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils</destination>
+		</action>
+		<action name="Install File" target="Stopwatch.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils</destination>
+		</action>
+		<action name="Install File" target="kernel.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils</destination>
+		</action>
+		<action name="Install File" target="Constants.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils</destination>
+		</action>
+		<action name="Install File" target="Random.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils</destination>
+		</action>
+		<action name="Install File" target="Stopwatch.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/class-use</destination>
+		</action>
+		<action name="Install File" target="kernel.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/class-use</destination>
+		</action>
+		<action name="Install File" target="Constants.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/class-use</destination>
+		</action>
+		<action name="Install File" target="Random.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo/class-use</destination>
+		</action>
+		<action name="Install File" target="MonteCarlo.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo</destination>
+		</action>
+		<action name="Install File" target="MonteCarlo.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu/class-use</destination>
+		</action>
+		<action name="Install File" target="LU.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu</destination>
+		</action>
+		<action name="Install File" target="LU.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft</destination>
+		</action>
+		<action name="Install File" target="FFT.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft</destination>
+		</action>
+		<action name="Install File" target="FFT.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft/class-use</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse/class-use</destination>
+		</action>
+		<action name="Install File" target="SparseCompRow.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse</destination>
+		</action>
+		<action name="Install File" target="SparseCompRow.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks</destination>
+		</action>
+		<action name="Install File" target="Util.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler</destination>
+		</action>
+		<action name="Install File" target="Compiler.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler</destination>
+		</action>
+		<action name="Install File" target="SpecFileManager.CachedFileObject.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler</destination>
+		</action>
+		<action name="Install File" target="SpecFileManager.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/compiler</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/compiler</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/compiler</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/compiler/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/compiler</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/compiler</destination>
+		</action>
+		<action name="Install File" target="MainBase.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler</destination>
+		</action>
+		<action name="Install File" target="SpecFileManager.InputFileObject.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/sunflow</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/sunflow</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/sunflow</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/sunflow/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/sunflow</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/sunflow</destination>
+		</action>
+		<action name="Install File" target="SpecFileManager.OutputFileObject.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler</destination>
+		</action>
+		<action name="Install File" target="Util.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use</destination>
+		</action>
+		<action name="Install File" target="Compiler.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use</destination>
+		</action>
+		<action name="Install File" target="SpecFileManager.CachedFileObject.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use</destination>
+		</action>
+		<action name="Install File" target="SpecFileManager.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use</destination>
+		</action>
+		<action name="Install File" target="MainBase.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use</destination>
+		</action>
+		<action name="Install File" target="SpecFileManager.InputFileObject.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use</destination>
+		</action>
+		<action name="Install File" target="SpecFileManager.OutputFileObject.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use</destination>
+		</action>
+		<action name="Install File" target="SpecFileManager.BaseFileObject.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler</destination>
+		</action>
+		<action name="Install File" target="SpecFileManager.BaseFileObject.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler</destination>
+		</action>
+		<action name="Install File" target="Util.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/aes</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/aes</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/aes</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/aes/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/aes</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/aes</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/rsa</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/rsa</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/rsa</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/rsa/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/rsa</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/rsa</destination>
+		</action>
+		<action name="Install File" target="Util.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/signverify</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/signverify</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/signverify</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/signverify/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/signverify</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/signverify</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup</destination>
+		</action>
+		<action name="Install File" target="StartupBenchmarkOutput.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup/class-use</destination>
+		</action>
+		<action name="Install File" target="StartupBenchmarkOutput.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup</destination>
+		</action>
+		<action name="Install File" target="ReadMe.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress/class-use</destination>
+		</action>
+		<action name="Install File" target="Harness.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress/class-use</destination>
+		</action>
+		<action name="Install File" target="Harness.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld</destination>
+		</action>
+		<action name="Install File" target="HelloWorld.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld</destination>
+		</action>
+		<action name="Install File" target="HelloWorld.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld/class-use</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio/class-use</destination>
+		</action>
+		<action name="Install File" target="Harness.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio/class-use</destination>
+		</action>
+		<action name="Install File" target="Harness.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check</destination>
+		</action>
+		<action name="Install File" target="FloatingPointCheck.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check</destination>
+		</action>
+		<action name="Install File" target="Super.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check</destination>
+		</action>
+		<action name="Install File" target="FloatingPointCheck.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/class-use</destination>
+		</action>
+		<action name="Install File" target="Super.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/class-use</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/class-use</destination>
+		</action>
+		<action name="Install File" target="Sub.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/class-use</destination>
+		</action>
+		<action name="Install File" target="Sub.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial</destination>
+		</action>
+		<action name="Install File" target="Utils.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial</destination>
+		</action>
+		<action name="Install File" target="Utils.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/class-use</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/class-use</destination>
+		</action>
+		<action name="Install File" target="TestReadResolve.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestParent.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestBigInteger.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestArrayDouble.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestWithFinalField.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestByteArray.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestWithBigDecimal.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestProxy.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestArrayList.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="InterfaceForProxy.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestExternalizable.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestDomainObject.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="ProxiedClass.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestClassReferenceTest.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestPayload.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestArray.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="Child.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="Handler.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestReadResolve.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestParent.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestBigInteger.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestArrayDouble.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestWithFinalField.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestByteArray.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestWithBigDecimal.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestProxy.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestArrayList.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="InterfaceForProxy.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestExternalizable.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestDomainObject.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="ProxiedClass.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestClassReferenceTest.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestPayload.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestArray.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="Child.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="Handler.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestSimple.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestClassWithSQLDateOnly.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestHugeData.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestHandler.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestExceptionReference.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use</destination>
+		</action>
+		<action name="Install File" target="TestSimple.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestClassWithSQLDateOnly.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestHugeData.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestHandler.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestExceptionReference.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/sunflow</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/sunflow</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/sunflow</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/sunflow/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/sunflow</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/sunflow</destination>
+		</action>
+		<action name="Install File" target="ReadMe.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks</destination>
+		</action>
+		<action name="Install File" target="XMLBenchmark.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/validation</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/validation</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/validation</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/validation/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/validation</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/validation</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/transform</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/transform</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/transform</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/transform/class-use</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/transform</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/transform</destination>
+		</action>
+		<action name="Install File" target="XMLBenchmark.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/class-use</destination>
+		</action>
+		<action name="Install File" target="ReportingHandler.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/class-use</destination>
+		</action>
+		<action name="Install File" target="ReportingHandler.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml</destination>
+		</action>
+		<action name="Install File" target="CyclicReader.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby</destination>
+		</action>
+		<action name="Install File" target="Utils.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby</destination>
+		</action>
+		<action name="Install File" target="DataReader.Data.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby</destination>
+		</action>
+		<action name="Install File" target="DataReader.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby</destination>
+		</action>
+		<action name="Install File" target="CyclicReader.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/class-use</destination>
+		</action>
+		<action name="Install File" target="Utils.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/class-use</destination>
+		</action>
+		<action name="Install File" target="DataReader.Data.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/class-use</destination>
+		</action>
+		<action name="Install File" target="DataReader.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/class-use</destination>
+		</action>
+		<action name="Install File" target="Main.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/class-use</destination>
+		</action>
+		<action name="Install File" target="DerbyHarness.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/class-use</destination>
+		</action>
+		<action name="Install File" target="DerbyHarness.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks</destination>
+		</action>
+		<action name="Install File" target="BenchmarkGroupRecords.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="package-use.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="package-summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="Writer.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="PlainWriter.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="Utils.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="SPECSubmissionPreparer.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="Reporter.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="HTMLWriter.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="SPECSubmissionProcessor.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="BenchmarkGroupRecords.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use</destination>
+		</action>
+		<action name="Install File" target="Writer.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use</destination>
+		</action>
+		<action name="Install File" target="PlainWriter.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use</destination>
+		</action>
+		<action name="Install File" target="Utils.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use</destination>
+		</action>
+		<action name="Install File" target="SPECSubmissionPreparer.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use</destination>
+		</action>
+		<action name="Install File" target="Reporter.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use</destination>
+		</action>
+		<action name="Install File" target="HTMLWriter.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use</destination>
+		</action>
+		<action name="Install File" target="SPECSubmissionProcessor.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use</destination>
+		</action>
+		<action name="Install File" target="BenchmarkChart.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use</destination>
+		</action>
+		<action name="Install File" target="BenchmarkRecord.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use</destination>
+		</action>
+		<action name="Install File" target="ReportGenerator.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use</destination>
+		</action>
+		<action name="Install File" target="BenchmarkChart.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="BenchmarkRecord.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="package-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="ReportGenerator.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="package-tree.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="index.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc</destination>
+		</action>
+		<action name="Install File" target="overview-frame.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc</destination>
+		</action>
+		<action name="Install File" target="stylesheet.css" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/javadoc</destination>
+		</action>
+		<action name="Install File" target="RunRules.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs</destination>
+		</action>
+		<action name="Install File" target="FAQ.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs</destination>
+		</action>
+		<action name="Install File" target="KnownIssues.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs</destination>
+		</action>
+		<action name="Install File" target="summary.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs</destination>
+		</action>
+		<action name="Install File" target="UserGuide.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs</destination>
+		</action>
+		<action name="Install File" target="TechSupport.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs</destination>
+		</action>
+		<action name="Install File" target="spec-sm.gif" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs</destination>
+		</action>
+		<action name="Install File" target="menu.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs</destination>
+		</action>
+		<action name="Install File" target="serial.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/benchmarks</destination>
+		</action>
+		<action name="Install File" target="compress.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/benchmarks</destination>
+		</action>
+		<action name="Install File" target="xml.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/benchmarks</destination>
+		</action>
+		<action name="Install File" target="sunflow.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/benchmarks</destination>
+		</action>
+		<action name="Install File" target="crypto.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/benchmarks</destination>
+		</action>
+		<action name="Install File" target="mpegaudio.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/benchmarks</destination>
+		</action>
+		<action name="Install File" target="startup.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/benchmarks</destination>
+		</action>
+		<action name="Install File" target="scimark.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/benchmarks</destination>
+		</action>
+		<action name="Install File" target="compiler.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/benchmarks</destination>
+		</action>
+		<action name="Install File" target="derby.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/benchmarks</destination>
+		</action>
+		<action name="Install File" target="index.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs/benchmarks</destination>
+		</action>
+		<action name="Install File" target="index.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs</destination>
+		</action>
+		<action name="Install File" target="stylesheet.css" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/docs</destination>
+		</action>
+		<action name="Install File" target="report.sh" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/</destination>
+		</action>
+		<action name="Install File" target="lgpl-3.0.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/jcommon</destination>
+		</action>
+		<action name="Install File" target="gpl-3.0.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/jcommon</destination>
+		</action>
+		<action name="Install File" target="README.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/licenses</destination>
+		</action>
+		<action name="Install File" target="README" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/licenses</destination>
+		</action>
+		<action name="Install File" target="lgpl-3.0.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/jfreechart</destination>
+		</action>
+		<action name="Install File" target="gpl-3.0.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/jfreechart</destination>
+		</action>
+		<action name="Install File" target="lgpl-2.1.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/XOM</destination>
+		</action>
+		<action name="Install File" target="XOMlicense.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/XOM</destination>
+		</action>
+		<action name="Install File" target="gpl-2.0.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/XOM</destination>
+		</action>
+		<action name="Install File" target="lgpl-3.0.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/javazoom</destination>
+		</action>
+		<action name="Install File" target="gpl-3.0.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/javazoom</destination>
+		</action>
+		<action name="Install File" target="LICENSE" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/compiler.compiler</destination>
+		</action>
+		<action name="Install File" target="gpl-2.0.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/compiler.compiler</destination>
+		</action>
+		<action name="Install File" target="LICENSE.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/sunflow</destination>
+		</action>
+		<action name="Install File" target="LICENSE" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/jtidy</destination>
+		</action>
+		<action name="Install File" target="LICENSE" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/derby</destination>
+		</action>
+		<action name="Install File" target="README.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources</destination>
+		</action>
+		<action name="Install File" target="xom-1.1-src.zip" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/packages/xom</destination>
+		</action>
+		<action name="Install File" target="jfreechart-1.0.5.zip" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/packages/jfreechart</destination>
+		</action>
+		<action name="Install File" target="jcommon-1.0.9.zip" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/packages/jfreechart</destination>
+		</action>
+		<action name="Install File" target="src.zip" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/packages/javazoom</destination>
+		</action>
+		<action name="Install File" target="compiler-7-ea-src-b18-16_aug_2007.zip" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/packages/compiler.compiler</destination>
+		</action>
+		<action name="Install File" target="sunflow-src-v0.07.2.zip" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/packages/sunflow</destination>
+		</action>
+		<action name="Install File" target="sunflow-src-v0.07.2.md5" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/packages/sunflow</destination>
+		</action>
+		<action name="Install File" target="jtidy_src.zip" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/packages/jtidy</destination>
+		</action>
+		<action name="Install File" target="db-derby-10.3.1.4-src.zip.md5" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/packages/derby</destination>
+		</action>
+		<action name="Install File" target="db-derby-10.3.1.4-src.zip" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/redistributable_sources/packages/derby</destination>
+		</action>
+		<action name="Install File" target="README.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/</destination>
+		</action>
+		<action name="Install File" target="DigestDefinition.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/validity</destination>
+		</action>
+		<action name="Install File" target="Digests.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/validity</destination>
+		</action>
+		<action name="Install File" target="package.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/io</destination>
+		</action>
+		<action name="Install File" target="ValidityCheckOutputStream.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/io</destination>
+		</action>
+		<action name="Install File" target="FileCache.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/io</destination>
+		</action>
+		<action name="Install File" target="HeapMemoryFreeAnalyzer.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="package.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="HeapMemoryTotalAnalyzer.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="AnalyzerBase.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="AnalyzerResult.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="TYInfo.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="PowerMeter.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="PowerAnalyzer.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="TempSensor.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="AnalyzersRunner.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="PollingAnalyzerExample.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="TempAnalyzer.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="CallbackAnalyzerExample.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer</destination>
+		</action>
+		<action name="Install File" target="Launch.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness</destination>
+		</action>
+		<action name="Install File" target="CommandLineParser.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness</destination>
+		</action>
+		<action name="Install File" target="package.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness</destination>
+		</action>
+		<action name="Install File" target="KnownIssues.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness</destination>
+		</action>
+		<action name="Install File" target="package.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/results</destination>
+		</action>
+		<action name="Install File" target="SuiteResult.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/results</destination>
+		</action>
+		<action name="Install File" target="BenchmarkResult.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/results</destination>
+		</action>
+		<action name="Install File" target="TestResult.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/results</destination>
+		</action>
+		<action name="Install File" target="IterationResult.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/results</destination>
+		</action>
+		<action name="Install File" target="LoopResult.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness/results</destination>
+		</action>
+		<action name="Install File" target="Constants.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness</destination>
+		</action>
+		<action name="Install File" target="Util.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness</destination>
+		</action>
+		<action name="Install File" target="Context.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness</destination>
+		</action>
+		<action name="Install File" target="BenchmarkThread.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness</destination>
+		</action>
+		<action name="Install File" target="ProgramRunner.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness</destination>
+		</action>
+		<action name="Install File" target="VMVersionTest.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness</destination>
+		</action>
+		<action name="Install File" target="SpecJVMBenchmark.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness</destination>
+		</action>
+		<action name="Install File" target="SpecJVMBenchmarkBase.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness</destination>
+		</action>
+		<action name="Install File" target="StopBenchmarkException.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness</destination>
+		</action>
+		<action name="Install File" target="Configuration.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/harness</destination>
+		</action>
+		<action name="Install File" target="SOR.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/sor</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/sor</destination>
+		</action>
+		<action name="Install File" target="Constants.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/utils</destination>
+		</action>
+		<action name="Install File" target="Stopwatch.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/utils</destination>
+		</action>
+		<action name="Install File" target="Random.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/utils</destination>
+		</action>
+		<action name="Install File" target="kernel.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/utils</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/monte_carlo</destination>
+		</action>
+		<action name="Install File" target="MonteCarlo.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/monte_carlo</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/lu</destination>
+		</action>
+		<action name="Install File" target="LU.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/lu</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/fft</destination>
+		</action>
+		<action name="Install File" target="FFT.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/fft</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/sparse</destination>
+		</action>
+		<action name="Install File" target="SparseCompRow.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/sparse</destination>
+		</action>
+		<action name="Install File" target="package.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks</destination>
+		</action>
+		<action name="Install File" target="Compiler.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compiler</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compiler/compiler</destination>
+		</action>
+		<action name="Install File" target="MainBase.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compiler</destination>
+		</action>
+		<action name="Install File" target="Util.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compiler</destination>
+		</action>
+		<action name="Install File" target="SpecFileManager.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compiler</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compiler/sunflow</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/crypto/aes</destination>
+		</action>
+		<action name="Install File" target="Util.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/crypto</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/crypto/rsa</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/crypto/signverify</destination>
+		</action>
+		<action name="Install File" target="StartupBenchmarkOutput.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/startup</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/startup</destination>
+		</action>
+		<action name="Install File" target="Harness.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compress</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compress</destination>
+		</action>
+		<action name="Install File" target="Compress.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compress</destination>
+		</action>
+		<action name="Install File" target="HelloWorld.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/helloworld</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/helloworld</destination>
+		</action>
+		<action name="Install File" target="Harness.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/mpegaudio</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/mpegaudio</destination>
+		</action>
+		<action name="Install File" target="PepTest.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/check</destination>
+		</action>
+		<action name="Install File" target="LoopBounds.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/check</destination>
+		</action>
+		<action name="Install File" target="Sub.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/check</destination>
+		</action>
+		<action name="Install File" target="FloatingPointCheck.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/check</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/check</destination>
+		</action>
+		<action name="Install File" target="Super.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/check</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial</destination>
+		</action>
+		<action name="Install File" target="Utils.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial</destination>
+		</action>
+		<action name="Install File" target="TestBigInteger.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestExceptionReference.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestArray.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestHandler.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestExternalizable.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestArrayList.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestWithFinalField.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestWithBigDecimal.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestProxy.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestByteArray.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="ProxiedClass.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="InterfaceForProxy.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestParent.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestHugeData.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="Handler.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestClassReferenceTest.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestSimple.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestArrayDouble.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestPayload.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestClassWithSQLDateOnly.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="Child.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestDomainObject.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="TestReadResolve.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/sunflow</destination>
+		</action>
+		<action name="Install File" target="ReadMe.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks</destination>
+		</action>
+		<action name="Install File" target="XMLBenchmark.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/xml</destination>
+		</action>
+		<action name="Install File" target="ReportingHandler.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/xml</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/xml/validation</destination>
+		</action>
+		<action name="Install File" target="ExtOutputStream.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/xml/transform</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/xml/transform</destination>
+		</action>
+		<action name="Install File" target="BaseOutputStream.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/xml/transform</destination>
+		</action>
+		<action name="Install File" target="CyclicReader.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/derby</destination>
+		</action>
+		<action name="Install File" target="DerbyHarness.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/derby</destination>
+		</action>
+		<action name="Install File" target="InitThread.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/derby</destination>
+		</action>
+		<action name="Install File" target="Main.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/derby</destination>
+		</action>
+		<action name="Install File" target="Utils.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/derby</destination>
+		</action>
+		<action name="Install File" target="DataReader.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/benchmarks/derby</destination>
+		</action>
+		<action name="Install File" target="HTMLWriter.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="package.html" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="ReportGenerator.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="SPECSubmissionProcessor.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="Reporter.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="Utils.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="Writer.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="SPECSubmissionPreparer.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="BenchmarkGroupRecords.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="BenchmarkRecord.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="PlainWriter.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="BenchmarkChart.java" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/spec/reporter</destination>
+		</action>
+		<action name="Install File" target="specjvm2008reporter.mf" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/META-INF</destination>
+		</action>
+		<action name="Install File" target="specjvm2008.mf" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/src/META-INF</destination>
+		</action>
+		<action name="Install File" target="jfreechart-1.0.5.jar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/lib</destination>
+		</action>
+		<action name="Install File" target="sunflow.jar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/lib</destination>
+		</action>
+		<action name="Install File" target="jcommon-1.0.9.jar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/lib</destination>
+		</action>
+		<action name="Install File" target="xom-1.1.jar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/lib</destination>
+		</action>
+		<action name="Install File" target="janino.jar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/lib</destination>
+		</action>
+		<action name="Install File" target="jl1.0.jar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/lib</destination>
+		</action>
+		<action name="Install File" target="Tidy.jar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/lib</destination>
+		</action>
+		<action name="Install File" target="ant-launcher.jar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/lib</destination>
+		</action>
+		<action name="Install File" target="ant.jar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/lib</destination>
+		</action>
+		<action name="Install File" target="check.jar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/lib</destination>
+		</action>
+		<action name="Install File" target="javac.jar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/lib</destination>
+		</action>
+		<action name="Install File" target="derby.jar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/lib</destination>
+		</action>
+		<action name="Install File" target="build-tools.zip" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/</destination>
+		</action>
+		<action name="Install File" target="specjvm.properties" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/props</destination>
+		</action>
+		<action name="Install File" target="specjvm.reporter.properties" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/props</destination>
+		</action>
+		<action name="Install File" target="version.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/</destination>
+		</action>
+		<action name="Install File" target="run-specjvm.sh" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/</destination>
+		</action>
+		<action name="Install File" target="report.cmd" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/</destination>
+		</action>
+		<action name="Install File" target="run-specjvm.cmd" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/</destination>
+		</action>
+		<action name="Install File" target="Peptest.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/license</destination>
+		</action>
+		<action name="Install File" target="CodeSynthesisLicense" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/license</destination>
+		</action>
+		<action name="Install File" target="Licence.txt" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/license</destination>
+		</action>
+		<action name="Install File" target="SPECjvm2008.jar" status="successful">
+			<destination>/local/benchmarks/SPECjvm2008/</destination>
+		</action>
+	</InstallLogDetails>
+</InstallationLog>

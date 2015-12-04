@@ -1,0 +1,181 @@
+<html>
+<head>
+  <title>SPECjvm2008 Known Issues</title>
+  <link href="./stylesheet.css" rel=stylesheet type=text/css>
+</head>
+<body>
+<H1 ALIGN=CENTER>SPECjvm2008 Known Issues</H1>
+<P ALIGN=CENTER>Version 1.0<BR>Last modified: April 12, 2008</P>
+<HR>
+
+<p>This document provides information about known issues that can be exposed running SPECjvm2008. <br>
+The most recent version of the <a href="http://www.spec.org/jvm2008/docs/KnownIssues.html"/>SPECjvm2008 Known Issues</a> document can be found <a href="http://www.spec.org/jvm2008/docs/KnownIssues.html"/>here</a>.</p>
+
+<h3>Known issues:</h3>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#OutOfMemory">1. Out of Memory Error</A></H4>
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#ValidationFailureInXMLBenchmark">2. Validation failure in XML transform benchmark</A></h4>
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#RelativePathForXMLValidationInputData">3. Null Pointer Exception in XML validation benchmark</A></h4>
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#CheckTestFailureOnMacOSX">4. Check test failure using Java for Mac OS X</A></h4>
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#BuildErrorOnMacOSX">5. Build error with Java for Mac OS X</A></h4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#X11RequirementWithSoyLatteOnMacOSX">6. Unable to run with SoyLatte JVM on Mac OS X (10.4), need X11</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#CrashInCryptoOnSolaris104">7. Crash of JVM in pkcs11_softtoken.so running on Solaris 10.4</A></H4>
+<hr>
+
+<h3 id="OutOfMemory">1. Out of Memory Error</h3>
+<p><b>Description: </b>An Out of Memory Error can be thrown. If and when this occurs depends on the JVM being used and the platform it is run upon, in particular the number of logical CPUs.  The error is thrown because the amount of live data in the benchmark is larger than the JVM can fit on the heap. The amount of live data grows with the number of benchmark threads, which by default is set to be the value returned by the Java runtime environment call java.lang.Runtime.availableProcessors(), which usually is the number of hardware threads (logical CPUs) on the machine.  Hence, this problem is more likely to occur on larger machines. For example, a run using 4 benchmark threads will need at least in the order of 270 MB of heap.</p>
+<p><b>Workaround for a peak run: </b>Increase the heap size by setting or increasing maximum heap size for the JVM (Java Virtual Machine), usually done with command line option -Xmx.</p>
+<p><b>Workaround for base: </b>Reduce the amount of live data by reducing the number of benchmark threads. Reducing the number of benchmark threads will likely cause a performance loss.</p>
+<p>Reducing the number of benchmark threads can be done using the argument -bt &lt;number of threads&gt; or the property specjvm.benchmark.threads. It can also be reduced on a per benchmark basis, for example this is how scimark.fft.large is run with 2 benchmark threads:
+ <font size="+0"><pre>      java -jar SPECjvm2008.jar -Dspecjvm.benchmark.threads.scimark.fft.large=2</pre></font>
+<br>
+<br>
+
+<h3 id="ValidationFailureInXMLBenchmark">2. Validation failure in XML transform benchmark</h3>
+<p><b>Description: </b>The xml.tranform benchmark fails in validation of the result. This can happen with the Java 5.0 versions of BEA JRockit, HP JVM and Sun Hotspot and is due to a race in the Apache Xerces library bundled in these products. </p>
+Example:
+<font size="+0"><pre>
+  [warmup][bt:4|op:2] Validation failure on line 19.
+    Expected output:
+      dsd/article.xml.SAX:PASSED
+      dsd/article.xml.DOM:PASSED
+      dsd/article.xml.Stream:PASSED
+      renderx/chess/Kasparov-Karpov.xml.SAX:PASSED
+      renderx/chess/Kasparov-Karpov.xml.DOM:PASSED
+      renderx/chess/Kasparov-Karpov.xml.Stream:PASSED
+      renderx/examples/balance/balance_sheet.xml.SAX:PASSED
+      renderx/examples/balance/balance_sheet.xml.DOM:PASSED
+      renderx/examples/balance/balance_sheet.xml.Stream:PASSED
+      renderx/examples/meeting/meeting_minutes.xml.SAX:PASSED
+      renderx/examples/meeting/meeting_minutes.xml.DOM:PASSED
+      renderx/examples/meeting/meeting_minutes.xml.Stream:PASSED
+    Received output:
+      dsd/article.xml.DOM:FAILED
+      dsd/article.xml.SAX:PASSED
+      dsd/article.xml.DOM:PASSED
+      dsd/article.xml.Stream:PASSED
+      renderx/chess/Kasparov-Karpov.xml.SAX:PASSED
+      renderx/chess/Kasparov-Karpov.xml.DOM:PASSED
+      renderx/chess/Kasparov-Karpov.xml.Stream:PASSED
+      renderx/examples/balance/balance_sheet.xml.SAX:PASSED
+      renderx/examples/balance/balance_sheet.xml.DOM:PASSED
+      renderx/examples/balance/balance_sheet.xml.Stream:PASSED
+      renderx/examples/meeting/meeting_minutes.xml.SAX:PASSED
+      renderx/examples/meeting/meeting_minutes.xml.DOM:PASSED
+      renderx/examples/meeting/meeting_minutes.xml.Stream:PASSED
+
+Score on xml.transform: 0,00 ops/min **NOT VALID**
+</pre></font>
+<p><b>Workaround 1: </b>Upgrade to Java 6.0 version (or later) of the Java Virtual Machines.</p>
+<p><b>Workaround 2: </b>Use one benchmark thread in the xml.validation benchmark to avoid the race. Example:</p>
+ <font size="+0"><pre>      java -jar SPECjvm2008.jar -Dspecjvm.benchmark.threads.xml.tranform=1</pre></font>
+<br>
+<br>
+
+<h3 id="RelativePathForXMLValidationInputData">3. Null Pointer Exception in XML validation benchmark</h3>
+<p><b>Description: </b>An unhandled null pointer exception can occur during the XML validation benchmark.  This occurs for Java 1.5.0 platforms based on Sun's Hotspot VM, on Unix or Linux operating systems, and is due to an issue in how JAXP parses directory strings.</p>
+Example:
+<font size="+0"><pre>
+  [warmup][bt:1|op:1] Validation failure on line 2.
+    Expected output:
+        as javax.xml.transform.dom.DOMSource succeeded. (correct result)
+        as javax.xml.transform.sax.SAXSource succeeded. (correct result)
+      Validating periodicxsd.xml
+        as javax.xml.transform.dom.DOMSource succeeded. (correct result)
+        as javax.xml.transform.sax.SAXSource succeeded. (correct result)
+      Validating much_adoxsd.xml
+        as javax.xml.transform.dom.DOMSource succeeded. (correct result)
+        as javax.xml.transform.sax.SAXSource succeeded. (correct result)
+      Validating structure.xml
+        as javax.xml.transform.dom.DOMSource succeeded. (correct result)
+        as javax.xml.transform.sax.SAXSource succeeded. (correct result)
+      Validating po.xml
+        as javax.xml.transform.dom.DOMSource succeeded. (correct result)
+        as javax.xml.transform.sax.SAXSource succeeded. (correct result)
+      Validating personal.xml
+        as javax.xml.transform.dom.DOMSource succeeded. (correct result)
+        as javax.xml.transform.sax.SAXSource succeeded. (correct result)
+    Received output:
+      java.lang.NullPointerException
+        at spec.benchmarks.xml.validation.Main.validateSource(Main.java:159)
+        at spec.benchmarks.xml.validation.Main.doValidationTests(Main.java:153)
+        at spec.benchmarks.xml.validation.Main.executeWorkload(Main.java:145)
+        at spec.benchmarks.xml.validation.Main.harnessMain(Main.java:130)
+        at spec.harness.BenchmarkThread.runLoop(BenchmarkThread.java:151)
+        at spec.harness.BenchmarkThread.executeIteration(BenchmarkThread.java:78)
+        at spec.harness.BenchmarkThread.run(BenchmarkThread.java:59)
+  
+Score on xml.validation: 0.00 ops/min **NOT VALID**
+</pre></font>
+<p><b>Workaround 1: </b>Upgrade to Java 6.0 version (or later) of the Java Virtual Machines.</p>
+<p><b>Workaround 2: </b>Use the <href="UserGuide.html#SPECjvm2008CommandLineOptions">-xd</a> option to give an absolute path to resources/xml.validation.  Example</p>
+<font size="+0"><pre>    java -jar SPECjvm2008.jar -xd `pwd`/resources/xml.validation</pre></font>
+<br>
+<br>
+
+<h3 id="CheckTestFailureOnMacOSX">4. Check test failure using Java for Mac OS X</h3>
+<p><b>Background: </b>SPEjvm2008 includes a version of Javac as a benchmark. It is important that the same version of Javac is used and there is therefore a version check included at the beginning of the benchmark run. </p>
+<p><b>Description: </b>Running SPECjvm2008 with Java for Mac OS X like "java -jar SPECjvm2008.jar" will result in a failure in the check test. This is because the bundled Javac tool is included in classes.jar on the bootclasspath, in difference from other JVMs where it is located in tools.jar. And since it is included on the bootclasspath, it will be the first to beb selected. </P>
+Example output:
+<font size="+0"><pre>
+    ...
+    Received output:
+      Compiler version test:    failed
+      testIf:     OK
+      testArray:  OK
+      testBitOps: OK
+      testFor:    OK
+      testDiv:    OK
+</pre></font>
+<p><b>Workaround 1: </b>Prepend SPECJVM2008_HOME/lib/javac.jar on bootclasspath. Example:</p>
+<font size="+0"><pre>      java -Xbootclasspath/p:lib/javac.jar -jar SPECjvm2008.jar</pre></font>
+<p><b>Workaround 2: </b>Use the run-specjvm.sh which special case on Mac OS X (Darwin), which prepends javac.jar on bootclaspath.</p>
+<br><br>
+
+
+<h3 id="BuildErrorOnMacOSX">5. Build error with Java for Mac OS X</h3>
+<p><b>Description: </b>Building SPECjvm2008 with Java for Mac OS X will result in a build failure. The symbol javax.tools.JavaFileManager will not be found. This is because of the bundled Javac tool is included in classes.jar on the boot class path, like <A HREF="#CheckTestFailureOnMacOSX">Known Issue 3.</A></P>
+Example:
+<font size="+0"><pre>
+     [javac] Compiling 98 source files to /home/SPEC/SPECjvm2008/build/classes
+     [javac] /home/SPEC/SPECjvm2008/src/spec/benchmarks/compiler/SpecFileManager.java:197: cannot find symbol
+     [javac] symbol  : method put
+(java.lang.Class&lt;javax.tools.JavaFileManager&gt;,&lt;anonymous
+com.sun.tools.javac.util.Context.Factory&lt;javax.tools.JavaFileManager&gt;&gt;)
+     [javac] location: class com.sun.tools.javac.util.Context
+     [javac]             context.put(JavaFileManager.class,
+     [javac]                        ^
+     [javac] 1 error
+</pre></font>
+
+<p><b>Workaround 1: </b>Prepend SPECJVM2008_HOME/lib/javac.jar on bootclasspath when building. This will then use the Javac from javac.jar. Example:</p>
+<font size="+0"><pre>      java -Xbootclasspath/p:lib/javac.jar -cp lib/ant.jar:lib/ant-launcher.jar org.apache.tools.ant.Main -f build.xml compile</pre></font>
+<p><b>Workaround 2: </b>Use the build-specjvm.sh which special case on Mac OS X (Darwin), which prepends javac.jar on bootclaspath. This will also then use the Javac from javac.jar. </p>
+<p><b>Workaround 3: </b>Use another JVM or an entierly different platform for building. Then move to this machine for running. </p>
+<P><b>Note: </b>Building the SPECjvm2008 benchmark is not needed for running it. Building SPECjvm2008 by yourself is not allowed in a compliant run. Examples for when it is needed is for adding analyzers or experimental modifications.</P>
+<br><br>
+
+
+<h3 id="X11RequirementWithSoyLatteOnMacOSX">6. Unable to run with SoyLatte JVM on Mac OS X (10.4), need X11</h3>
+<p><b>Description: </b>When running with SoyLatte on Mac OS X, version 10.4, the run will complain and say there is no X11 server running. SoyLatte has the same requirement on Mac OS X 10.5 and later as well, but there the X11 server is started by default.</p>
+<p><b>Solution: </b>Start the X11 server before running.</p>
+<br><br>
+
+<h3 id="CrashInCryptoOnSolaris104">7. Crash of JVM in pkcs11_softtoken.so running on Solaris 10.4</h3>
+<p><b>Description: </b>Running the crypto benchmark on Solaris 10.4, the JVM crashes with a native dump. The benchmark provokes a bug in the Solaris library pkcs11_softtoken.so which makes the JVM crash. This can happen with both Sun HotSpot and BEA JRockit and can happen on all architectures (SPARC and X86). This was introduced in Solaris 10.4 and is fixed in Solaris 10.5.
+<p><b>Workaround: </b>Upgrade to Solaris 10.5 or later where it is fixed.</p>
+<br><br>
+
+<HR>
+<P>Copyright 2008 Standard Performance Evaluation Corporation</P>
+<HR SIZE=1 NOSHADE>
+<P><A HREF="http://www.spec.org/">Home</A> - <A HREF="http://www.spec.org/spec/contact.html">Contact</A> - <A HREF="http://www.spec.org/contents.html">Site Map</A> - <A HREF="http://www.spec.org/spec/privacy_policy.html">Privacy</A> - <A HREF="http://www.spec.org/spec/">About SPEC</A></P>
+
+<HR SIZE=1 NOSHADE>
+<P>
+<A HREF="mailto:webmaster@spec.org">webmaster@spec.org</A><BR>
+Last updated: <I>April 12, 2008 </I><BR><A HREF="http://www.spec.org/spec/copyright.html">Copyright</A>
+&copy; 1995 - 2008 Standard Performance Evaluation Corporation <BR>
+URL: <I>http://www.spec.org/jvm2008/docs/RunRules.html</I>
+</P>
+</body>
+</html>

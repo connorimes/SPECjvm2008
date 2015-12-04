@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Key characteristics:
+		simple structure
+		uses most of the primitive data types
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:include schemaLocation="workload.xsd"/>
+
+<xs:element name="data-sampler-table">
+	<xs:complexType>
+		<xs:complexContent>
+			<xs:extension base="workload-segment">
+				<xs:sequence>
+					<xs:element ref="data-sampler-record" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="data-sampler-record">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="s-string10">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="s-boolean" type="xs:boolean"/>
+			<xs:element name="s-decimal" type="xs:decimal"/>
+			<xs:element name="s-float" >
+				<xs:simpleType>
+					<xs:restriction base="xs:float">
+						<xs:minInclusive value="-1e10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="s-double" type="xs:double"/>
+			<xs:element name="s-duration" type="xs:duration"/>
+			<xs:element name="s-dateTime" type="xs:dateTime"/>
+			<xs:element name="s-hexBinary" type="xs:hexBinary"/>
+			<xs:element name="s-anyURI" type="xs:anyURI"/>
+			<!--  Can't get this to work <xs:element name="s-QName" type="xs:QName"/>
+			-->
+			<xs:element name="s-token" type="xs:token"/>
+			<xs:element name="s-NCName" type="xs:NCName"/>
+			<xs:element name="s-positiveInteger" type="xs:positiveInteger"/>
+			<xs:element name="s-nonPositiveInteger" type="xs:nonPositiveInteger"/>
+			<xs:element name="s-long" type="xs:long"/>
+			<xs:element name="s-zero">
+				<xs:simpleType>
+					<xs:restriction base="xs:nonPositiveInteger">
+						<xs:minInclusive value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="s-answer" type="xs:integer" fixed="42"/>
+			<xs:element name="s-list" type="int-or-na-list"/>
+			<xs:any processContents="strict"/>
+			<xs:any processContents="skip"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:simpleType name="int-or-na-list">
+	<xs:restriction>
+		<xs:simpleType>
+			<xs:list itemType="int-or-na"/>
+		</xs:simpleType>
+		<xs:minLength value="2"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="int-or-na">
+	<xs:union memberTypes="na">
+		<xs:simpleType>
+			<xs:restriction base="xs:nonNegativeInteger"/>
+		</xs:simpleType>
+	</xs:union>
+</xs:simpleType>
+
+<xs:simpleType name="na">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="n/a"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:element name="s-elt">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="empty"/>
+		</xs:sequence>
+		<xs:anyAttribute/>
+	</xs:complexType>
+</xs:element>
+
+</xs:schema>

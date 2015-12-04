@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modified for XSLT Benchmark by Kevin Jones -->
+
+<?xml-stylesheet type="text/xsl" href="../resources/style/page.xsl"?>
+
+<my:doc xmlns:my="http://www.jenitennison.com/" xmlns="http://www.w3.org/1999/xhtml">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcq="http://purl.org/dc/qualifiers/1.0/">
+      <rdf:Description about="/xslt/index.xml">
+         <dc:title>Jeni's XSLT Pages</dc:title>
+         <dc:date xmlns:vcf="http://www.ietf.org/internet-drafts/draft-dawson-vcard-xml-dtd-03.txt">
+            <rdf:Description dcq:dateType="created" dcq:dateScheme="W3C-DTF" rdf:value="2000-08-06"/>
+         </dc:date>
+         <dc:date xmlns:vcf="http://www.ietf.org/internet-drafts/draft-dawson-vcard-xml-dtd-03.txt">
+            <rdf:Description dcq:dateType="modified" dcq:dateScheme="W3C-DTF" rdf:value="2001-01-16"/>
+         </dc:date>
+         <dc:creator rdf:resource="mail@jenitennison.com"/>
+         <link rel="stylesheet" href="/resources/style/base.css"/>
+      </rdf:Description>
+   </rdf:RDF>
+   <h1>Jeni's XSLT Pages</h1>
+   <p>
+	These pages are all about XSLT, an XML-based language for translating one set of XML into another set of XML, or into HTML.  Of course, there are all sorts of <my:link href="#links">other pages</my:link>	around that cover XSLT.  Jeni's XSLT Pages, though, are dedicated to helping people understand and make the most of using XSLT.
+</p>
+   <p>
+	My warmest thanks to all those people who post interesting problems on <my:link href="http://www.mulberytech.com/xsl/xsl-list/">XSL-List</my:link>, and 	especially to those of you that have encouraged me to set up this site through your kind emails.
+</p>
+   <h2>Tutorials</h2>
+   <p>
+  These pages contain information for people trying to learn how to use and make the most of XSLT.
+</p>
+   <p class="note">
+	These pages were and are mainly just a lot of links to some of my contributions to <my:link href="http://www.biglist.com/lists/xsl-list/archives/">XSL-List</my:link>.  Unfortunately, when Mulberytech moved site, most of the links to these posts broke in non-recoverable ways.  I'm trying to add more links in, but it will take time so please bear with me.  If there are any particular areas that you'd like me to work on, please <my:link href="mail@jenitennison.com">let me know</my:link>.
+</p>
+   <dl>
+      <dt>Fundamentals</dt>
+      <dd>
+         <my:links>
+            <my:link href="associating.xml">Calling Stylesheets</my:link>
+            <my:link href="processing.xml">General Processing</my:link>
+            <my:link href="namespaces.xml">Handling Namespaces</my:link>
+            <my:link href="xpath.xml">Using XPaths</my:link>
+            <my:link href="escaping.xml">Escaping and CDATA Sections</my:link>
+         </my:links>
+      </dd>
+      <dt>Specific Functions</dt>
+      <dd>
+         <my:links>
+            <my:link href="variables.xml">Variables and Parameters</my:link>
+            <my:link href="keys.xml">Using Keys</my:link>
+            <my:link href="document.xml">Using document()</my:link>
+         </my:links>
+      </dd>
+      <dt>Basic Tasks</dt>
+      <dd>
+         <my:links>
+            <my:link href="elements.xml">Creating Result Elements and Attributes</my:link>
+            <my:link href="copying.xml">Copying the Source</my:link>
+            <my:link href="conditions.xml">Conditional Processing</my:link>
+            <my:link href="sorting.xml">Sorting</my:link>
+            <my:link href="number.xml">Numbering Output</my:link>
+            <my:link href="strings.xml">String and Number Manipulation</my:link>
+            <my:link href="merging-XSLT.xml">Combining Stylesheets</my:link>
+         </my:links>
+      </dd>
+      <dt>Complex Tasks</dt>
+      <dd>
+         <my:links>
+            <my:link href="unique.xml">Identifying Unique Items</my:link>
+            <my:link href="grouping/index.xml">Grouping</my:link>
+            <my:link href="hierarchies-out.xml">Constructing Hierarchies</my:link>
+            <my:link href="hierarchies-in.xml">Flattening Input</my:link>
+            <my:link href="merging-docs.xml">Combining Documents</my:link>
+            <my:link href="comparing-docs.xml">Comparing Documents</my:link>
+         </my:links>
+      </dd>
+      <dt>Improving Your XSLT</dt>
+      <dd>
+         <my:links>
+            <my:link href="debugging.xml">Debugging Stylesheets</my:link>
+            <my:link href="performance.xml">Improving Performance</my:link>
+            <my:link href="simplification.xml">Simplifying your XSLT</my:link>
+            <my:link href="documentation.xml">Documenting Stylesheets</my:link>
+         </my:links>
+      </dd>
+   </dl>
+   <h2>Utilities</h2>
+   <p>
+  These pages describe and link to utilities that I've written that you may find helpful within your XSLT stylesheets.
+</p>
+   <my:links>
+      <my:link href="utilities/markup.xml">Markup Utility</my:link>
+      <my:link href="utilities/selectParameters.xml">Select Parameters Utility</my:link>
+   </my:links>
+   <h2 id="links">Links</h2>
+   <my:links>
+      <my:link href="www.dpawson.co.uk">Dave Pawson's XSLT FAQ</my:link>
+      <my:link href="www.netcrucible.com/xslt/msxml-faq.html">The Unofficial MSXML FAQ</my:link>
+      <my:link href="www.xslt.com">XSLT.com</my:link>
+   </my:links>
+</my:doc>

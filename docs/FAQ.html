@@ -1,0 +1,500 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+  <HEAD>	
+    <TITLE>SPECjvm2008 Frequently Asked Questions</TITLE>    
+    <link href="./stylesheet.css" rel=stylesheet type=text/css>
+  </HEAD>
+    
+    <BODY TEXT="#000000" LINK="#0000ff" VLINK="#0000ff">
+        
+        <H1 ALIGN=CENTER>SPECjvm2008
+            <BR>
+            Frequently Asked Questions 
+        </H1>
+        
+        <P ALIGN=CENTER>Version 1.3
+            <BR>
+            Last modified: April 14, 2008
+        </P>
+        
+        <HR>
+        <BR>
+        <H2>Benchmark description</H2>
+            <A HREF="#Q1.1">Q1.1: What is SPECjvm2008?</A><br>
+            <A HREF="#Q1.2">Q1.2: What are the differences between SPECjvm98 and SPECjvm2008?</A><br>
+            <A HREF="#Q1.3">Q1.3: Does SPECjvm2008 replace SPECjvm98?</a><br>
+            <A HREF="#Q1.4">Q1.4: Is all source code included in SPECjvm2008?</A><br>
+            <A HREF="#Q1.5">Q1.5: How much does the SPECjvm2008 benchmark cost?</A><br>
+            <A HREF="#Q1.6">Q1.6: What does SPECjvm2008 test?</A><br>
+            <A HREF="#Q1.7">Q1.7: Is this a Java EE benchmark? </A><br>
+            <A HREF="#Q1.8">Q1.8: How long does one run one of the benchmarks in SPECjvm2008 take? </A><br>
+            <A HREF="#Q1.9">Q1.9: What is the runtime of the full SPECjvm2008 suite? </A><br>
+            <A HREF="#Q1.10">Q1.10: Why is an operation not interrupted directly when the measurement period is over? </A><br>
+            <A HREF="#Q1.11">Q1.11: What is the reasoning around having an operation length in seconds in SPECjvm2008? </A><br>
+
+        <BR>
+        <H2>Rules and Reporting</H2>
+            <A HREF="#Q2.1">Q2.1: What is the performance metric for SPECjvm2008?</A><br>
+            <A HREF="#Q2.2">Q2.2: Where can I find published results for SPECjvm2008?</A><br>
+            <A HREF="#Q2.3">Q2.3: How can I publish SPECjvm2008 results?</A><br>
+            <A HREF="#Q2.4">Q2.4: How much does it cost to publish results?</A><br>
+            <A HREF="#Q2.5">Q2.5: Can I compare SPECjvm2008 results with SPECjvm98 results?</A><br>
+            <A HREF="#Q2.6">Q2.6: Can I compare SPECjvm2008 results with SPECjAppServer2004 or SPECjbb2005 results?</A><br>
+            <A HREF="#Q2.7">Q2.7: Can I extrapolate estimates from existing result?</A><br>
+            <A HREF="#Q2.8">Q2.8: Can I report with vendor A hardware, vendor B OS, and vendor C JRE?</A><br>
+            <A HREF="#Q2.9">Q2.9: Are the results independently audited?</A><br>
+            <A HREF="#Q2.10">Q2.10: Can I announce my results without a review by the SPEC Java subcommittee?</A><br>
+
+        <BR>
+        <H2>Configuration</H2>
+            <A HREF="#Q3.1">Q3.1: What is the minimum configuration necessary to test this benchmark?</A><br>
+            <A HREF="#Q3.2">Q3.2: What software is required to run the benchmark?</A><br>
+            <A HREF="#Q3.3">Q3.3: How many different HW, OS, and JVM configurations have you test?</A><br>
+            <A HREF="#Q3.4">Q3.4: How scalable is the benchmark?</A><br>
+            <A HREF="#Q3.5">Q3.5: Can I run SPECjvm2008 with multiple JVM instances?</A><br>
+            <A HREF="#Q3.6">Q3.6: Can I run the benchmark while not starting from the SPECjvm2008 root folder?</A><br>
+
+        <BR>
+        <H2>Trouble shooting</H2>
+            <A HREF="#Q4.1">Q4.1: What should I do if the run fails in some way?</A>
+            <A HREF="#Q4.2">Q4.2: Why does my run take longer than 20 seconds, even if I specified 10 seconds on commandline? </A><br>
+            <A HREF="#Q4.3">Q4.3: What should I do if I get an OutOfMemoryError?</A><br>
+            <A HREF="#Q4.4">Q4.4: Why do I get a failure in the check test due to a Compiler version test failure?</A><br>
+            <A HREF="#Q4.5">Q4.5: Why do I get a build failure, failing to find symbol javax.tools.JavaFileManager?</A><br>
+            <A HREF="#Q4.6">Q4.6: Why do xml.transform, derby and compiler take so long before they start?</A><br>
+            <A HREF="#Q4.7">Q4.7: Why do I get a null pointer exception running the xml.validation benchmark?</A><br>
+
+        <BR>
+        <H2>Miscellenious</H2>
+            <A HREF="#Q5.1">Q5.1: How do I obtain the SPECjvm2008 benchmark?</A><br>
+            <A HREF="#Q5.2">Q5.2: Who developed SPECjvm2008?</A><br>
+
+            <br>
+            <br>
+
+        <HR>
+        <BR>
+        <H2>Benchmark description</H2>
+        <HR>
+        <P>
+            <A NAME="Q1.1"><B>Q1.1:</B> What is SPECjvm2008?</A>
+            <P>
+              SPECjvm2008 is a benchmark suite, containing several real life applications and some benchmarks focusing on core java functionality. The main purpose of SPECjvm2008 is to measure the performance of a Java Runtime Environment (JRE). It also measures the performance of the operating system and hardware in the context of executing the JRE. It focuses on the performance of the JRE executing a single application; it reflects the performance of the hardware processor and memory subsystem, but has low dependence on file I/O and includes no network I/O cross machines. The SPECjvm2008 workload mimics a variety of common general purpose application computations. These characteristics reflect the intent that this benchmark will be applicable to measuring basic Java performance on a wide variety of both client and server systems running Java. SPEC also finds user experience of Java important and the suite therefore includes startup benchmarks and has a required run category called base, which has to be run without any tuning of the JVM to improve the out of the box performance.
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q1.2"><B>Q1.2:</B> What are the differences between SPECjvm98 and SPECjvm2008?</A>
+            <P>
+              SPECjvm2008 is a new suite of benchmarks that test systems running the latest generation 
+              of JVMs on workloads selected from what are common use cases in 2008, both on server and on client side Java.
+              The run mode is changed from end to end time, to timed runs, where as much as possible should be done inside 
+              a measurement interval. The workloads are executed in parallel mode to utilize today's systems. In addition 
+              to measuring the throughput, the benchmark also focuses on user experience of Java, which is addressed by 
+              adding startup benchmark and by requiring a base submission where tuning is not allowed.
+              There is also a different set of run rules, a different set of metrics compared to SPECjvm98.
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q1.3"><B>Q1.3:</B> Does SPECjvm2008 replace SPECjvm98?</a>
+            <P>
+                <B>Yes</B>. SPEC is immediately replacing SPECjvm98 with SPECjvm2008.  
+                SPECjvm98 code can still be purchased from SPEC but no further benchmarks results will be 
+                reviewed and accepted by SPEC. Note that the results from SPECjvm2008 not are comparable to SPECjvm98 results.
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q1.4"><B>Q1.4:</B> Is all source code included in SPECjvm2008?</A>
+            <P>
+                <B>YES</B>, all source code is included and available to review and analysis. 
+                The components are shipped under different licenses, see the license file.
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q1.5"><B>Q1.5:</B> How much does the SPECjvm2008 benchmark cost?</A>
+            <P>
+                The SPECjvm2008 benchmark is freely downloadable from SPEC (still subject to the SPEC license).
+                It is also possible to buy a CD from SPEC with the benchmark. 
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q1.6"><B>Q1.6:</B> What does SPECjvm2008 test?</A>
+            <P>
+                SPECjvm2008 is designed to test the performance of a JRE on typical java applications, 
+                including the Java libraries such as JAXP (XML) and Crypto, both workloads common for client 
+                and server side Java applications. Other factors include the application environment, 
+                e.g. H/W and OS. For more information on what is specifically tested, see the benchmark 
+                documentation for each <a href="./benchmarks/index.html">benchmark</a>. 
+            </P>
+        </P>
+        <HR>        
+        <P>
+            <A NAME="Q1.7"><B>Q1.7:</B> Is this a Java EE benchmark? </A>
+            <P>
+                No, this is not a Java EE benchmark, and does not measure performance of Enterprise
+                Java Beans (EJBs), servlets, Java Server Pages (JSPs), etc.
+            </P>
+        </P>
+        <HR>        
+        <P>
+            <A NAME="Q1.8"><B>Q1.8:</B> How long does one run of one of the benchmarks in SPECjvm2008 take? </A>
+            <P>
+              One benchmark has a 2 minutes warmup time and 4 minutes measured runtime. During this time several 
+              operations will be performed. An operation will never be interrupted, so all threads will 
+              continue to run until all threads have completed the operation started inside the 
+              measurement interval. This means that a 4 minutes measurement period will take at least 
+              4 minutes to complete, in some cases a noticable amount of time more. 
+            </P>
+        </P>
+        <HR>        
+        <P>
+            <A NAME="Q1.9"><B>Q1.9:</B> What is the runtime of the full SPECjvm2008 suite? </A>
+            <P>
+              The runtime will be a bit more than 2 hours. The suite contains 21 benchmarks 
+              (counting each sub-benchmark as one benchmark now) plus the the startup benchmarks. 
+              This means that execution will be at least 21*6 minutes, which is 126, plus the 
+              startup benchmarks, plus the extra overhead of gathering all the threads after each 
+              benchmark and the bringing up and down the harness.
+            </P>
+        </P>
+        <HR>        
+        <P>
+          <A NAME="Q1.10"><B>Q1.10:</B> Why is an operation not interrupted directly when the measurement period is over? </A>
+        <P>
+          An operation will continue to be run even when the measurement period is over. This is 
+          done in order to ensure that each operation that is started inside the measurement period 
+          will contribute to the measurement period, but only as much as is inside it. So an operation
+          that is started but not completed inside will contribute between 0 and 1, depending on how much
+          of the execution time was inside the measurement period. In order to not give any advantage for
+          executing outside the measurement period, the harness will continue to execute threads until all
+          operations started inside the measurement period are completed.
+        </P>
+        </P>
+        
+        <HR>        
+        <P>
+          <A NAME="Q1.11"><B>Q1.11:</B> What is the reasoning around having an operation length in seconds in SPECjvm2008? </A>
+        <P>
+          In the java world it is very common to run short operations. A server does often act on requests that take 
+          milliseconds to perform, but there are most often many of these requests. Both the SPECjbb2005 and the 
+          SPECjAppServer2004 benchmarks are built on this concept. The operations in SPECjvm2008 are actually somewhat 
+          longer than those in the mentioned benchmarks, but then again shorter than other existing workloads. By running 
+          multiple operations next to each other and many of them for an extended period of time, several "side effects" occur, 
+          which are typical JVM specific problems (or VEE to be more correct). An Example of such problems is load on the memory 
+          system (including both allocation and garbage collector), which is key in Java performance and tested by continuous work. 
+          When running the benchmark operations over and over for 4 minutes the "side effects" that a JVM has to handle occur.
+        </P>
+        <P>For several of the benchmarks the SPECjvm2008 team tested increasing and decreasing the work loads and found that 
+          other than the time to execute the operation, the characteristics where basically the same, so in these scenarios 
+          nothing was gained by having larger (or smaller) workload input. Then a workload size was selected inside 
+          the expected and realistic range that consisted of a decent amount of work, similar to most of the other benchmarks.
+        </P>
+        <P>Some of the sub-benchmarks are real world applications and the work load size was chosen by the problem being 
+          solved. Others are not real full world applications, but code that exercises core functionality of larger 
+          enterprise systems. Improving the performance of these benchmarks will improve the performance on such function, and 
+          application,contribute to improving the performance of applications using that function. In a 
+          suite together with other workloads, they do provide value.
+        </P>
+        </P>
+        <HR>
+        <BR>
+        <H2>Rules and Reporting</H2>
+        <HR>
+        <P>
+            <A NAME="Q2.1"><B>Q2.1:</B> What is the performance metric for SPECjvm2008?</A>
+            <P> 
+                SPECjvm2008 produces these throughput metrics in operations per minute (ops/m):
+                <UL>
+                    <li>The total base throughput measurement, SPECjvm2008 Base ops/m<br>
+                    This is the overall throughput result obtained from a full compliant base run. A base run requires that there is no hand tuning of the JVM.
+                    <li>The total peak throughput measurement, SPECjvm2008 Peak ops/m<br>
+                    This is the overall throughput result obtained from a full compliant peak run. A peak run does allow tuning of the JVM and represent the maximum throughput that can be achieved with the system.
+                </ul>
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q2.2"><B>Q2.2:</B> Where can I find published results for SPECjvm2008?</A>
+            <P>
+                SPECjvm2008 results are available on SPEC's web site: 
+                <A HREF="http://www.spec.org/jvm2008/results/">http://www.spec.org/jvm2008/results/</A>
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q2.3"><B>Q2.3:</B> How can I publish SPECjvm2008 results?</A>
+            <P>
+              In order to submit a result to SPEC for review, you need to first obtain the benchmark, which can be downloaded from the SPEC web site. 
+              Then follow the <a href="./UserGuide.html#ProducingAndSubmittingResults">user guide</a> on how to produce and submit results.
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q2.4"><B>Q2.4:</B> How much does it cost to publish results?</A>
+            <P>
+              In order to publish a result on the SPEC web site, you must pay a review fee of $500 or become an member of the SPEC organisation.
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="#Q2.5"><B>Q2.5:</B> Can I compare SPECjvm2008 results with SPECjvm98 results?</A>
+            <P>
+                <B>NO.</B> The two benchmarks are not comparable. In addition to that, this would be a violation to the run rules. 
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q2.6"><B>Q2.6:</B> Can I compare SPECjvm2008 results with other SPEC benchmarks?</A>
+            <P>
+                <B>NO.</B> SPECjvm2008 is not comparable with any other benchmark. In addition to that, this would be a violation to the run rules. 
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q2.7"><B>Q2.7:</B> Can I extrapolate estimates from existing result?</A>
+            <P>
+                <B>NO.</B> Run rules for SPECjvm2008 do not allow estimated results to be publicly disclosed. Extrapolated results are considered to be estimates.
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q2.8"><B>Q2.8:</B> Can I report using vendor A hardware, vendor B OS, and vendor C JRE?</A>
+            <P>
+                <b>Yes,</b> the <A HREF="RunRules.html">SPECjvm2008 run rules</A> do not preclude 
+                third-party submission of benchmark results. But <B>result submitters must abide by 
+                the licensing restrictions of all the products used in the benchmark</B>; SPEC is 
+                not responsible 
+                for vendor (hardware or software) licensing issues. Many products include a 
+                restriction on publishing benchmark results without the expressed written permission 
+                of the vendor.
+            </P> 
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q2.9"><B>Q2.9:</B> Are the results independently audited?</A>
+            <P>
+              Results published on SPEC pages are all reviewed by the SPEC Java subcommittee. See <a href="http://www.spec.org/spec/disclaimer.html">SPEC Results Disclaimer</a>.
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q2.10"><B>Q2.10:</B> Can I announce my results without a review by the SPEC Java subcommittee?</A>            
+            <P>
+                Yes, you can publish compliant results that have not been reviewed by SPEC. 
+                Should you do so, any SPEC member may request a full disclosure
+                result, which you are obliged to provide within ten business days,
+                and which may be reviewed by SPEC.  You can find more details in the
+                <A HREF="./RunRules.html">SPECjvm2008 run rules</A>.
+            </P>    
+        </P>
+        <HR>
+
+        <BR>
+        <H2>Configuration</H2>
+        <HR>
+        <P>
+            <A NAME="Q3.1"><B>Q3.1:</B> What is the minimum hardware configuration necessary to test this benchmark?</A>
+            <P>
+                It is possible to run SPECjvm2008 on a machine with one hardware thread (CPU/Socket/Core).<br>
+                The recommended minimum amount of memory needed is 512 MB for a small system.<br>
+                The recommended minimum amount of disk space needed is 256 MB (including installation).<br>
+                <br>
+                SPECjvm2008 is designed to scale up the workload when a larger machine (higher number of logical CPUs) 
+                is used. In most of the work loads this means more live data will be required and the minimum amount 
+                of memory mentioned above will not be enough. In derby this also means that even more space on disk is required.<br>
+                <br>
+                In order to use as few resources as possible, run with only one benchmark thread, use option "-bt 1". This will however affect the benchmark result.
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q3.2"><B>Q3.2:</B> What software is required to run the benchmark?</A>
+            <P>
+                SPECjvm2008 requires a Java Runtime Environment supporting Java SE 5.0 features.
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q3.3" id="TestedConfigurations"><B>Q3.3:</B> How many different HW, OS and JVM configurations have you test?</A>
+            <P>
+                Several combinations of the following products have been tested and verified there are no issues in the benchmark. There are a some <a href="./KnownIssues.html">Known Issues</a> reported).<br>
+                <P><b>Java Virtual Machines:</b>
+                <UL>
+                    <LI> Apache Harmony (5.0)
+                    <LI> BEA JRockit (5.0 and 6.0)
+                    <LI> HP JVM for HP-UX
+                    <LI> IBM J9 (5.0 and 6.0)
+                    <LI> Java for Sun OS X
+                    <LI> Sun HotSpot (5.0 and 6.0)
+                </UL>
+                </P>
+
+                <P><b>Operating Systems:</b>
+                <UL>
+                    <LI> AIX
+                    <LI> IBM i Operating System
+                    <LI> HP-UX
+                    <LI> Linux (multiple vendors and versions)
+                    <LI> Solaris (9 and 10)
+                    <LI> Z/OS
+                    <LI> Windows (Server 2003, XP, Vista)
+                </UL>
+                </P>
+
+                <P><b>Hardware Architectures:</b>
+                <UL>
+                    <LI> Itanium
+                    <LI> PA RISC
+                    <LI> IBM Power Systems
+                    <LI> SPARC (Niagra and Ultra SPARC, 32-bits and 64-bits)
+                    <LI> X86 (AMD (Opteron), Intel (Netburst and Core2), 32-bits and 64-bits)
+                </UL>
+                </P>
+
+                <P><b>Scalability:</b>
+                <UL>
+                    <LI> Tested on as much as 8 sockets, 32 cores and 64 hardware threads.
+                </UL>
+                </P>
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q3.4"><B>Q3.4:</B> How scalable is the benchmark?</A>
+            <P>
+                There is no hard limit in the benchmark harness and the work load when it comes to 
+                scaling up the number of benchmark threads and this has been verified in the testing. 
+                The size of the workload does increase with the number of benchmark threads. While some 
+                workloads are embarrassingly parallel and will scale well long past the 64 benchmark 
+                threads it has been verified with, others intentionally introduce scalability 
+                problems, for example with using java locks and also by heavy work which introduces several 
+                scalability problems, in the hardware and on the memory bus, as well as in the JVM with 
+                heavy allocation as well as large-scale garbage collection work.
+            </P>
+        </P>
+        <HR>
+        <P>
+            <A NAME="Q3.5"><B>Q3.5:</B> Can I run SPECjvm2008 with multiple JVM instances?</A>
+            <P>
+                No, SPECjvm2008 designed to work within a single JVM instance.
+            </P>
+        </P>
+        <HR>
+        <P>           
+            <A NAME="Q3.6"><B>Q3.6:</B> Can I run the benchmark while not starting from the SPECjvm2008 root folder?</A>
+            <P>
+                Yes, it is designed to be able to do that. Specify the system property "specjvm.home.dir" to point to where the SPECjvm2008 install exists. See <a href="./UserGuide.html#WhereToRun">the User Guide</a> for more info and examples.
+            </P>
+        </P>
+        <HR>
+
+        
+        <BR>
+        <H2>Trouble shooting</H2>
+        <HR>
+        <P>           
+          <A NAME="Q4.1"><B>Q4.1:</B> What should I do if the run fails in some way?</A>
+          <P>It depends on how it fails. The first step is to look in <A HREF="./KnownIssues.html">the Known Issues</A> document. If someone else has run into this issue, it is likely to be in this document.</P>
+          <P>If you believe it is a bug in one of the products used, for example the JVM tested, it is recommended to see if this is a known issue there and then contact the vendor who is responsible for the product. A good way to determine if this is a problem with the product tested is to test with another vendors product, or with another version of it, to see if it occurs there too. If it only is in one of the vendors or versions of the product, it is likely to be a vendor specific issue.</P>
+          <P>If you believe it is a bug in the SPECjvm2008 benchmark suite, download the latest version of the benchmark to see if it is fixed. If not, contact jvm2008support@spec.org and describe the issue.</P>
+        </P>
+        <HR>
+
+        <P>           
+            <A NAME="Q4.2"><B>Q4.2:</B> Why does my run take longer than 20 seconds, even if I specified 10 seconds on the command line? </A>
+            <P>
+                An operation within the sub-benchmark has not completed and SPECjvm2008 does not allow operations to be interrupted. 
+                See <a href="#Q1.10">Q1.10</a> for the reasoning around this.
+            </P>
+            <P>
+              It could also be because result of the warmup period indicates that the iteration time not will be enough to finish 
+              five operations. Then the iteration time will be increased. There is a message printed by the harness if this occurs.
+              A run should always finish at least 5 operations, otherwise the run is considered too small.
+            </P>
+        </P>
+        <HR>
+        <P>           
+            <A NAME="Q4.3"><B>Q4.3:</B> What should I do if I get an OutOfMemoryError?</A>
+            <P>
+              An Out of Memory Error can be thrown. If and when this occurs depends on the JVM being used and the platform it is run upon, 
+              in particular the number of logical CPUs. The error is thrown because the amount of live data in the benchmark is larger 
+              than the JVM can fit on the heap. The amount of live data grows with the number of benchmark threads, so the larger machine, 
+              the more likely this is to happen. See <A HREF="./KnownIssues.html#OutOfMemory">the Known Issues document about OOME</a> 
+              for more info and recommended workaround.
+            </P>
+        </P>
+
+        <HR>
+        <P>           
+            <A NAME="Q4.4"><B>Q4.4:</B> Why do I get a failure in the check test due to a Compiler version test failure?</A>
+            <P>
+              There is a javac version included in SPECjvm2008 and the check benchmark verifies the correct one is used, since the compiler benchmark uses it. There is a known issue on this for one vendor including a workaround. See <A HREF="./KnownIssues.html#CheckTestFailureOnMacOSX">the Known Issues</a> document for more info.
+            </P>
+        </P>
+
+        <HR>
+        <P>           
+            <A NAME="Q4.5"><B>Q4.5:</B> Why do I get a build failure, failing to find symbol javax.tools.JavaFileManager?</A>
+            <P>
+              There is a javac version included in SPECjvm2008, since the compiler benchmark uses it. There is a known issue for building, depending on the order of classes on the bootclasspath for one vendor including a workaround. See <A HREF="./KnownIssues.html#BuildErrorOnMacOSX">the Known Issues</a> document for more info.
+            </P>
+        </P>
+        <HR>
+        <P>           
+            <A NAME="Q4.6"><B>Q4.6:</B> Why do xml.transform, derby and compiler take so long before they start?</A>
+            <P>
+              They need to perform some preparatory work before measurements interval, which is done in a setup phase before the warmup and measurement period.
+              Derby initializes and populates a database, The xml.transform benchmark makes one operation before measurement start to verify results fully,
+              this includes canonicalization of output. The compiler benchmark gathers files information to reduce file I/O impact during measurements interval.              
+            </P>
+        </P>
+        <HR>
+        <P>           
+            <A NAME="Q4.7"><B>Q4.7:</B>Why do I get a null pointer exception running the xml.validation benchmark?</A>
+            <P>
+              This could be the known issue with direct path's in jdk 1.5.0. See  <A HREF="./KnownIssues.html#RelativePathForXMLValidationInputData">the Known Issues</a> document for more info.
+            </P>
+        </P>
+        <HR>        <BR>
+        <H2>Miscellenious</H2>
+        <HR>
+        <P>
+            <A NAME="Q5.1"><B>Q5.1:</B> How do I obtain the SPECjvm2008 benchmark?</A>
+            <P>
+                You can download the benchmark from <A HREF="http://www.spec.org/jvm2008/">http://www.spec.org/jvm2008/</A>.
+                You can also buy a CD from the SPEC office.
+            </P>
+        </P>
+        <HR>
+         <P>
+            <A NAME="Q5.2"><B>Q5.2:</B> Who developed SPECjvm2008?</A>
+            <P>
+                SPECjvm2008 was developed by the Java subcommittee's core design team. 
+                AMD, BEA, HP, IBM, Intel and Sun participated in design, implementation and testing phases of the product.
+            </P>
+        </P>
+
+
+
+           
+        <BR>
+        <BR>                
+        <HR>
+        <P>Copyright 2008 Standard Performance Evaluation Corporation</P>
+        <HR SIZE=1 NOSHADE>
+        <P STYLE="margin-bottom: 0in"><A HREF="http://www.spec.org/">Home</A> - <A HREF="http://www.spec.org/spec/contact.html">Contact</A> - <A HREF="http://www.spec.org/contents.html">Site Map</A> - <A HREF="http://www.spec.org/spec/privacy_policy.html">Privacy</A> - <A HREF="http://www.spec.org/spec/">About SPEC</A>
+        </P>
+        <HR SIZE=1 NOSHADE>
+        <P>
+            <A HREF="mailto:webmaster@spec.org">webmaster@spec.org</A><BR>
+            Last updated: <I>April 14, 2008 21:57:00 EDT 2008 </I><BR><A HREF="http://www.spec.org/spec/copyright.html">Copyright</A>
+            &copy; 1995 - 2008 Standard Performance Evaluation Corporation <BR>
+            URL: <I>http://www.spec.org/jvm2008/docs/RunRules.html</I>
+        </P>
+        
+    </BODY>
+</HTML>

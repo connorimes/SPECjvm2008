@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+file      : structure.xml
+author    : Boris Kolpackov <boris@codesynthesis.com>
+copyright : Copyright (c) 2006 Code Synthesis Tools CC
+license   : The structure.xml and structure.xsd files are part of the XSDBench W3C XML Schema
+            benchmark: http://www.codesynthesis.com/projects/xsdbench/
+-->
+
+<s:structure xmlns:s="http://www.codesynthesis.com/xmlns/xsdbench/structure"
+             xmlns:o="http://www.codesynthesis.com/xmlns/xsdbench/other"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.codesynthesis.com/xmlns/xsdbench/structure structure.xsd">
+
+ <!-- attribute -->
+
+ <s:attribute orange="orange" grapefruit="grapefruit">
+   <s:potato>potato</s:potato>
+ </s:attribute>
+
+ <s:attribute mango="mango" orange="orange" grapefruit="grapefruit">
+   <s:potato>potato</s:potato>
+   <s:carrot>carrot</s:carrot>
+   <s:onion>onion</s:onion>
+ </s:attribute>
+
+ <s:attribute mango="mango" apple="apple" grapefruit="grapefruit" orange="orange">
+   <s:potato>potato</s:potato>
+   <s:carrot>carrot</s:carrot>
+   <s:onion>onion</s:onion>
+   <s:onion>onion</s:onion>
+   <s:onion>onion</s:onion>
+   <s:onion>onion</s:onion>
+   <s:onion>onion</s:onion>
+ </s:attribute>
+
+ <!-- element -->
+
+ <s:element carrot="carrot">
+   <s:mango>mango</s:mango>
+   <s:grapefruit>grapefruit</s:grapefruit>
+ </s:element>
+
+ <s:element potato="potato" carrot="carrot">
+   <s:apple>apple</s:apple>
+   <s:orange>orange</s:orange>
+   <s:mango>mango</s:mango>
+   <s:grapefruit>grapefruit</s:grapefruit>
+ </s:element>
+
+ <s:element potato="potato" carrot="carrot">
+   <s:apple>apple</s:apple>
+
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+
+   <s:mango>mango</s:mango>
+
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+ </s:element>
+
+ <!-- any -->
+
+ <s:any foo="foo" carrot="carrot">
+   <s:apple>apple</s:apple>
+   <s:orange>orange</s:orange>
+
+   <!-- ##targetNamespace -->
+   <s:apple-target>orange</s:apple-target>
+
+   <s:mango>mango</s:mango>
+
+   <!-- ##any -->
+   <s:apple-target>orange</s:apple-target>
+ </s:any>
+
+ <s:any potato="potato" foo="foo" bar="bar" carrot="carrot">
+   <!-- ##other -->
+   <o:apple-other>other</o:apple-other>
+
+   <s:apple>apple</s:apple>
+
+   <!-- ##local -->
+   <apple-local>peach</apple-local>
+   <apple-local>peach</apple-local>
+   <orange-local>orange</orange-local>
+   <orange-local>orange</orange-local>
+   <mango-local>mango</mango-local>
+   <mango-local>mango</mango-local>
+   <grapefruit-local>grapefruit</grapefruit-local>
+   <grapefruit-local>grapefruit</grapefruit-local>
+
+   <s:orange>orange</s:orange>
+
+   <!-- ##targetNamespace -->
+   <s:apple-target>orange</s:apple-target>
+
+   <s:mango>mango</s:mango>
+
+   <!-- ##any -->
+   <o:apple-other>other</o:apple-other>
+   <apple-local>peach</apple-local>
+   <s:apple-target>orange</s:apple-target>
+ </s:any>
+
+ <!-- all -->
+
+ <s:all-optional></s:all-optional>
+
+ <s:all-optional>
+   <s:apple>apple</s:apple>
+   <s:mango>mango</s:mango>
+ </s:all-optional>
+
+ <s:all-optional>
+   <s:apple>apple</s:apple>
+   <s:orange>orange</s:orange>
+   <s:mango>mango</s:mango>
+   <s:grapefruit>grapefruit</s:grapefruit>
+ </s:all-optional>
+
+ <s:all-required>
+   <s:apple>apple</s:apple>
+   <s:mango>mango</s:mango>
+ </s:all-required>
+
+ <s:all-required>
+   <s:apple>apple</s:apple>
+   <s:orange>orange</s:orange>
+   <s:mango>mango</s:mango>
+   <s:grapefruit>grapefruit</s:grapefruit>
+ </s:all-required>
+
+ <!-- choice -->
+
+ <s:choice>
+   <!-- first -->
+
+   <s:peach>peach</s:peach>
+
+   <!-- second -->
+
+   <s:apricot>apricot</s:apricot>
+
+   <!-- third -->
+   <s:mango>mango</s:mango>
+
+   <s:tangerine>tangerine</s:tangerine>
+
+   <!-- fourth -->
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+ </s:choice>
+
+ <s:choice>
+   <!-- first -->
+   <s:apple>apple</s:apple>
+
+   <s:peach>peach</s:peach>
+
+   <!-- second -->
+   <s:apple>apple</s:apple>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:mango>mango</s:mango>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+
+   <s:apricot>apricot</s:apricot>
+
+   <!-- third -->
+   <s:mango>mango</s:mango>
+
+   <s:tangerine>tangerine</s:tangerine>
+
+   <!-- fourth -->
+   <s:apple>apple</s:apple>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:mango>mango</s:mango>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+ </s:choice>
+
+ <!-- sequence -->
+
+ <s:sequence>
+   <!-- first -->
+
+   <s:peach>peach</s:peach>
+
+   <!-- second -->
+
+   <s:apricot>apricot</s:apricot>
+
+   <!-- third -->
+   <s:apple>apple</s:apple>
+   <s:orange>orange</s:orange>
+   <s:mango>mango</s:mango>
+   <s:grapefruit>grapefruit</s:grapefruit>
+
+   <s:tangerine>tangerine</s:tangerine>
+
+   <!-- fourth -->
+   <s:apple>apple</s:apple>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:mango>mango</s:mango>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+ </s:sequence>
+
+ <s:sequence>
+   <!-- first -->
+   <s:apple>apple</s:apple>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:mango>mango</s:mango>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+
+   <s:peach>peach</s:peach>
+
+   <!-- second -->
+   <s:apple>apple</s:apple>
+   <s:orange>orange</s:orange>
+   <s:mango>mango</s:mango>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:apple>apple</s:apple>
+   <s:orange>orange</s:orange>
+   <s:mango>mango</s:mango>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:apple>apple</s:apple>
+   <s:orange>orange</s:orange>
+   <s:mango>mango</s:mango>
+   <s:grapefruit>grapefruit</s:grapefruit>
+
+   <s:apricot>apricot</s:apricot>
+
+   <!-- third -->
+   <s:apple>apple</s:apple>
+   <s:orange>orange</s:orange>
+   <s:mango>mango</s:mango>
+   <s:grapefruit>grapefruit</s:grapefruit>
+
+   <s:tangerine>tangerine</s:tangerine>
+
+   <!-- fourth -->
+   <s:apple>apple</s:apple>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:mango>mango</s:mango>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:apple>apple</s:apple>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:mango>mango</s:mango>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:apple>apple</s:apple>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:orange>orange</s:orange>
+   <s:mango>mango</s:mango>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+   <s:grapefruit>grapefruit</s:grapefruit>
+ </s:sequence>
+
+ <!-- empty -->
+
+ <s:empty carrot="carrot"/>
+ <s:empty potato="potato" carrot="carrot"/>
+
+ <s:empty-extension carrot="carrot"/>
+ <s:empty-extension potato="potato" carrot="carrot"/>
+ <s:empty-extension potato="potato" carrot="carrot" onion="onion"/>
+
+ <s:empty-restriction onion="onion" potato="potato" carrot="carrot"/>
+
+ <!-- simple -->
+
+ <s:simple carrot="carrot">simple</s:simple>
+ <s:simple potato="potato" carrot="carrot">simple</s:simple>
+
+ <s:simple-extension carrot="carrot">simple</s:simple-extension>
+ <s:simple-extension potato="potato" carrot="carrot">simple</s:simple-extension>
+ <s:simple-extension potato="potato" carrot="carrot" onion="onion">simple</s:simple-extension>
+
+ <s:simple-restriction onion="onion" potato="potato" carrot="carrot">simple</s:simple-restriction>
+
+ <!-- complex -->
+ <s:complex carrot="carrot">
+  <s:mango>mango</s:mango>
+  <s:grapefruit>grapefruit</s:grapefruit>
+ </s:complex>
+
+ <s:complex potato="potato" carrot="carrot">
+  <s:apple>apple</s:apple>
+  <s:orange>orange</s:orange>
+  <s:mango>mango</s:mango>
+  <s:grapefruit>grapefruit</s:grapefruit>
+ </s:complex>
+
+ <s:complex carrot="carrot" potato="potato">
+  <s:apple>apple</s:apple>
+  <s:orange>orange</s:orange>
+  <s:mango>mango</s:mango>
+  <s:grapefruit>grapefruit</s:grapefruit>
+  <s:apple>apple</s:apple>
+  <s:orange>orange</s:orange>
+  <s:mango>mango</s:mango>
+  <s:grapefruit>grapefruit</s:grapefruit>
+  <s:apple>apple</s:apple>
+  <s:orange>orange</s:orange>
+  <s:orange>orange</s:orange>
+  <s:orange>orange</s:orange>
+  <s:orange>orange</s:orange>
+  <s:mango>mango</s:mango>
+  <s:grapefruit>grapefruit</s:grapefruit>
+  <s:grapefruit>grapefruit</s:grapefruit>
+  <s:grapefruit>grapefruit</s:grapefruit>
+  <s:grapefruit>grapefruit</s:grapefruit>
+  <s:grapefruit>grapefruit</s:grapefruit>
+ </s:complex>
+
+
+ <s:complex-extension carrot="carrot">
+  <!-- base -->
+
+  <!-- extension -->
+  <s:peach>peach</s:peach>
+  <s:apricot>apricot</s:apricot>
+  <s:apricot>apricot</s:apricot>
+  <s:apricot>apricot</s:apricot>
+  <s:tangerine>tangerine</s:tangerine>
+  <s:banana>banana</s:banana>
+  <s:banana>banana</s:banana>
+  <s:banana>banana</s:banana>
+ </s:complex-extension>
+
+ <s:complex-extension potato="potato" carrot="carrot">
+  <!-- base -->
+  <s:apple>apple</s:apple>
+  <s:orange>orange</s:orange>
+  <s:mango>mango</s:mango>
+  <s:grapefruit>grapefruit</s:grapefruit>
+  <s:apple>apple</s:apple>
+  <s:orange>orange</s:orange>
+  <s:mango>mango</s:mango>
+  <s:grapefruit>grapefruit</s:grapefruit>
+  <s:apple>apple</s:apple>
+  <s:orange>orange</s:orange>
+  <s:mango>mango</s:mango>
+  <s:grapefruit>grapefruit</s:grapefruit>
+
+  <!-- extension -->
+ </s:complex-extension>
+
+ <s:complex-extension potato="potato" onion="onion" carrot="carrot">
+  <!-- base -->
+  <s:apple>apple</s:apple>
+  <s:orange>orange</s:orange>
+  <s:mango>mango</s:mango>
+  <s:grapefruit>grapefruit</s:grapefruit>
+  <s:apple>apple</s:apple>
+  <s:orange>orange</s:orange>
+  <s:mango>mango</s:mango>
+  <s:grapefruit>grapefruit</s:grapefruit>
+  <s:apple>apple</s:apple>
+  <s:orange>orange</s:orange>
+  <s:mango>mango</s:mango>
+  <s:grapefruit>grapefruit</s:grapefruit>
+
+  <!-- extension -->
+  <s:peach>peach</s:peach>
+  <s:apricot>apricot</s:apricot>
+  <s:apricot>apricot</s:apricot>
+  <s:apricot>apricot</s:apricot>
+  <s:tangerine>tangerine</s:tangerine>
+  <s:banana>banana</s:banana>
+  <s:banana>banana</s:banana>
+  <s:banana>banana</s:banana>
+ </s:complex-extension>
+
+
+ <s:complex-restriction potato="potato" onion="onion" carrot="carrot">
+  <!-- base -->
+  <s:apple>apple</s:apple>
+  <s:orange>orange</s:orange>
+  <s:orange>orange</s:orange>
+  <s:orange>orange</s:orange>
+  <s:mango>mango</s:mango>
+  <s:grapefruit>grapefruit</s:grapefruit>
+
+  <!-- extension -->
+  <s:tangerine>tangerine</s:tangerine>
+ </s:complex-restriction>
+
+ <s:complex-restriction onion="onion" carrot="carrot" potato="potato">
+  <!-- base -->
+  <s:apple>apple</s:apple>
+  <s:orange>orange</s:orange>
+  <s:mango>mango</s:mango>
+  <s:grapefruit>grapefruit</s:grapefruit>
+  <s:apple>apple</s:apple>
+  <s:orange>orange</s:orange>
+  <s:mango>mango</s:mango>
+  <s:grapefruit>grapefruit</s:grapefruit>
+  <s:apple>apple</s:apple>
+  <s:orange>orange</s:orange>
+  <s:mango>mango</s:mango>
+  <s:grapefruit>grapefruit</s:grapefruit>
+
+  <!-- extension -->
+  <s:peach>peach</s:peach>
+  <s:apricot>apricot</s:apricot>
+  <s:apricot>apricot</s:apricot>
+  <s:apricot>apricot</s:apricot>
+  <s:tangerine>tangerine</s:tangerine>
+  <s:banana>banana</s:banana>
+ </s:complex-restriction>
+
+</s:structure>

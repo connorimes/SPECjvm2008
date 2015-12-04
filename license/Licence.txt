@@ -1,0 +1,72 @@
+Standard Performance Evaluation Corporation (SPEC)
+   6585 Merchant Place, Suite 100
+   Warrenton, VA 20187 USA
+
+Phone: 1-540-349-7878, ext. 31
+Fax:   1-540-349-5992
+License Number: _____________
+
+SITE LICENSE AGREEMENT FOR SPEC BENCHMARK PRODUCTS
+
+Read the terms and conditions of this Agreement carefully before opening this package containing the benchmark program and the accompanying documentation (“the Materials").  This Agreement represents the entire agreement concerning the Materials between you and SPEC and supersedes any prior proposal, representation or understanding between the parties. 
+
+Use and Re-Export of SPEC’s software is subject to the United States Export Control Administration regulations. The software may not be used by unlicensed person or entities and may not be re-exported to another country. See Export Assurance (Clause 10) of this license.
+
+The restrictions and limitations of this Agreement do not apply to those items contained in this package that have been modified under, or used under, licenses that require free redistribution.  SPEC has collected copies of all such items underneath the directory redistributable_sources, along with the licenses applicable to each item in that directory.
+
+By opening this package containing “The Materials”, you are accepting and agreeing to the terms of this Agreement. If you are not willing to be bound by these terms, you should promptly return “The Materials” in unopened form, and you will receive a refund of your money.
+
+        COMPANY/NAME:		 ________________________________________
+        MAIN SITE:		 		 ________________________________________
+
+1. Grant. SPEC agrees to grant and USER agrees to accept a nontransferable and nonexclusive license to use and modify the Materials, subject to the restrictions and conditions set forth below.
+
+2. Copies and Location.  USER may make only exact and complete copies of the original of the Materials (modification or merger with other software is allowed only as specified in the Run and Reporting Rules for the given SPEC Benchmark product). The original and copies thereof may be used only:
+
+   * By the user, if purchased by a non-corporate entity. This user must also abide by the Export Assurance (Clause 10) of this license.
+
+   * By anyone within the same corporate structure, if purchased by a corporation. Note that a "corporate user" must be identified and all technical support and contact with SPEC must be handled through that contact. This user and corporation must also abide by the Export Assurance (Clause 10) of this license.
+
+USER will not permit any third party to use or copy the original or any copy thereof.  In the event of unauthorized transfer or copying, USER will pay SPEC a penalty in the amount of one additional fee for each such transfer or copy.
+
+3. Scope of Use.  The Materials may be used only for the generation of data regarding measurement and analysis of computer system (hardware and software) performance on those Materials. USER may not distribute the Materials or any modification to the Materials with the following exceptions: 
+   * USER may distribute those items specifically included in   the directory of redistributable sources according to   the terms of their open source licenses. 
+   * USER may share only with other SPEC licensees of this benchmark modifications created by USER for purposes of performance analysis. Such modifications shall be limited to 1) modifying the code to instrument the benchmark; or 2) modifying the workload to enable  further performance analysis on systems under the USER's control or 3) a combination of 1) and 2). 
+
+For performance results obtained from such modified benchmark, USER may not 1) represent the results as being SPEC benchmark results or 2) use the official SPEC benchmark metric name(s) to identify the results.
+
+
+4. Fee.  The fee paid by the USER to SPEC for the Materials is in consideration of SPEC's cost in connection with the distribution of the Materials and is not a royalty.
+
+
+5. Reports.  In order to preserve the integrity of SPEC's performance standards, USER agrees to run the Materials in accordance with the rules published by SPEC for the Materials. If the USER chooses to publicly report measured results, the reporting must be strictly in accordance with the rules published by SPEC for the Materials.
+
+6. Term.  This Agreement is effective upon USER opening the package containing the Materials and shall continue until terminated.  USER may terminate the Agreement at any time by returning the Materials and all copies thereof to SPEC, but the provisions of Sections 5, 7 and 9 shall survive any termination.
+
+The license granted as to the current release of the Materials shall terminate when SPEC issues and makes available to the USER a subsequent release of such materials.  In the event of a breach by the USER of any provision hereof, SPEC may terminate this Agreement, and the licenses granted hereunder, in whole or as to any portion of the Materials upon 30 days written notice unless the default is cured within such 30-day period.  Upon termination of the license, USER shall immediately return all copies of the Materials to SPEC.
+
+7. Use of Name. It is acknowledged that all trademark and trade name rights in the names are owned exclusively by SPEC and such ownership shall be acknowledged in any use of the name by the USER (i.e. - noting that these are "trademarks of the Standard Performance Evaluation Corporation").
+
+8. Indemnity.  USER agrees to indemnify and hold SPEC harmless from any claims, expenses, or liabilities caused by USER's use of the Materials or by USER's publication or use of data arising from its use of the Materials.
+
+Disclaimer of Warranties.  SPEC MAKES NO WARRANTIES WHATSOEVER, EXPRESS OR IMPLIED, RELATING TO THE SALE, USE OR PERFORMANCE OF THE MATERIALS, INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE OR PURPOSE, AND ALL SUCH WARRANTIES ARE HEREBY DISCLAIMED AND EXCLUDED BY SPEC.
+
+USER RECOGNIZES THAT THE PRODUCTS ARE THE RESULT OF A COOPERATIVE, NON- PROFIT EFFORT AND THAT SPEC DOES NOT CONDUCT A TYPICAL BUSINESS.  USER ACCEPTS THE MATERIALS "AS IS" AND WITHOUT ANY WARRANTY, EXPRESS OR IMPLIED.  HOWEVER, IF ANY MEDIA DEFECT IS FOUND IN THE MATERIALS WITHIN NINETY (90) DAYS AFTER SHIPMENT TO THE USER, SPEC SHALL REPLACE THE MEDIA WITH A COPY WITHOUT MEDIA DEFECT, WHICH SHALL BE USER'S SOLE REMEDY.
+
+9. Limitation of Liability.  SPEC assumes no liability with respect to the Materials, including liability for infringement of intellectual property rights, negligence, or any other liability.
+
+SPEC is not aware of any infringement of copyright or patent that may result from its transfer to USER of the Materials.  If USER receives any notice of infringement, such notice shall be immediately communicated to SPEC who will take immediate action to evaluate the claim and, if practicable, modify the Materials as necessary to avoid infringement. USER waives any claim against SPEC in the event of such infringement.
+
+SPEC's total liability for any reason shall not exceed the amount of the fee paid to SPEC.  In no event will SPEC be liable for any indirect, special, incidental or consequential damages arising out of or in connection with this Agreement, including the sale, use or performance of the Materials, even if SPEC shall have knowledge of the possibility of such damages.
+
+10.  Export Assurance.  Use and re-export of SPEC's software and related technical information is subject to the Export Administration Regulations (EAR) of the United States Department of Commerce.  USER hereby agrees that USER (a) assumes responsibility for compliance with the EAR in its use of the software and technical information, and (b) will not export, re-export, or otherwise disclose directly or indirectly, the software, technical data, or any direct product of the software or technical data in violation of the EAR.
+
+11. Governing Law.  This Agreement shall be construed and governed in accordance with the laws of the State of California.  If any term of this Agreement is declared void or not enforceable by any competent court of jurisdiction, all other terms shall remain in effect.
+
+12. No Waiver.  The failure of either party to enforce any term herein or to take action in the event of any violation of these terms shall not be deemed a waiver by that party as to the subsequent enforcement of any rights.
+
+
+Copyright © 2008 Standard Performance Evaluation Corporation
+
+All Rights Reserved
+

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PLAY">
+    <xs:complexType>
+      <xs:sequence>
+	<xs:element ref="TITLE" />
+	<xs:element ref="FM" />
+	<xs:element ref="PERSONAE" />
+	<xs:element ref="SCNDESCR" />
+	<xs:element ref="PLAYSUBT" />
+	<xs:element maxOccurs="unbounded" ref="ACT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TITLE" type="xs:string" />
+  <xs:element name="FM">
+    <xs:complexType>
+      <xs:sequence>
+	<xs:element maxOccurs="unbounded" ref="P" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="P" type="xs:string" />
+  <xs:element name="PERSONAE">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+	<xs:element ref="TITLE" />
+	<xs:element ref="PERSONA" />
+	<xs:element ref="PGROUP" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PERSONA" type="xs:string" />
+  <xs:element name="PGROUP">
+    <xs:complexType>
+      <xs:sequence>
+	<xs:element maxOccurs="unbounded" ref="PERSONA" />
+	<xs:element ref="GRPDESCR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GRPDESCR" type="xs:string" />
+  <xs:element name="SCNDESCR" type="xs:string" />
+  <xs:element name="PLAYSUBT" type="xs:string" />
+  <xs:element name="ACT">
+    <xs:complexType>
+      <xs:sequence>
+	<xs:element ref="TITLE" />
+	<xs:element maxOccurs="unbounded" ref="SCENE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SCENE">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+	<xs:element ref="TITLE" />
+	<xs:element ref="STAGEDIR" />
+	<xs:element ref="SPEECH" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="STAGEDIR" type="xs:string" />
+  <xs:element name="SPEECH">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+	<xs:element ref="SPEAKER" />
+	<xs:element ref="LINE" />
+	<xs:element ref="STAGEDIR" />
+	<xs:element ref="SUBHEAD" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SPEAKER" type="xs:string" />
+  <xs:element name="LINE">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+	<xs:element ref="STAGEDIR" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SUBHEAD" type="xs:string" />
+</xs:schema>

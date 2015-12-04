@@ -1,0 +1,417 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil Courier New;}{\f1\fswiss\fcharset0 Arial;}}
+{\*\generator Msftedit 5.41.15.1507;}\viewkind4\uc1\pard\f0\fs20 SUN MICROSYSTEMS, INC.\par
+\par
+SUN MICROSYSTEMS, INC. THROUGH ITS\par
+SUN LABORATORIES DIVISION ("SUN") IS\par
+WILLING TO LICENSE THE JAVA (tm)\par
+COMPILER SOFTWARE IN OBJECT CODE\par
+FORMAT, THE JAVA (tm) COMPILER\par
+COMPILER (tm) SOFTWARE IN OBJECT\par
+CODE FORMAT, SOFTWARE SAMPLE\par
+GRAMMARS, A CONFORMANCE TEST PROGRAM\par
+KNOWN AS "PEPTEST," AND THE\par
+ACCOMPANYING DOCUMENTATION\par
+(collectively, the "Software") TO\par
+LICENSEE, AS DEFINED BELOW, ONLY ON\par
+THE CONDITION THAT LICENSEE ACCEPTS\par
+ALL THE TERMS CONTAINED IN THIS\par
+LICENSE AGREEMENT.\par
+\par
+PLEASE READ THE TERMS CAREFULLY\par
+BEFORE USING THE SOFTWARE.  LICENSEE\par
+ACKNOWLEDGES THAT LICENSEE HAS READ\par
+AND UNDERSTANDS THIS AGREEMENT AND\par
+AGREES TO BE BOUND BY ITS TERMS AND\par
+CONDITIONS.  IF LICENSEE DOES NOT\par
+ACCEPT THESE LICENSE TERMS, SUN DOES\par
+NOT GRANT ANY LICENSE TO THE\par
+SOFTWARE.\par
+\par
+1.  LICENSE GRANT\par
+\par
+(A)  As the Software has been\par
+selected by the Members of the\par
+Standard Performance Evaluation\par
+Corporation ("SPEC") for\par
+incorporation into one of its\par
+benchmark suites, Sun hereby grants\par
+to SPEC (a "Licensee") a\par
+non-exclusive, non-transferable,\par
+royalty-free right to use, reproduce\par
+and distribute the Software to third\par
+parties for a fee or otherwise on a\par
+commercial basis, in object code\par
+format and on CD-ROM or via any\par
+other medium, for use by such third\par
+parties solely as set forth in\par
+Section 1(B) below.\par
+\par
+(B)  Sun grants each and every third\par
+party who purchases or otherwise\par
+acquires the Software from SPEC,\par
+whether by CD or via another medium,\par
+(each, a "Licensee") a\par
+non-exclusive, non-transferable,\par
+royalty-free right to download,\par
+install, compile and use this\par
+Software, in object code format,\par
+exclusively with sample grammars\par
+provided by Sun solely for the\par
+purposes of (i) using "PepTest" to\par
+determine whether other software and\par
+hardware products conform to the\par
+Java (TM) standards set by Sun and\par
+(ii) using the rest of the Software\par
+as a benchmark against which\par
+Licensee can evaluate the\par
+performance of such other software\par
+and hardware products.\par
+\par
+2.  LICENSE RESTRICTIONS\par
+\par
+This Software is licensed, not sold,\par
+to Licensee only under the terms of\par
+this Agreement, and Sun reserves all\par
+rights not expressly granted to\par
+Licensee.  Licensee may not use,\par
+copy, modify or transfer the\par
+Software or any copy thereof or\par
+create any derivative works\par
+therefrom except as expressly\par
+provided for in this Agreement.\par
+Licensee may not reverse engineer,\par
+disassemble, decompile or translate\par
+the Software or otherwise attempt to\par
+derive the source code of the\par
+Software except as allowed by law.\par
+Licensee may not rent, lease, loan,\par
+sell or distribute the Software or\par
+any part thereof for any purpose,\par
+whether commercial or otherwise,\par
+except as expressly provided for in\par
+this Agreement.\par
+\par
+THE SOFTWARE IS NOT DESIGNED OR\par
+INTENDED FOR USE IN ON-LINE CONTROL\par
+OF AIRCRAFT, AIR TRAFFIC, AIRCRAFT\par
+NAVIGATION OR AIRCRAFT\par
+COMMUNICATIONS; IN THE DESIGN,\par
+CONSTRUCTION, OPERATION OR\par
+MAINTENANCE OF ANY NUCLEAR FACILITY\par
+OR IN ANY LIFE-SAVING OR LIFE\par
+SUPPORT APPLICATION.  SUN DISCLAIMS\par
+ANY EXPRESS OR IMPLIED WARRANTY OF\par
+FITNESS FOR SUCH USES.  LICENSEE\par
+REPRESENTS AND WARRANTS THAT IT WILL\par
+NOT USE THE SOFTWARE FOR SUCH\par
+PURPOSES.\par
+\par
+Licensee will, at its expense,\par
+defend, indemnify and hold Sun\par
+harmless from and against any third\par
+party claims, including costs and\par
+reasonable attorneys' fees, and be\par
+wholly responsible for any other\par
+liabilities or damages arising out\par
+of or related to Licensee's use of\par
+the Software or breach of the terms\par
+hereof.\par
+\par
+3.  OWNERSHIP\par
+\par
+(A)  As between Sun and Licensee,\par
+Sun is and will be the sole and\par
+exclusive owner of all right, title\par
+and interest in and to the Software\par
+other than the limited rights\par
+granted to Licensee in this\par
+Agreement.\par
+\par
+(B)  The Software is protected by\par
+United States copyright law and\par
+international treaty and\par
+unauthorized reproduction or\par
+distribution is subject to civil and\par
+criminal penalties.  Licensee shall\par
+retain and reproduce all copyright\par
+and other proprietary notices\par
+presently on the Software and SPEC\par
+shall only name or otherwise list\par
+the Software by title on a CD-ROM,\par
+related documents or other materials\par
+or any other medium in a format\par
+identical to that used by Sun,\par
+including all trademark symbols.\par
+Java (TM) and the family of marks\par
+based on the word JAVA\par
+(collectively, the "Mark") are\par
+trademarks or registered trademarks\par
+of Sun in the U.S. and other\par
+countries.  No right, title or\par
+interest in or to any trademarks,\par
+service marks or trade names of Sun\par
+or Sun's licensors is granted\par
+hereunder.\par
+\par
+(C)  Accordingly, Licensee\par
+acknowledges that Sun owns the Mark\par
+and all goodwill associated\par
+therewith.  Licensee further\par
+acknowledges that it has no rights\par
+of any kind whatsoever anywhere in\par
+the world with respect to the Mark.\par
+Licensee agrees that all past and\par
+future use of the Mark by Licensee\par
+anywhere in the world inures to the\par
+sole benefit of Sun.  Licensee\par
+agrees that it will take no action\par
+anywhere in the world inconsistent\par
+with Sun's ownership of the Mark and\par
+will not attempt to register the\par
+Mark or any mark including the word\par
+JAVA anywhere in the world.\par
+Licensee agrees that it will not\par
+attack Sun's ownership in and title\par
+to the Mark anywhere in the world\par
+and that it will not attack the\par
+validity of the license granted\par
+herein.\par
+\par
+SUN MAKES NO REPRESENTATIONS OR\par
+WARRANTIES OF ANY KIND RESPECTING\par
+THE MARK, INCLUDING BUT NOT LIMITED\par
+TO ANY WARRANTY OF NONINFRINGEMENT\par
+OR OF THE VALIDITY OF SUN'S RIGHTS\par
+IN THE MARK IN ANY COUNTRY AND\par
+DISCLAIMS ANY AND ALL WARRANTIES\par
+RESPECTING THE MARK THAT MIGHT\par
+OTHERWISE BE IMPLIED BY APPLICABLE\par
+LAW.\par
+\par
+4.  TERM, TERMINATION AND SURVIVAL \par
+\par
+(A)  The Agreement is effective\par
+until terminated.  Upon any\par
+termination, Licensee must\par
+immediately cease all use and\par
+distribution of the Software and\par
+destroy all copies of the Software\par
+in its possession or, upon Sun's\par
+request, return the Software to\par
+Sun.  Upon any termination, the\par
+parties agree that no implied\par
+license shall arise.\par
+\par
+(B)  Licensee may terminate this\par
+Agreement at any time by destroying\par
+all copies of the Software in its\par
+possession.\par
+\par
+(C)  This Agreement will immediately\par
+terminate without notice if Licensee\par
+fails to comply with any obligation\par
+of this Agreement.\par
+\par
+(D)  At such time as SPEC\par
+permanently ceases its distribution\par
+of the Software, this Agreement\par
+shall automatically terminate as to\par
+SPEC.\par
+\par
+(E)  All licenses granted to third\par
+parties pursuant to Section 1(B)\par
+above prior to any termination of\par
+this Agreement shall continue in\par
+accordance with their terms.\par
+\par
+(F)  The relevant provisions of\par
+Sections 2 through 9 shall survive\par
+any termination of this Agreement,\par
+as applicable.\par
+\par
+5.  NO WARRANTY\par
+\par
+THE SOFTWARE IS PROVIDED TO LICENSEE\par
+"AS IS."  ALL EXPRESS OR IMPLIED\par
+CONDITIONS, REPRESENTATIONS AND\par
+WARRANTIES, INCLUDING ANY IMPLIED\par
+WARRANTY OF MERCHANTABILITY,\par
+SATISFACTORY QUALITY, FITNESS FOR A\par
+PARTICULAR PURPOSE, OR\par
+NON-INFRINGEMENT, ARE DISCLAIMED.\par
+LICENSEE ACKNOWLEDGES AND AGREES\par
+THAT (I) THE SOFTWARE IS\par
+NON-COMMERCIAL, EXPERIMENTAL\par
+SOFTWARE; (II) THE SOFTWARE MAY\par
+CONTAIN ERRORS, DESIGN FLAWS OR\par
+OTHER PROBLEMS; (III) THE SOFTWARE\par
+MAY NOT FUNCTION FULLY OR ADEQUATELY\par
+UPON INSTALLATION; (IV) IT MAY NOT\par
+BE POSSIBLE TO RENDER THE SOFTWARE\par
+FUNCTIONAL; (V) USE OF THE SOFTWARE\par
+MAY RESULT IN UNEXPECTED RESULTS,\par
+LOSS OF DATA OR OTHER UNPREDICTABLE\par
+DAMAGE OR LOSS TO LICENSEE; (VI) SUN\par
+HAS NO OBLIGATION WHATSOEVER TO\par
+CONTINUE DEVELOPMENT OF THE\par
+SOFTWARE; AND (VII) SUN HAS NO\par
+OBLIGATION WHATSOEVER TO MAINTAIN OR\par
+SUPPORT THE SOFTWARE.\par
+\par
+6.  LIMITATION OF LIABILITY\par
+\par
+IN NO EVENT WILL SUN BE LIABLE IN\par
+ANY WAY FOR ANY DIRECT DAMAGES OR\par
+ANY INDIRECT, PUNITIVE, SPECIAL,\par
+INCIDENTAL OR CONSEQUENTIAL DAMAGES\par
+OF ANY KIND (INCLUDING LOSS OF USE\par
+OR DATA; LOSS OF BUSINESS, REVENUE,\par
+PROFITS OR OTHER ECONOMIC ADVANTAGE;\par
+OR PERSONAL INJURY OR PROPERTY\par
+DAMAGE) INCURRED BY LICENSEE OR ANY\par
+THIRD PARTY, WHETHER IN AN ACTION IN\par
+CONTRACT, TORT, BASED ON A WARRANTY\par
+OR OTHERWISE, ARISING OUT OF OR\par
+RELATED TO THIS AGREEMENT OR THE\par
+SOFTWARE IN ANY WAY EVEN IF SUN HAS\par
+BEEN PREVIOUSLY ADVISED OF THE\par
+POSSIBILITY OF SUCH DAMAGES OR IF\par
+SUCH DAMAGES ARE FORESEEABLE.\par
+\par
+7.  GOVERNMENT USERS\par
+\par
+The Software is provided with\par
+restricted rights.  With respect to\par
+any acquisition of the Software by\par
+or for any unit or agency of the\par
+U.S.  Government, the Software shall\par
+be classified as "commercial\par
+computer software" as that term is\par
+defined in the applicable provision\par
+of the Federal Acquisition\par
+Regulations ("FAR") and supplements\par
+thereto, including the Department of\par
+Defense (DoD) FAR Supplement\par
+("DFARS").  If the Software is\par
+supplied for use by the DoD, the\par
+Software is delivered subject to the\par
+terms of this Agreement and either\par
+(i) in accordance with DFARS\par
+227.7202-1(a) and 227.7202-3(a) or\par
+(ii) with restricted rights in\par
+accordance with DFARS\par
+252.227-7013(c)(1)(ii) (OCT 1988),\par
+as applicable.  If the Software is\par
+supplied for use by a federal agency\par
+other than the DoD, the Software is\par
+restricted computer software\par
+delivered subject to the terms of\par
+this Agreement and (i) FAR\par
+12.212(a); (ii) FAR 52.227-19; or\par
+(iii) FAR 52.227-14 (ALT III), as\par
+applicable.\par
+\par
+Sun Microsystems, Inc., 901 San Antonio Road, Palo Alto, CA  94303, USA\par
+\par
+8.  EXPORT LAW\par
+\par
+Licensee acknowledges and agrees\par
+that this Software and/or any\par
+related technology is subject to the\par
+U.S. Export Administration Laws and\par
+Regulations.  Diversion of such\par
+Software and/or technology contrary\par
+to U.S.  law is prohibited.\par
+Licensee agrees and certifies that\par
+none of this Software and/or\par
+technology, nor any direct product\par
+therefrom, is being or will be\par
+acquired for, shipped, transferred\par
+or reexported, directly or\par
+indirectly, to proscribed or\par
+embargoed countries or their\par
+nationals, nor be used for nuclear\par
+activities, chemical biological\par
+weapons, or missile projects or\par
+other purposes prohibited by U.S.\par
+export laws unless authorized by the\par
+U.S.  Government.  Proscribed\par
+countries are set forth in the U.S.\par
+Export Administration Regulations.\par
+Countries subject to U.S. embargo\par
+are:  Cuba, Iran, Iraq, Libya, North\par
+Korea, Syria and the Sudan.  This\par
+list is subject to change without\par
+further notice from Sun, and\par
+Licensee must comply with the list\par
+as it exists in fact.  Licensee\par
+certifies that it is not on the U.S.\par
+Department of Commerce's Denied\par
+Persons List or affiliated lists or\par
+on the U.S. Department of Treasury's\par
+Specially Designated Nationals\par
+List.\par
+\par
+Licensee agrees to comply strictly\par
+with all U.S. export laws and assume\par
+sole responsibility for obtaining\par
+licenses to export or reexport as\par
+may be required.  Licensee is\par
+responsible for complying with any\par
+applicable local laws and\par
+regulations, including but not\par
+limited to, the export and import\par
+laws and regulations of other\par
+countries.\par
+\par
+9.  MISCELLANEOUS\par
+\par
+This Agreement will be construed\par
+under and governed by California law\par
+and controlling federal law as\par
+applied to transactions taking place\par
+wholly within California between\par
+California residents; the United\par
+Nations Convention on Contracts for\par
+the International Sale of Goods\par
+shall not apply.  The parties agree\par
+that any action shall be brought in\par
+the United States District Court for\par
+the Northern District of California\par
+or the California Superior Court for\par
+the County of Santa Clara, as\par
+applicable, and the parties hereby\par
+submit exclusively to the personal\par
+jurisdiction and venue thereof.\par
+Licensee may not assign this\par
+Agreement or any of its rights and\par
+obligations hereunder to any party.\par
+The official text of this Agreement\par
+is in the English language and any\par
+interpretation or construction of\par
+this Agreement will be based\par
+thereon.  In the event that this\par
+Agreement or any documents or\par
+notices related to it are translated\par
+into any other language, the English\par
+language version will control.  This\par
+Agreement (i) is the entire\par
+agreement between Sun and Licensee\par
+relating to the Software, (ii)\par
+supersedes all prior or\par
+contemporaneous oral or written\par
+communications, proposals,\par
+warranties, representations or\par
+agreements with respect to the\par
+Software and (iii) will prevail over\par
+any conflicting or additional terms\par
+of any subsequent quote, order,\par
+acknowledgment or any other\par
+communications by or between the\par
+parties.  No modification to this\par
+Agreement will be binding unless in\par
+writing and signed by an authorized\par
+representative of each party.\par
+\f1\par
+}
+ 

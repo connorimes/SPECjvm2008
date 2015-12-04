@@ -1,0 +1,148 @@
+<html>
+<head>
+<meta content="HTML Tidy, see www.w3.org" name="generator"></meta>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta>
+<title>Norfolk Weather and Tide Updates</title>
+<link href="nitf.css" rel="stylesheet" type="text/css"></link>
+</head>
+<body>
+<table border="1" cellpadding="6" width="550">
+<tr>
+<td>
+<div class="hedline">
+<h1 class="nitfhl1">Weather and Tide Updates for Norfolk</h1>
+
+<h2 class="nitfhl2">A sample, fictitious NITF article</h2>
+</div>
+
+<div class="note">
+<blockquote><i>Editor's Note:</i>This sample article was created
+completely from scratch in order to illustrate various features of
+NITF. Parts of it are somewhat contrived, in order to illustrate as
+much of the DTD as possible.</blockquote>
+</div>
+
+<p class="nitfby">By <b>Alan Karben</b><br></br>
+<i>NITF Network News Online</i></p>
+
+<p class="nitfp">The weather was great today in Norfolk, Virginia.
+Made me want to take out my boat, manufactured by the <b><a class="org" href="http://www.stockpoint.com/get-quote?ticker=acm">Acme Boat Company</a></b>.</p>
+
+<p class="nitfp">Tides in Norfolk are running normal today. This
+weeks article highlights many of this week's fishing issues, and
+also presents a reference table of tide times.</p>
+
+<h2 class="nitfhl2">The Tides are High</h2>
+
+<p class="nitfp">As can be seen from the table below, the shores of
+Oceanview again present the brightest spots for fishermen and
+sandcastle-builders alike.</p>
+
+<table border="1">
+<tr>
+<th colspan=""></th>
+<th colspan="2">today</th>
+<th colspan="2">tide</th>
+<th colspan="2">tomorow</th>
+<th colspan="2">next day</th>
+<th colspan="2">third day</th>
+</tr>
+
+<tr>
+<th colspan="">beach</th>
+<th colspan="">high</th>
+<th colspan="">low</th>
+<th colspan="">in</th>
+<th colspan="">out</th>
+<th colspan="">high</th>
+<th colspan="">low</th>
+<th colspan="">high</th>
+<th colspan="">low</th>
+<th colspan="">high</th>
+<th colspan="">low</th>
+</tr>
+
+<tr>
+<td>Sunset</td>
+<td>30</td>
+<td>14</td>
+<td>09:23</td>
+<td>18:51</td>
+<td>28</td>
+<td>11</td>
+<td>31</td>
+<td>12</td>
+<td>33</td>
+<td>9</td>
+</tr>
+
+<tr>
+<td>Oceanview</td>
+<td>31</td>
+<td>15</td>
+<td>09:25</td>
+<td>18:56</td>
+<td>26</td>
+<td>11</td>
+<td>31</td>
+<td>11</td>
+<td>31</td>
+<td>9</td>
+</tr>
+
+<tr>
+<td>Shellfish</td>
+<td>29</td>
+<td>15</td>
+<td>09:25</td>
+<td>18:53</td>
+<td>26</td>
+<td>9</td>
+<td>29</td>
+<td>11</td>
+<td>30</td>
+<td>11</td>
+</tr>
+</table>
+
+<p class="nitfp">Based on these tide tables, I believe you can see
+that this weekend stands to be an excellent one for small- or
+large-scale fishing exhibitions.</p>
+
+<table align="right" border="1" cellpadding="6" width="278">
+<tr>
+<td><img alt="The tides are high." height="185" src="images/high-tide.jpg" width="278"></img>
+<div align="right"><font size="-2">Photo: Karben</font></div>
+
+<b><font size="-1">The tides, captured on film late
+yesterday.</font></b> </td>
+</tr>
+</table>
+
+<p class="nitfp">There are many local nooks that fishing fans may
+want to keep a special eye one.</p>
+
+<ul>
+<li><b>Deer Creek:</b> This area has proven to be a bass-lover's
+haven. Wilt Monthaven reports that examples of bass over 30 inches
+long have been reeled-in by both the casual and the professional
+angler.</li>
+
+<li><b>Fox Run:</b> A bit more difficult, logistically, to
+navigate. However, the reports of Sturgeon in this area have put it
+on the fishing map for the first time since 1996.</li>
+
+<li><b>Pheasant Hollow:</b> If you don't mind the crowds, this old
+favorite has come through this year. More fish than you can shake a
+stick at. Or a rod at.</li>
+</ul>
+
+<p class="nitfp">Happy fishing everybody!</p>
+
+<p class="tagline"><i>Stewart Klometers contributed to this
+article.</i></p>
+</td>
+</tr>
+</table>
+</body>
+</html>

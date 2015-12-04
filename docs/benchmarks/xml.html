@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+    <head>
+        <title>XML</title>
+    </head>
+    <body>
+        <h1>XML</h1>
+        <h2>Description</h2>
+        <p>
+            This benchmark has two sub-benchmarks: XML.transform and XML.validation.
+            XML.transform exercises the JRE's implementation of javax.xml.transform (and associated APIs) by
+            applying style sheets (.xsl files) to XML documents.
+            The style sheets and XML documents are several real life examples that vary
+            in size (3KB to 156KB) and in the style sheet features that are used most heavily.           
+            One "operation" of XML.transform consists of processing each style sheet / document pair,
+            accessing the XML document as a DOM source, a SAX source, and a Stream source.
+            In order that each style sheet / document pair contribute about equally to the time taken
+            for a single operation, some of the input pairs are processed multiple times during one operation.
+        </p>
+        <p> Result verification for XML.transform is somewhat more complex than for other of the benchmarks
+            because different XML style sheet processors can produce results that are slightly different
+            from each other, but all still correct. In brief, the process used is this.  First, before the
+            measurement interval begins the workload is run once and the output is collected, canonicalized
+            (per the specification of canonical XML form) and compared with the expected canonicalized output.
+            Output from transforms that produce HTML is converted to XML before canonicalization.
+            Also, a checksum is generated from this output.
+            Inside the measurement interval the output from each operation is only checked using the checksum.
+        </p>
+        <p>
+            XML.validation exercises the JRE's implementation of javax.xml.validation (and associated APIs) by
+            validating XML instance documents against XML schemata (.xsd files).
+            The schemata and XML documents are several real life examples that vary
+            in size (1KB to 607KB) and in the XML schema features that are used most heavily.           
+            One "operation" of XML.validation consists of processing each style sheet / document pair,
+            accessing the XML document as a DOM source and a SAX source.
+            As in XML.transform, some of the input pairs are processed multiple times during one operation
+            so that each input pair contributes about equally to the time taken for a single operation.
+        </p>
+        <a href="../../src/spec/benchmarks/xml/">Browse source code</a>
+        <h2>Authors</h2>        
+         <ul>      
+            <li>Evgeniya Maenkova
+            <li>Dmitry Petrochenko 
+            <li>Qi Zhang
+            <li>Eric Dittert   
+        </ul>
+    </body>
+</html>

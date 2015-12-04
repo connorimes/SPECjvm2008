@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DOCTYPE balance SYSTEM "balance_sheet.dtd" -->
+<balance>
+    <active>
+        <head>
+            <column name="Assets"/>
+            <column name="Line"/>
+            <column name="By the end of the previous year"/>
+            <column name="By the end of the reported year (period)"/>
+        </head>
+        <body>
+            <part legend="I" name="Non current assets">
+                <row id="010" name="Fixed assets" end-value="8427"/>
+                <row id="020" name="Incomplete non current tangible assets"/>
+                <row id="030" name="Intangible assets"/>
+                <row id="040" name="Investments by share participation method"/>
+                <row id="050" name="Other non current financial assets"/>
+                <row id="060" name="Delayed tax assets"/>
+                <row id="070" name="Other non current assets (specify)"/>
+                <row id="071" name=""/>
+                <row id="072" name=""/>
+                <row id="073" name=""/>
+                <row id="074" name=""/>
+                <row id="080" name="Total non current assets"/>
+            </part>
+            <part legend="II" name="Current assets">
+                <row id="090" name="Materials"/>
+                <row id="100" name="Animals being raised and fattened"/>
+                <row id="110" name="Short-life items"/>
+                <row id="120" name="Unfinished production" end-value="25738"/>
+                <row id="130" name="Production"/>
+                <row id="140" name="Products"/>
+                <row id="150" name="Current prepayments"/>
+                <row id="160" name="Account payable by sales"/>
+                <row id="170" name="Short-term accounts payable to budget" end-value="1180"/>
+                <row id="180" name="Other accounts payable"/>
+                <row id="190" name="Current financial investments"/>
+                <row id="200" name="Cash assets and equivalents" end-value="2971"/>
+                <row id="210" name="Other current assets (specify)"/>
+                <row id="211" name=""/>
+                <row id="212" name=""/>
+                <row id="220" name="Total current assets"/>
+            </part>
+            <part legend="balance" name="">
+                <row id="230" name="TOTAL"/>
+            </part>
+        </body>
+    </active>
+    <passive>
+        <head>
+            <column name="Liabilities and shareholders’ equity"/>
+            <column name="Line"/>
+            <column name="By the end of the previous year"/>
+            <column name="By the end of the reported year (period)"/>
+        </head>
+        <body>
+            <part legend="III" name="Private capital">
+                <row id="240" name="Net charter capital" end-value="5000"/>
+                <row id="250" name="Emission income"/>
+                <row id="260" name="Difference from reassessment and recalculation"/>
+                <row id="270" name="Accumulated profit"/>
+                <row id="280" name="Reserves"/>
+                <row id="290" name="Other private capital"/>
+                <row id="291" name=""/>
+                <row id="300" name="Total private capital"/>
+            </part>
+            <part legend="IV" name="Non current liabilities">
+                <row id="310" name="Long term bank credits and loans"/>
+                <row id="320" name="Delayed tax liabilities"/>
+                <row id="330" name="Asset-related grants"/>
+                <row id="340" name="Non current reserves"/>
+                <row id="350" name="Other non current liabilities (specify)"/>
+                <row id="351" name=""/>
+                <row id="360" name="Total non current liabilities"/>
+            </part>
+            <part legend="V" name="Current liabilities">
+                <row id="370" name="Short-term bank credits"/>
+                <row id="380" name="Short-term loans"/>
+                <row id="390" name="Credit debts by purchase"/>
+                <row id="400" name="Acquired current prepays" end-value="33316"/>
+                <row id="410" name="Short-term debts payable to budget"/>
+                <row id="420" name="Short-term debts to obligatory social insurance"/>
+                <row id="430" name="Debts to wages, employees and other short-term payables"/>
+                <row id="440" name="Short-term debts to participants (founders)"/>
+                <row id="450" name="Other debts"/>
+                <row id="460" name="Grants by income"/>
+                <row id="470" name="Current reserves"/>
+                <row id="480" name="Other current liabilities (specify)"/>
+                <row id="481" name=""/>
+                <row id="482" name=""/>
+                <row id="483" name=""/>
+                <row id="490" name="Total current liabilities"/>
+            </part>
+            <part legend="balance" name="">
+                <row id="500" name="TOTAL"/>
+            </part>
+        </body>
+    </passive>
+</balance>

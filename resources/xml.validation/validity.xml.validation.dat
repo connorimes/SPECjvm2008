@@ -1,0 +1,18 @@
+Validating validation_input.xml
+	as javax.xml.transform.dom.DOMSource succeeded. (correct result)
+	as javax.xml.transform.sax.SAXSource succeeded. (correct result)
+Validating periodicxsd.xml
+	as javax.xml.transform.dom.DOMSource succeeded. (correct result)
+	as javax.xml.transform.sax.SAXSource succeeded. (correct result)
+Validating much_adoxsd.xml
+	as javax.xml.transform.dom.DOMSource succeeded. (correct result)
+	as javax.xml.transform.sax.SAXSource succeeded. (correct result)
+Validating structure.xml
+	as javax.xml.transform.dom.DOMSource succeeded. (correct result)
+	as javax.xml.transform.sax.SAXSource succeeded. (correct result)
+Validating po.xml
+	as javax.xml.transform.dom.DOMSource succeeded. (correct result)
+	as javax.xml.transform.sax.SAXSource succeeded. (correct result)
+Validating personal.xml
+	as javax.xml.transform.dom.DOMSource succeeded. (correct result)
+	as javax.xml.transform.sax.SAXSource succeeded. (correct result)

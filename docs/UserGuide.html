@@ -1,0 +1,823 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+        <link href="./stylesheet.css" rel=stylesheet type=text/css>
+	<TITLE>SPECjvm2008 User's Guide</TITLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+
+<H1 ALIGN="CENTER">SPECjvm2008 User's Guide</H1>
+<P ALIGN="CENTER">Version 1.0<BR>Last modified: April 16, 2008 </P>
+<HR>
+
+<H3><A href="#Introduction">1 Introduction</A></H3>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#GeneralConcepts">1.1 General Concepts</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#Background">1.2 Background </A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#Workloads">1.3 Workloads</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#BaseAndPeak">1.4 Base and Peak</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#AnOperation">1.5 An Operation</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#AnIteration">1.6 An Iteration</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#Warmup">1.7 Warmup</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#Parallelism">1.8 Parallelism</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#Analyzers">1.9 Analyzers</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#StartupBenchmarks">1.10 Startup Benchmarks</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#ScimarkLargeAndSmallWorkloads">1.11 SciMark Large and Small Workloads</A></H4>
+
+<H3><A href="#InstallingSPECjvm2008">2 Installing SPECjvm2008</A></H3>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#SystemRequirements">2.1 System requirements</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#Installation">2.2 Installation</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#TrialRun">2.3 Trial run</A></H4>
+
+<H3><A href="#OperationalConfiguration">3 Operational Configuration</A></H3>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#SPECjvm2008Parameters">3.1 SPECjvm2008 parameters</A></H4>
+
+<H3><A href="#UserSuppliedSystemInformation">4 User-supplied System Information</A></H3>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#SettingSystemInformationProperties">4.1 Setting System Information Properties</A></H4>
+
+<H3><A href="#RunningSPECjvm2008">5 Running SPECjvm2008</A></H3>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#RunningTheBenchmark">5.1 Running the benchmark</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#RunningTheReporterSeparately">5.2 Running the Reporter Separately</A></H4>
+
+<H3><A href="#ThroughputMeasurement">6 Throughput Measurement</A></H3>
+
+<H3><A href="#ResultsReports">7 Results Reports</A></H3>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#ResultReportContents">7.1 Results Reports Contents</A></H4>
+
+<H3><A href="#ProducingAndSubmittingResults">8 Producing and Submitting Results</A></H3>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#ProducingResults">8.1 Producing Results</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#SubmittingResults">8.2 Submitting Results</A></H4>
+
+<H3><A href="#TuningNotes">9 Tuning notes</A></H3>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#Properties">9.1 SPECjvm2008 properties</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#BenchmarkSpecificProperties">9.2 Benchmark specific properties</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#ThreadsSpecification">9.3 Threads specification</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#Checksum">9.4 How to disable checksum verification?</A> </H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#RunTimeTuning">9.5 Run time tuning</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#WhereToStoreResults">9.6 How to put results elsewhere?</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#WhereToRun">9.7 Where SPECjvm2008 can be run from?</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#DisableResults">9.8 How to disable reports generation?</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#ConfigureAnalyzers">9.9 How to configure Analyzers?</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#UsePJA">9.10 How to get JVM arguments from the runtime?</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#Miscellaneous">9.11 Miscellaneous</A></H4>
+
+<H3><A href="#AppendixA">Appendix A</A></H3>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#SPECjvm2008CommandLineOptions">SPECjvm2008 command line options</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A href="#SPECjvm2008WorkloadNames">SPECjvm2008 workload names</A></H4>
+
+<HR>
+
+<br><H2 id="Introduction">1 Introduction</H2>
+<P>This document is a practical guide for setting up and running SPECjvm2008. 
+To submit SPECjvm2008 results the benchmarker must adhere to the rules
+contained in the <A HREF="RunRules.html">Run and Reporting Rules</A> 
+document contained in the kit. 
+</P>
+<P>This document is targeted at people trying to run the SPECjvm2008 benchmark 
+in order to accurately measure their Java system, comprising a JRE and an 
+underlying operating system and hardware. 
+</P>
+
+<H3 id="GeneralConcepts">1.1 General Concepts</H3>
+<UL>
+  <LI>JVM - Java Virtual Machine, an execution engine for Java.
+  <LI>JRE - Java Runtime Environment, which includes a JVM and class libraries.
+  <LI>Valid - A valid run is a run that produces a correct result. This can apply to a benchmark, a sub-benchmark or the whole suite.
+  <LI>Compliant - A compliant run is a run of the whole suite done according to the run rules. One of the requirements is that the run is valid. 
+  <LI>Logical CPU - A hardware thread, i.e. what the system reports as a execution unit, for example a core, a hyper thread or a strand, depending on architecture. The harness will use the java call Runtime.getRuntime().availableProcessors() to determine the number of logical CPUs in the system it runs on.
+  <LI><font size="+0"><code>java</code></font> - The term <font size="+0"><code>java</code></font> is used below in examples and in this context it refers to the launcher used to invoke the Java Virtual Machine.
+</UL>
+
+<H3 id="Background">1.2 Background </H3>
+<P>The main purpose of SPECjvm2008 is to measure the
+performance of a JRE (a JVM and associated libraries). It also
+measures the performance of the operating system and hardware in the
+context of executing the JRE. It focuses on the performance of the
+JRE executing a single application; it reflects the performance of
+the hardware processor and memory subsystem, but has minimal
+dependence on file I/O and includes no remote network I/O.</P>
+<P>The SPECjvm2008 workload mimics a variety of common general 
+purpose application computations. These characteristics reflect the 
+goal that this benchmark be applicable to measuring basic Java performance 
+on a wide variety of both client and server systems running Java. 
+</P>
+<P>SPEC also finds user experience of Java important and the suite therefore 
+includes startup benchmarks and has a required run category called base, 
+which has to be run without any tuning of the JVM to improve the out of the 
+box performance.
+</P>
+<P>Other SPEC benchmarks are available for measuring
+the performance of Java systems in more specialized enterprise
+scenarios. <A HREF="http://www.spec.org/jbb2005">SPECjbb2005</A>
+is a Java program emulating a 3-tier system with emphasis on the
+middle tier. For a full-fledged multi-tier Java benchmark, SPEC has
+developed a comprehensive application server benchmark,
+<A HREF="http://www.spec.org/jAppServer2004/">SPECjAppServer2004</A>.
+SPEC also has a Java messaging benchmark called 
+<a href="http://www.spec.org/jms2007/">SPECjms2007</a>, which is the first 
+industry-standard benchmark for evaluating the performance of enterprise 
+message-oriented middleware servers based on JMS (Java Message Service)
+</P>
+
+<H3 id="Workloads">1.3 Workloads</H3>
+<P>SPECjvm2008 comprises a collection of workloads
+intended to represent a diverse set of common types of computation.
+In general, the algorithms and operations in the workloads are
+components of real-world applications and include text/character
+processing, numerical computations, and bitwise computation (<I>e.g.</I>,
+media processing). Each of the workloads has a specific amount of
+work to do, making them each a small benchmark in itself and several
+of the benchmarks have sub-benchmarks.
+</P>
+<P>The benchmarks are described in detail in the 
+<A HREF="benchmarks/index.html">benchmark pages</A>. 
+</P>
+
+<H3 id="BaseAndPeak">1.4 Base and Peak</H3>
+<P>There are two run categories in SPECjvm2008 called Base and Peak 
+and there is also an additional run category called Lagom. In order 
+to create a compliant result, a run in the Base category must be included. 
+It is optional to also include a run in the Peak category.
+</P>
+<P>The Base category shows the performance of the system without any 
+tuning of the JVM, the 'out of the box' performance. It does 
+however allow tuning of the OS and hardware (including firmware like BIOS). The Base 
+category has the limitation that you are not allowed to do any hand 
+tuning of the JVM and you are not allowed to change the run time.
+</P>
+<P>The Peak category shows what can be achieved with the system.
+Tuning of the JVM is allowed to achieve optimal performance.
+</P>
+<P>The Base run and the Peak run are done with two seperate invocations 
+of the SPECjvm2008 benchmarrk suite, and initially two different results are 
+created. The results from these are later combined into one raw file, in order to submit.
+</P>
+
+<H4>1.4.1 Lagom workload</H4>
+<P>The Lagom workload is a fixed size workload, meaning it does a certain 
+number of operations of each benchmarks. This is a complement to the
+base and peak categories and can be used when it is preferred to run 
+a fixed amount of work. The workload will run a specified number of 
+operations (different for each benchmark) in each benchmark thread. 
+The number of benchmark threads will by default be adjusted to the
+number of hardware threads the machine has, so in order to have an exact
+amount of work on two different systems of different size, the number 
+of benchmark threads should be set. </P>
+<P> The Lagom workload is intended for research usage, to be used as a tool
+to measure the progres, overhead, or whatever the intent of the research may be. 
+A run of the Lagom category will not be a compliant run and SPEC will not 
+review or post any of this results on the spec.org web.
+</P>
+
+<H3 id="AnOperation">1.5 An Operation</H3>
+<P>Each invocation of a benchmark workload is one operation. 
+The harness will call a benchmark several times, making it 
+perform multiple operations in one iteration. 
+</P>
+
+<H3 id="AnIteration">1.6 An Iteration</H3>
+<P>An iteration goes on for a certain duration, by
+default 240 seconds. During this time the harness will kick off
+several operations, one new one as soon as previous operation completed.
+It will never abort an operation, but wait until an operation is
+completed for stopping. The harness expects to complete at least 5
+operations inside an iteration. The duration for an iteration is
+never less than specified time, but will be increased if the
+operations takes too long, based on performance in the warmup period.</P>
+
+<H3 id="Warmup">1.7 Warmup</H3>
+<P>The first iteration is a warmup iteration, run for 120 seconds by default. 
+The result of the warmup iteration is not included in the benchmark result. 
+To skip warmup, set the warmup time to 0.
+</P>
+
+<H3 id="Parallelism">1.8 Parallelism</H3>
+<P>Most of the benchmarks are run in parallel, where
+several operations are started at the same time in separate threads.
+From a harness point of view the threads work independently but the
+work loads are designed to introduce an interesting mix of problems,
+both by sharing data and work in the application level as well as
+using resources shared inside the JVM. 
+</P>
+
+<H3 id="Analyzers">1.9 Analyzers</H3>
+<P>It is possible to use the SPECjvm2008 benchcmark harness in order to 
+analyze what happens during a run, in order to understand and diagnose 
+a product. An example would be to view the heap usage during a benchmark run. 
+In order to achieve this, the framework can run one or several <i>Analyzers</i> 
+during the benchmark run. Those will gather information and deliver 
+the results together with the benchmark results. It will plot information 
+on the details chart in the report, where each benchmark operation 
+is plotted, and it can report a summary metric for each iteration. 
+The analyzers can either poll for information during the benchmark 
+run, or implement a callback method to report results based on events. 
+<a href="#ConfigureAnalyzers">Here</a> is recommended further reading 
+for configuration and implementation of analyzers.
+</P>
+
+<H3 id="StartupBenchmarks">1.10 Startup Benchmarks</H3>
+<P>The startup benchmarks measure JVM and application startup performance. 
+The ops/m metric is calculated using the time taken for 
+each workload to be run for one operation by a newly started JVM 
+(via java.lang.Runtime.exec())). This tests both basic JVM startup and also the 
+time to startup the benchmark workload, since in order to get best score 
+in several of the benchmarks it is critical to optimize hot areas of code.</P>
+<P>It is possible to configure both launcher and arguments for the startup 
+benchmarks, see the Operational Configurations section. 
+</P>
+
+<H3 id="ScimarkLargeAndSmallWorkloads">1.11 SciMark Large and Small Workloads</H3>
+<P>The SciMark workloads are run with both small and large dataset 
+sizes. The small dataset fits within the L2 cache available on most 
+modern CPU architectures and is intended to test JVM code optimization 
+and computation performance while ensuring the dataset is accessible in 
+cache alone.  The large dataset is large enough to not fit within a standard L2 cache 
+and is intended to test JVM optimizations targeted at memory and the performance 
+of the memory subsystem itself.  The scimark.monte_carlo workload is run only 
+once as it does not use a dataset for calcuation that can be modified.
+</P>
+
+<br><H2 id="InstallingSPECjvm2008">2 Installing SPECjvm2008</H2>
+
+<H3 id="SystemRequirements">2.1 System requirements</H3>
+<P>SPECjvm2008 can be run on a system with only one logical CPU and 512 MB of memory.<br>
+The recommended minimum amount of disk space needed is 256 MB (including installation).
+</P>
+<P>SPECjvm2008 requires a Java Runtime Environment supporting Java SE 5.0 features.
+</P>
+<P>SPECjvm2008 has been tested on a large set of Hardware, OS and JRE combinations. <br>
+See <a href="./FAQ.html#TestedConfigurations">the FAQ</a> for details on what configurations are tested.
+</P>
+<P><strong>Note: </strong>SPECjvm2008 is designed to scale up the workload when a larger machine 
+(determined by the number of logical CPUs) is used. In many of the work loads included in the suite, 
+the amount of live data will be increased when the workload is increased  and minimum amount of memory 
+mentioned above will not be enough. More space on disk will also is required (since the derby 
+benchmark stores data on disk).
+</P>
+
+<H3 id="Installation">2.2 Installation</H3>
+<P>The benchmark kit is distributed with an installer or in a zip file.
+</P> 
+<P>It is recommended to install the benchmark on the system under test, but it can 
+be installed on and run from a file share. The installed benchmark suite will use 
+about 150 MB of file resources.
+</P>
+<P>To install using the installer, invoke the installer and follow the instructions, 
+which will ask where the benchmark should be installed.
+</P> 
+<P>To install using the zip file, unzip it in a folder where the benchmark is to be installed. 
+The zip file will create the sub-folder SPECjvm2008 where into which everything will be installed.
+</P>
+<P><STRONG>Note: </STRONG>Although the Java source code for the benchmark is provided in the
+kit, it is NOT necessary to recompile the Java code; the .jar files in the kit have everything required. 
+In fact, rebuilt .jar files are not allowed to be used for compliant runs and they will fail the checksum tests. 
+You may, of course, modify and recompile the benchmark for research purposes.
+</P>
+<P><STRONG>Note:</STRONG>If you are using Java for Mac OS X, see <A HREF="./KnownIssues.html#CheckTestFailureOnMacOSX">the Known Issues</a> document for how to prepend javac.jar.
+
+<H3 id="TrialRun">2.3 Trial run</H3>
+<P> The following command line may be used to quickly check the installation. <br>
+It should be executed from a shell or command window and should be executed where the benchmark is installed, where the SPECjvm2008.jar file is located. <br>
+It is expected to complete within a few minutes. <br>
+It is expected to:
+<ul>
+  <li>Validate the kit with a checksum test of jars and resource files.
+  <li>Run the check test, for a functional verification of the JVM. <b>*</b>
+  <li>Run the compress benchmark, warmup and one iteration of 10 seconds each.
+  <li>Create a report of the run in results/...
+  <li>Print a result string for a valid, but noncompliant run of the benchmark suite.
+</ul>
+If this runs to completion as described here and without any error messages, then it 
+is highly likely that the various pieces of the benchmark are correctly in place.
+</P>
+<font size="+0"><pre>     java -jar SPECjvm2008.jar -wt 5s -it 5s -bt 2 compress</pre></font>
+<P> <b>Note:</b> If there is no "java" command in your path, the "java" above would have to replaced by the full path to the java command, e.g. "d:\myjava\jre\bin\java.exe"
+<P> <b>* Note:</b> The check benchmark will verify that the javac version used by the JRE is from javac.jar included in the benchmark. If this verification fails, see the <a href="./KnownIssues.html#CheckTestFailureOnMacOSX">known issues document</a> for a workaround, if it is the same issue already found.
+</P>
+Beginning of the output:
+<font size="+0"><pre>
+SPECjvm2008 Peak
+  Properties file:   none
+  Benchmarks:        compress
+
+  WARNING: Run will not be compliant.
+  Not a compliant sequence of benchmarks for publication.
+  Property specjvm.iteration.time must be at least 240 seconds for publication.
+
+  ...
+
+</pre></font>
+
+
+<br><H2 id="OperationalConfiguration">3 Operational Configuration</H2>
+<P>There are a number of parameters that control the
+operation of the SPECjvm2008 benchmark. Each parameter has a default
+value; the user may override these defaults by specifying parameter
+values in a properties file and/or on the command line.</P>
+
+<H3 id="SPECjvm2008Parameters">3.1 SPECjvm2008 parameters</H3>
+<P>The SPECJvm2008 harness is very flexible when it comes to tuning the workloads 
+in order to be able to work with the benchmarks as effectively as possible. 
+The complete set of parameters for SPECjvm2008 is documented in Appendix A
+and also in the files props/specjvm.properties and props/specjvm.reporter.properties.</P>
+
+<H4>3.1.1 How to specify SPECjvm2008 parameter values</H4>
+<P>The user may specify values for SPECjvm2008
+parameters on the command line as arguments or as properties in a properties file. In
+general, the effective value of a parameter is determined as if by the following procedure:</P>
+<OL TYPE=a>
+	<LI><P>If one or more command line
+	options specify a value for the parameter, then the effective value
+	is the one specified in the last such option; otherwise</P>
+	<LI><P>if a properties file is loaded
+	and one or more lines in the properties file specify a value for the
+	parameter, then the effective value is the one specified by the last
+	such line; otherwise</P>
+	<LI><P>the effective value is the
+	default value for the parameter.</P>
+</OL>
+<P>As described in the next section, the parameter
+<font size="+0"><code>specjvm.propfile</code></font> is an exception to this rule.</P>
+
+<H4>3.1.2 Properties File</H4>
+<P>Whether a properties file is loaded is determined
+by what value, if any, for the parameter <font size="+0"><code>specjvm.propfile</code></font> is
+specified <I>on the command line</I>.
+If no value for <font size="+0"><code>specjvm.propfile</code></font> is specified on the command line,
+then no properties file is loaded. If one or more command line
+options specify a value for <font size="+0"><code>specjvm.propfile</code></font>, then the value
+specified in the last such option, PROPFILE, is used as follows.</P>
+<OL TYPE=a>
+	<LI VALUE=1>If the file PROPFILE exists, that file is loaded; otherwise
+	<LI>if the file SPECJVM_HOME/props/PROPFILE exists, that file is loaded; otherwise
+	<LI>a warning is reported, no properties file is loaded, and execution of
+	the benchmark continues.
+</OL>
+<P>SPECJVM_HOME denotes the root of the directory subtree containing the SPECjvm2008 kit.</P>
+
+<H5>3.1.2.1 Properties File Format</H5>
+<P>The properties file is a list of attribute-value
+pairs, specified one per line in the following form:</P>
+<P CLASS="code-western">&lt;parameter name&gt;=&lt;value&gt;</P>
+<P>Blank lines and lines beginning with the character
+'#' are ignored. Conversions are performed according to the type of
+value expected for each parameter.</P>
+
+<H4>3.1.3 Specifying parameter values on the command
+line</H4>
+<P>Any SPECjvm2008 parameter may be set by using the
+-D command line option. In addition, specific command line options
+exist to make setting many of the more commonly used parameters more
+convenient. See <a href="#AppendixA">Appendix A</a> for details on command line options.</P>
+
+<br><H2 id="UserSuppliedSystemInformation">4 User-supplied System Information</H2>
+<P>To assist testers and submitters in assembling all
+the pertinent information needed for reproducing SPECjvm2008 results,
+the benchmark defines a number of system attributes which are given
+values in the same way as <A HREF="#OperationalConfiguration">operational
+parameters</A> and the reporting mechanism automatically includes
+this information in the various <A HREF="#ResultsReports">reports</A>
+it generates. The names of these system information properties are
+easy to distinguish, as the all begin with the prefix
+spec.jvm2008.reporter. It is important to note two things about these
+properties.</P>
+<OL>
+	<LI><P>Although they are given values
+	via the same mechanism as the operational parameters, SPECjvm2008
+	treats them very differently. They have no effect on the operation
+	of the benchmark; they are simply passed through to the results
+	reports. Except for the labeling supplied for them in the results
+	reports, SPECjvm2008 does not interpret their values.</P>
+	<LI><P>SPECjvm2008 is capable of
+	automatically detecting and filling in values for a few of these
+	properties, but for the most part it is up to the user to supply
+	these values. In any case, the user should check them all for
+	correctness.</P>
+</OL>
+
+<H3 id="SettingSystemInformationProperties">4.1 Setting System Information Properties</H3>
+<P>Whereas it is common that all the operation
+parameters that a user wants to change are easily supplied via
+command line options, supplying all the required system information
+on the command line (while possible) would be very cumbersome.
+Therefore, the expected usage model is that these are supplied via a
+properties file.</P>
+<P>An example properties file for this purpose is
+included as props/specjvm.reporter.properties. In addition,
+SPECjvm2008 has a mechanism that supports keeping separate property
+files for operational parameters and system information: if (as the
+result of command line options or the loading of a first property
+file) the operational parameter 
+<font size="+0"><code>specjvm.additional.properties.file</code></font>
+has a nonnull value, then SPECjvm2008 uses that value as the name of
+another property file to be loaded.</P>
+
+<br><H2 id="RunningSPECjvm2008">5 Running SPECjvm2008</H2>
+
+<H3 id="RunningTheBenchmark">5.1 Running the benchmark</H3>
+<P>SPECjvm2008 runs as a single Java application on a
+single system. It understands a number of command line switches,
+though none of them are required. However, some of the workloads
+require heap space that is greater than the default maximum heap size
+for some particular JREs on particular systems. The benchmark will  
+increase the workload (and the size of the live data) based on the 
+number for CPUs (number of hardware threads). For all the JREs we
+have tested, 400 MB is sufficient for a system with 2 hardware threads. 
+So a simple command line to run the benchmark is</P>
+<font size="+0"><pre>     java -Xmx400m -jar SPECjvm2008.jar</pre></font>
+<P>The general form of the command line to run the
+benchmark is</P>
+<font size="+0"><pre>     java [&lt;jvm options&gt;] -jar SPECjvm2008.jar [&lt;SPECjvm2008 options&gt;] [&lt;benchmark name&gt; ...]</pre></font>
+<P>Appendix A lists the valid SPECjvm2008 options and
+their meanings and the valid benchmark names.</P>
+
+<H4>5.1.1 Compliant runs</H4>
+<P>For a run to be compliant, the SPECjvm2008 configuration, specified on 
+the command line and/or in properties files must result in parameters having 
+values conforming to the 
+<A HREF="RunRules.html#_Toc102806106">the run rules, section 2.3 and 2.4</A>. 
+The SPECjvm2008 framework checks the conformance of the 
+parameter values at start of suite and indicates in the benchmark output 
+any parameter values that do not pass these checks (which makes the run 
+noncompliant).</P>
+<P>For a run to be compliant it must also be valid, passing the result 
+validations done by the SPECjvm2008 harness as part of each operation. </P>
+
+<H5>5.1.1.1 Compliant runs for the Base metric</H5>
+<P>For a compliant run to be submitted for the base
+metric, the run must not use any jvm options or harness time tuning.</P>
+<P>To run the base category, specify --base on command line. This category 
+is default unless JVM command line arguments are used or run time is changed.</P>
+
+<H5>5.1.1.2 Compliant runs for the Peak metric</H5>
+<P>A compliant run submitted for the peak metric may
+use jvm options. The options used must be disclosed as described in
+the Run Rules.</P>
+<P>This disclosure is done using the property <font size="+0"><code>spec.jvm2008.report.jvm.command.line</code></font>.</P>
+<P>To run the peak category, specify --peak on command line. This will 
+also be selected automatically if JVM command line arguments are used 
+or run time is changed.</P>
+
+<H4>5.1.2 Output and Results</H4>
+<P>SPECjvm2008 prints a record of its operation to
+the standard output stream as it runs. It optionally produces an XML
+file that records system information supplied by the user, some
+parameter values and results for the run. This XML file is required
+for submitting the results to SPEC, and the default behavior is that
+this XML file is produced.</P>
+<P><A NAME="Output and Results - Location"></A>The
+location to which the XML file is written is controlled by the value of the
+parameter <font size="+0"><code>specjvm.result.dir</code></font>; the default 
+is a subdirectory named &ldquo;results&rdquo; in the current working directory. In the
+following description, RESULTS_DIR denotes the value of
+<font size="+0"><code>specjvm.results.dir</code></font>. If the XML file is to be created, 
+SPECjvm2008 creates a subdirectory of RESULTS_DIR named SPECjvm2008.<I>&lt;num&gt;</I>,
+where <I>&lt;num&gt;</I> is the smallest positive integer that will result in a unique
+subdirectory name within RESULTS_DIR. The XML file is then written as
+a file named</P>
+<P>RESULTS_DIR/SPECjvm2008.&lt;num&gt;/SPECjvm2008&lt;num&gt;.raw</P>
+<P>Optionally, the SPECjvm2008 reporter will run at
+the end of the run and create text and/or HTML versions of the
+information in the XML results file. These files are written to the
+same directory as the XML results file. A more detailed description
+of the results files appears in the section on <A HREF="#Results Reports">Results
+Reports</A>.</P>
+
+<H3 id="RunningTheReporterSeparately">5.2 Running the Reporter Separately</H3>
+<P>Normally, the reporter is executed automatically
+by SPECjvm2008 at the end of a run to process the results file
+generated by that run. The reporter may also be run alone by using a
+command line of this form:</P>
+<font size="+0"><pre>     java -jar SPECjvm2008.jar --reporter &lt;file name&gt;</pre></font>
+<P>where &lt;file name&gt; is the name of a results file produced by a
+previous run. As in a regular run, which results file formats are
+created is controlled by the properties <font size="+0"><code>specjvm.create.html.report</code></font>
+and <font size="+0"><code>specjvm.create.txt.report</code></font>.</P>
+
+<br><H2 id="ThroughputMeasurement">6 Throughput Measurement</H2>
+<P>In a given run, each SPECjvm2008 sub-benchmark produces a result in ops/min (operations per minute)
+that reflects the rate at which the system was able to complete invocations of the workload
+of that sub-benchmark.  At the conclusion of a run, SPECjvm2008 computes a single quantity
+intended to reflect the overall performance of the system on all the sub-benchmarks executed during the run.
+The basic method used to compute the combined result is to compute a geometric mean.
+However, because it is desired to reflect performance on various application areas more or less equally,
+the computation done is a little more complex than a straight geometric mean of the sub-benchmark results.
+</P>
+<P>In order to include multiple sub-benchmarks that represent the same general application area while still
+treating various application areas equally, an intermediate result is computed for certain groups of
+the sub-benchmarks before they are combined into the overall throughput result.  In particular, for these
+groups of sub-benchmarks
+</P>
+<UL>
+	<LI><P>COMPILER: compiler.compiler, compiler.sunflow</P>
+	<LI><P>CRYPTO: crypto.aes, crypto.rsa, crypto.signverify</P>
+	<LI><P>SCIMARK: scimark.fft.large, scimark.lu.large, scimark.sor.large, scimark.sparse.large,
+                      scimark.fft.small, scimark.lu.small, scimark.sor.small, scimark.sparse.small,
+                      scimark.monte_carlo</P>
+	<LI><P>STARTUP: {all sub-benchmarks having names beginning with startup. } See Appendix A for the complete list.</P>
+	<LI><P>XML: xml.transform, xml.validation</P>
+</UL>
+<P>the geometric mean of sub-benchmark results in each group is computed.  The overall throughput result is
+then computed as the geometric mean of these group results and the results from the other sub-benchmarks.
+</P>
+<P>While throughput results obtained from runs that execute only selected sub-benchmarks may be interesting and
+useful for research purposes, only the overall throughput results from runs that execute all the sub-benchmarks
+(and satify several other conditions as well) are deemed to represent the performance of the system on
+SPECjvm2008 per se.
+The conditions under which an overall throughput result represents a SPECjvm2008 metric is discussed in detail
+in the <A HREF="RunRules.html">&quot;Run and Reporting Rules&quot;</A>.
+</P>
+
+<br><H2 id="ResultsReports">7 Results Reports</H2>
+<P>The benchmark results reports for a single run are
+written to a single results directory as described <A HREF="#Output and Results - Location">above</A>.
+The results files include some or all of the following.</P>
+<font size="+0"><pre>     SPECjvm2008.&lt;num&gt;.raw</pre></font> 
+<font size="+0"><pre>     SPECjvm2008.&lt;num&gt;.html </pre></font>
+<font size="+0"><pre>     SPECjvm2008.&lt;num&gt;.txt </pre></font>
+<font size="+0"><pre>     SPECjvm2008.&lt;num&gt;.sub </pre></font>
+<font size="+0"><pre>     SPECjvm2008.&lt;num&gt;.summary </pre></font>
+<P>If the HTML results file exists, there will also be an <i>images</i> 
+subdirectory containing .jpg files that are referenced by the HTML
+results file. 
+</P>
+<P>The XML results file (.raw) is generated from data
+in the benchmark's internal data structures at the end of a run; it
+is intended primarily for consumption by other software, and it is
+the form required for submission to SPEC for review and publication.
+The HTML and text reports are generated from the XML results file and
+are intended primarily for viewing by humans. All of them contain
+substantially the same information.</P>
+
+<H3 id="ResultReportContents">7.1 Results Reports Contents</H3>
+<P>The results reports contain the <A HREF="#4.User-supplied System Information|outline">system
+information</A> supplied by the user, summary information about the
+run and detailed information about the run.</P>
+
+<H4>7.1.1 System Information in the Results Reports</H4>
+<P>The system information in the results reports is
+categorized as general information about the run (such as time and
+date), information about the JRE on which the benchmark was run,
+information about the OS, and information about the hardware. All of
+the system information properties that SPECjvm2008 is capable of
+reporting are documented in the example reporter properties file
+(props/specjvm.reporter.properties).</P>
+
+<H4>7.1.2 Summary Information in the Results Reports</H4>
+<P>The summary information includes the score on each
+workload, the composite score, and, if there were any, violations
+that make the run noncompliant. For a compliant run, the composite
+score represents a value of the SPECjvm2008 metric; for a
+noncompliant run the composite score is just a number that may or may
+not be interesting for research purposes.</P>
+
+<H4>7.1.3 Detailed Information in the Results Reports</H4>
+<P>For each workload executed in the run, the results
+report includes the values of the operational parameters in effect
+for that workload, the score for each iteration (or an indication
+that the iteration did not complete successfully), and the start and
+end times for each execution of the workload by each thread.</P>
+
+<H4>7.1.4 Navigating the HTML Results Report</H4>
+<P>Most of the information in the HTML report is
+presented in a single main page. However, below the graph of the
+scores by iteration for each workload, there is a link named
+&ldquo;details&rdquo;. Clicking on this link will display a graph
+showing the performance of individual threads for that workload.</P>
+
+<br><H2 id="ProducingAndSubmittingResults">8 Producing and Submitting Results</H2>
+<br><H3 id="ProducingResults">8.1 Producing Results</H3>
+<P>Recommended steps for producing a compliant result:</P>
+<UL>
+  <LI>Edit the property file for the reporter with system and submission information SPECjvm2008/props/specjvm.reporter.properties.
+  <UL><LI>Make sure the JVM arguments property and heap size properties are not set in the base run.</UL>
+  <LI>Edit the property file for the reporter with harness configuration SPECjvm2008/props/specjvm.properties. For many sumission, default values will be ok and no updates are needed. 
+  <UL>
+     <LI>Make sure that this configuration file points to the reporter information file.
+     <LI>Make sure that this does not include any changes to the run time.
+  </UL>
+  <LI>Run the base run, either using run scripts or directly from the command line as follows:
+      <font size="+0"><pre>    java -jar SPECjvm2008.jar --base --propfile props/specjvm.properties</pre></font>
+  <LI>Update properties files for a peak run, including an update of the JVM arguments property.
+  <LI>Run the peak run, either using run scripts or directly from command line like:
+      <font size="+0"><pre>    java -Xms3000m -Xmx3000m -jar SPECjvm2008.jar --peak --propfile props/specjvm.properties</pre></font>
+  <LI>
+  <LI>Review the results in the SPECjvm2008/results/ folder.
+</UL>
+
+<br><H3 id="SubmittingResults">8.2 Submitting Results</H3>
+<P>Here are the steps for submitting results:</P>
+<UL>
+  <LI>Prepare the raw file(s) with the command:
+    <font size="+0"><pre>    java -jar SPECjvm2008.jar --reporter --prepare &lt;base raw file&gt; &lt;optional peak raw file&gt;</pre></font>
+    This will first produce a new raw file, which is a merged version of previous files.<br>
+    Then it will produce a zip file containing the new raw file.<br>
+    <br>
+  </LI>
+  <LI>Check your raw file by copying your zip-file to a new location and running:
+    <font size="+0"><pre>    java -jar SPECjvm2008.jar --reporter --specprocess &lt;zip file&gt;</pre></font>
+    This should pass without complaints and create a brief summary report, which links to the full reports for each run in subfolders.<br>
+    <br>
+  </LI>
+  <LI>Mail the zip file to <I>subjvm2008@spec.org</I>.</LI>
+</UL>
+
+<br><H2 id="TuningNotes">9 Tuning notes</H2>
+<H3 id="Properties">9.1 SPECjvm2008 properties</H3>
+<P> To control SPECjvm2008 behavior you can use SPECjvm2008 options. These options can be specified either on the command line or in a property file. </P>
+<UL>
+  <LI><P>To specify option by a property file use:
+    <font size="+0"><pre>    java -jar SPECjvm2008.jar -pf &lt;your_file_name&gt; </pre></font>
+    This will let the suite know what property file should be used. Desired property should be set in this property file.</P>
+  </LI>
+  <LI><P>To specify option by command line use:
+    <font size="+0"><pre>    java -jar SPECjvm2008.jar -D&lt;property_name&gt;=&lt;property_value&gt;</pre></font></P>
+  </LI>    
+  <LI><P>For the most of frequently used options simpler way can be used, use '-help' option, to see short names.</P>
+  </LI>
+</UL>
+<P> Properties specified on the command line override properties 
+specified in a property file, even if a propoerty file specification goes
+after command line options. So, if props.file contains line props_a=value_b: <br>
+   <font size="+0"><pre>    java -jar SPECjvm2008.jar -Dprops_a=value_c -pf props.file </pre></font> 
+   the property props_a will be set to value_c. 
+</P>
+
+<H3 id="BenchmarkSpecificProperties">9.2 Benchmark specific properties</H3>
+<P> For the benchmark specific properties, you can add benchmark name to 
+use this property only for a certain benchmark, for example:   
+   <font size="+0"><pre>    java -jar SPECjvm2008.jar -Dspecjvm.benchcmark.threads.scimark.monte_carlo=3 -Dspecjvm.benchmark.threads=2 all </pre></font>
+This will run 2 benchmark threads for all benchmarks except 
+scimark.monte_carlo which will have 3 and the startup benchmarks 
+which always run the workload single threaded. 
+</P>
+
+<H3 id="ThreadsSpecification">9.3 Threads specification</H3>
+<P> The suite uses the number of available logical CPUs to compute the 
+number of benchmark threads to use for each benchmark. Some benchmarks 
+scale the number of benchmark threads, for example the sunflow benchmark 
+uses only half as many benchmark threads as the number of available 
+logical CPUs, since each benchmark instance (thread) kicks off four threads 
+internally. It is possible to override the number of available logical CPUs 
+using the property <font size="+0"><code>specjvm.hardware.threads.override</code></font>. 
+Overriding it will leave the existing suite computations based on the new 
+value and scale the workload. This therefore differs from using the argument -bt.
+</P>
+
+<H3 id="Checksum">9.4 Disabling the checksum verification?</H3>
+<P> To disable checksum verification of the kit, use the '-ikv' option. This can be used for testing purposes, but can not be used in a compliant run.</P>
+
+<H3 id="RunTimeTuning">9.5 Run time tuning</H3>
+<P> It's possible to set the number of iterations, the iteration time and the warmup time.</P>
+<P>To set the number of iterations, use the '-i &lt;iter_num&gt;' option. With this option the suite 
+will run one warmup iteration and then &lt;iter_num&gt; iterations. If &lt;iter_num&gt; is set to -1, 
+it will continue to run an infinite number of iterations.</P>
+<P> To specify the duration of the warmup phase and an iteration one can use '-it <time>' option to 
+specify the iteration time and '-wt <time>' to specify the warmup time.</P>
+
+<P>So, for example: 
+<font size="+0"><pre>    java -jar SPECjvm2008.jar -i 4 -wt 17 -it 4711 </pre></font> 
+will run 4 iterations with 17 seconds of warmup and each iteration will run for 4711 seconds. </P> 
+</P>
+
+<P>Another example is: 
+<font size="+0"><pre>    java -jar SPECjvm2008.jar -i -1 -wt 0 -it 20 </pre></font>
+which will skip the warmup phase, then run an infinite number of iterations, 10 seconds each. </P> 
+</P>
+
+<H3 id="WhereToStoreResults">9.6 Where can SPECjvm2008 results be stored?</A></H3>
+<P>SPECjvm2008 results will by default be stored in a result folder, based on where the execution takes place. It is possible to redirect the results using the property <font size="+0"><code>specjvm.result.dir</code></font> property. Example:  
+<font size="+0"><pre>    java -Dspecjvm.result.dir=/home/results/jvm08-results/ -jar /home/tests/SPECjvm2008/SPECjvm2008.jar</pre></font>
+</P>
+
+<H3 id="WhereToRun">9.7 Where can SPECjvm2008 be run from?</A></H3>
+<P>SPECjvm2008 can be run from any directory; however, <font size="+0"><code>specjvm.home.dir</code></font> must be specified as a system property and point to the SPECjvm2008 location (where SPECjvm2008.jar is located). Example:
+<font size="+0"><pre>    java -Dspecjvm.home.dir=/home/tests/SPECjvm2008 -jar /home/tests/SPECjvm2008/SPECjvm2008.jar</pre></font>
+In the above example, the results will be produced where you execute, but can be controlled with property <font size="+0"><code>specjvm.result.dir</code></font>. Example: 
+<font size="+0"><pre>    java -Dspecjvm.home.dir=/home/tests/SPECjvm2008 -Dspecjvm.result.dir=/home/results/jvm08-results/ -jar /home/tests/SPECjvm2008/SPECjvm2008.jar</pre></font>
+</P>
+
+<H3 id="DisableResults">9.8 How to disable report generation</H3>
+<P>By default the harness will produce a raw file (in xml format) with the results from the benchmark runs. The result is stored after each iteration, in order not to have an impact on the measurement period, but also done continuously in order to not store any extra data between benchmarks or even between iterations, which could affect the benchmark result.</P>
+<P>After the full suite is run, the reporter will be invoked and produce an html report, a text report and a little summary file. In order to skip generating these reports, the commands '-ctf false' will skip the text report and '-chf false' will skip the html report.</P>
+<P>In order to skip generating results over all, the command '-crf false' can be used in order not to print any results to file. This means that there will be no raw file, and it will not be possible to post-generate any html report or text report.</P>
+
+<H3 id="ConfigureAnalyzers">9.9 How to configure and write Analyzers?</H3>
+<P>By default no analyzers will be run. In order to run one or more, set the 
+property <font size="+0"><code>specjvm.benchmark.analyzer.names</code></font> 
+to contain which analyzer(s) to run. If more than one is specified, seperate 
+with a blank space. Use property 
+<font size="+0"><code>specjvm.benchmark.analyzer.frequency</code></font> 
+to control how often the analyzers will run when polling. The name of an 
+analyzer is the same as the name of the Analyzer class.
+</P> 
+<P>An analyzer is a class that extends  the class 
+<a href="./javadoc/spec/harness/analyzer/AnalyzerBase.html">AnalyzerBase</a> 
+and has the package name spec.harness.analyzers. It must implement the method 
+execute(). If the analyzer rather should listen to events than poll, it is recommended 
+to implement an empty execute method(). In order to store a result, use the report method. 
+To store a result that should be plotted in the graph over the run, pass a 
+<a href="./javadoc/spec/harness/analyzer/TYInfo.html">TYInfo</a> (Time-axis, Y-axis) 
+object. To store a summary result (recommended to do in the tearDown method) for the 
+iteration, pass an <a href="./javadoc/spec/harness/analyzer/AnalyzerResult.html">AnalyzerResult</a> 
+object.
+</P>
+<P>To implement your own, see <a href="./javadoc/spec/harness/analyzer/PollingAnalyzerExample.html">
+this example of a polling analyzer</a> and <a href="./javadoc/spec/harness/analyzer/CallbackAnalyzerExample.html">
+this for an event-based or listening callback-based analyzer</a>.
+</P>
+
+<H3 id="UsePJA">9.10 How to get JVM arguments from the runtime?</H3>
+<P>The harness can be configured to use a property file for reporter information about the system. 
+   It is recommended to do so in an additional file, compared to the harness configuration and the 
+   additional file is specified by using the property <font size="+0"><code>specjvm.additional.properties.file</code></font>.
+   This properties file usually includes the JRE arguments. 
+   It is possible to parse the command line arguments can from the information available in the Runtime JMXBean, including parsing the initial and mximum heap settings.
+   THis is done if the -pja option is specified on the command line for the harness.
+   There is however no standard on what is passed in by the launcher and then reported in this field. Some JVM also includes properties information other than what is specified on command line, but by the launcher. So use this option as shorthand when possible.
+   </P>
+  
+<H3 id="Miscellaneous">9.11 Miscellaneous</H3>
+<UL>
+  <LI>The suite verifies benchmark output; to switch this validation off one can use <font size="+0"><code>specjvm.verify</code></font> property. 
+  </LI>
+  
+  <LI> You can run a group of the benchmarks by specifying a group as a benchmark name. The following groups are available: 'crypto', 'xml', 'compiler', 'scimark', 'scimark.large', 'scimark.small', 'startup', 'throughput' and 'all': 
+<font size="+0"><pre>    java -jar SPECjvm2008.jar compiler </pre></font> 
+  will run the compiler.compiler and the compiler.sunflow benchmarks.</LI> 
+</UL>
+<H2 id="AppendixA">Appendix A</H2>
+
+<H3 id="SPECjvm2008CommandLineOptions">SPECjvm2008 command line options</H3>
+These options are also available with the command 
+<font size="+0"><pre>     java -jar SPECjvm2008.jar --help</pre></font>
+<table BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
+<tr><th align=left>Arg</th><th align=left>Long arg</th><th align=left>Value</th><th align=left>Property name</th><th align=left>Description</th></tr>
+<tr><td> -h </td><td> --help </td><td> &nbsp; </td><td> &nbsp; </td><td>Show this help.</td></tr>
+<tr><td> &nbsp; </td><td> --version </td><td> &nbsp; </td><td> &nbsp; </td><td> Print SPECjvm2008 version and exit. </td></tr>
+<tr><td> -sv </td><td> --showversion </td><td> &nbsp; </td><td> &nbsp; </td><td> Print SPECjvm2008 version and continue. </td></tr>
+<tr><td> &nbsp; </td><td> --base </td><td> &nbsp; </td><td> &nbsp; </td><td> Run the base compliant run of SPECjvm2008 (default, unless jvm args are specified). </td></tr>
+<tr><td> &nbsp; </td><td> --peak </td><td> &nbsp; </td><td> &nbsp; </td><td> Run the peak compliant run of SPECjvm2008. </td></tr>
+<tr><td> &nbsp; </td><td> --lagom </td><td> &nbsp; </td><td> &nbsp; </td><td> Run the Lagom benchmark suite, a version, of SPECjvm2008 that uses a fixed workload. </td></tr>
+<tr><td> -pf </td><td> --propfile </td><td> string </td><td>specjvm.propfile</td><td>Use this properties file.</td></tr>
+<tr><td> -i </td><td> --iterations </td><td> int </td><td>specjvm.miniter, specjvm.maxniter</td><td> How many iterations to run. 'inf' means an infinite number. </td></tr>
+<tr><td> -mi </td><td> --miniter </td><td> int </td><td>specjvm.miniter</td><td>Minimum number of iterations.</td></tr>
+<tr><td> -ma </td><td> --maxiter </td><td> int </td><td>specjvm.maxniter</td><td> Maximum number of iterations. </td></tr>
+<tr><td> -it </td><td> --iterationtime </td><td> time </td><td>specjvm.iteration.time</td><td> How long one iteration should be. The time is specified as an integer, and assumed to be in seconds, or an integer with unit, for example 4m (4 minutes). Units available are ms, s, m and h. If the iteration time is too short, based on the warmup result, it will be adjusted to expect to finish at least 5 operations. </td></tr>
+<tr><td> -fit </td><td> --forceIterationIime </td><td> time </td><td>specjvm.iteration.time, specjvm.iteration.time.forced</td><td> As iteration time, but the time will not be adjusted based on the warmup result. </td></tr>
+<tr><td> -ja </td><td> --jvmArgs </td><td> string </td><td>specjvm.startup.jvm_options</td><td> JVM options used for startup subtests. </td></tr>
+<tr><td> -jl </td><td> --jvmLauncher </td><td> path </td><td>specjvm.benchmark.startup.launcher</td><td> JVM launcher used for startup subtests. </td></tr>
+<tr><td> -wt </td><td> --warmuptime </td><td> time </td><td>specjvm.benchmark.warmup.time</td><td> How long warmup time. The time format is the same as in iteration time.</td></tr>
+<tr><td> -ops </td><td> --operations </td><td> int </td><td>specjvm.fixed.operations, specjvm.run.type</td><td> How many operations each iteration will consist of. It will then be a fixed workload and iteration time is ignored.</td></tr>
+<tr><td> -bt </td><td> --benchmarkThreads </td><td> int </td><td>specjvm.benchmark.threads</td><td> How many benchmark threads to use. </td></tr>
+<tr><td> -r </td><td> --reporter </td><td> raw file name </td><td> &nbsp; </td><td>  Invokes the reporter with given file(s). The benchmarks will not be run. </td></tr>
+<tr><td> -v </td><td> --verbose </td><td> &nbsp; </td><td>specjvm.print.verbose, specjvm.print.progress </td><td> Print verbose info (harness only). </td></tr>
+<tr><td> -pja </td><td> --parseJvmArgs </td><td> &nbsp; </td><td> &nbsp; </td><td> Parse jvm arguments info from command line, including heap settings (uses JMXBean info). This is not done by default.</td></tr>
+<tr><td> -coe </td><td> --continueOnError </td><td> &nbsp; </td><td>specjvm.continue.on.error</td><td> Continue to run suite, even if one test fails. </td></tr>
+<tr><td> -ict </td><td> --ignoreCheckTest </td><td> &nbsp; </td><td>specjvm.run.initial.check</td><td> Do not run check benchmark. </td></tr>
+<tr><td> -ikv </td><td> --ignoreKitValidation </td><td> &nbsp; </td><td>specjvm.run.checksum.validation</td><td> Do not run checksum validition of benchmark kit. </td></tr>
+<tr><td> -crf </td><td> --createRawFile  </td><td> boolean </td><td>specjvm.create.xml.report</td><td> Whether to generate a raw file. </td></tr>
+<tr><td> -ctf </td><td> --createTextFile </td><td> boolean </td><td>specjvm.create.txt.report</td><td> Whether to generate text report. If raw is disabled, so is txt. </td></tr>
+<tr><td> -chf </td><td> --createHtmlFile </td><td> boolean </td><td>specjvm.create.html.report</td><td> Whether to generate html report. If raw is disabled, so is html. </td></tr>
+<tr><td> -xd </td><td> --xmlDir </td><td> path </td><td>specjvm.benchmark.xml.validation.input.dir</td><td> To set path to xml input files </td></tr>
+<tr><td> &nbsp; </td><td> &lt;benchmark(s)&gt; </td><td> &nbsp; </td><td>specjvm.benchmarks</td><td> Name of benchmark(s) to run. By default all submission benchmarks will be selected. 'all' means all sumission benchmarks will be run. See SPECjvm2008 workload names for all values.</td></tr>
+</table>
+
+<BR><BR>
+<H3 id="SPECjvm2008WorkloadNames">SPECjvm2008 workload names</H3>
+<table CELLPADDING=4 CELLSPACING=5>
+<tr><td>startup.helloworld</td><td>compiler.compiler</td><td>scimark.fft.small</td></tr>
+<tr><td>startup.compiler.compiler</td><td>compiler.sunflow</td><td>scimark.lu.small</td></tr>
+<tr><td>startup.compiler.sunflow</td><td>compress</td><td>scimark.sor.small</td></tr>
+<tr><td>startup.compress</td><td>crypto.aes</td><td>scimark.sparse.small</td></tr>
+<tr><td>startup.crypto.aes</td><td>crypto.rsa</td><td>scimark.monte_carlo</td></tr>
+<tr><td>startup.crypto.rsa</td><td>crypto.signverify</td><td>serial</td></tr>
+<tr><td>startup.crypto.signverify</td><td>derby</td><td>sunflow</td></tr>
+<tr><td>startup.mpegaudio</td><td>mpegaudio</td><td>xml.transform</td></tr>
+<tr><td>startup.scimark.fft</td><td>scimark.fft.large</td><td>xml.validation</td></tr>
+<tr><td>startup.scimark.lu</td><td>scimark.lu.large</td><tr>
+<tr><td>startup.scimark.monte_carlo</td><td>scimark.sor.large</td><tr>
+<tr><td>startup.scimark.sor</td><td>scimark.sparse.large</td><tr>
+<tr><td>startup.scimark.sparse</td><tr>
+<tr><td>startup.serial</td><tr>
+<tr><td>startup.sunflow</td><tr>
+<tr><td>startup.xml.transform</td><tr>
+<tr><td>startup.xml.validation</td><tr>
+</table>
+
+<br><br><br>
+<HR>
+<P>Copyright 2008 Standard Performance Evaluation Corporation</P>
+<HR SIZE=1 NOSHADE>
+<P><A HREF="http://www.spec.org/">Home</A> - <A HREF="http://www.spec.org/spec/contact.html">Contact</A> - <A HREF="http://www.spec.org/contents.html">Site Map</A> - <A HREF="http://www.spec.org/spec/privacy_policy.html">Privacy</A> - <A HREF="http://www.spec.org/spec/">About SPEC</A>
+</P>
+<HR SIZE=1 NOSHADE>
+<P>
+<A HREF="mailto:webmaster@spec.org">webmaster@spec.org</A><BR>
+Last updated: <I>Sat Jan 12 14:33:48 EDT 2008 </I><BR><A HREF="http://www.spec.org/spec/copyright.html">Copyright</A>
+&copy; 1995 - 2008 Standard Performance Evaluation Corporation <BR>
+URL: <I>http://www.spec.org/jvm2008/docs/RunRules.html</I>
+</P>
+
+</BODY>
+</HTML>

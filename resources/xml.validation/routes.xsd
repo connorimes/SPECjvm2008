@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Key characteristics:
+		Complex structure
+		Heavy use of type derivation
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<xs:import namespace="http://www.w3.org/2001/XMLSchema-instance"/>
+
+<xs:include schemaLocation="workload.xsd"/>
+
+<xs:element name="trip">
+	<xs:complexType>
+		<xs:complexContent>
+			<xs:extension base="workload-segment">
+				<xs:sequence>
+					<xs:element name="segment" type="route" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:element>
+
+    <xs:complexType name="route">
+		<xs:sequence>
+			<xs:element name="starting_point" type="place" />
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="travel_on" type="segment" />
+				<xs:element name="then_at" type="place" />
+				<xs:element name="do" type="action" />
+			</xs:sequence>
+		</xs:sequence>
+    </xs:complexType>
+    
+   	<xs:complexType name="segment" >
+    	<xs:all>
+    		<xs:element name="road" type="roadway" />
+    		<xs:element name="for" type="distance" />
+    	</xs:all>
+   	</xs:complexType>
+   	
+    <xs:complexType name="place">
+    	<xs:sequence>
+    	<xs:element name="name" type="xs:string" nillable="true" minOccurs="0"/>
+    	</xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="named-area">
+    	<xs:complexContent>
+    		<xs:restriction base="place">
+    			<xs:sequence>
+    				<xs:element name="name" type="xs:string"
+    					nillable="false" minOccurs="1" />
+    			</xs:sequence>
+    		</xs:restriction>
+    	</xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="intersection">
+    	<xs:complexContent>
+    		<xs:extension base="place">
+    			<xs:sequence>
+    				<xs:element name="with" type="roadway" />
+    			</xs:sequence>
+    		</xs:extension>
+    	</xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="intersection-with-next">
+    	<xs:complexContent>
+    		<xs:extension base="place">
+    			<xs:sequence>
+    			</xs:sequence>
+    		</xs:extension>
+    	</xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="junction">
+    	<xs:complexContent>
+    		<xs:extension base="place">
+    			<xs:sequence>
+    				<xs:element name="with" type="roadway" />
+    			</xs:sequence>
+    		</xs:extension>
+    	</xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="addressed-location">
+    	<xs:complexContent>
+    		<xs:extension base="place">
+    			<xs:sequence>
+    				<xs:element name="number" type="xs:integer" />
+    				<xs:element name="on" type="roadway" />
+    			</xs:sequence>
+    		</xs:extension>
+    	</xs:complexContent>
+    </xs:complexType>
+
+    <!-- This type has the same structure as "addressed-location",
+    	but it is not derived from "place".  It is only here to
+    	be used in a negative test.
+     -->
+     <xs:complexType name="addressed-location2">
+    	<xs:sequence>
+	    	<xs:element name="name" type="xs:string" nillable="true" minOccurs="0"/>
+    		<xs:element name="number" type="xs:integer" />
+    		<xs:element name="on" type="roadway" />
+    	</xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="exit">
+    	<xs:complexContent>
+    		<xs:extension base="exit-base">
+    			<xs:group ref="directionals" />
+    		</xs:extension>
+    	</xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="exit-base">
+    	<xs:complexContent>
+    		<xs:restriction base="place">
+    			<xs:sequence>
+    				<xs:element name="name" nillable="true" >
+    					<xs:simpleType>
+    						<xs:restriction base="xs:string">
+    							<xs:pattern value="\d{1,3}\p{Lu}?" />
+    						</xs:restriction>
+    					</xs:simpleType>
+    				</xs:element>
+    			</xs:sequence>
+    		</xs:restriction>
+    	</xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="distance">
+    	<xs:simpleContent>
+    		<xs:extension base="xs:decimal" >
+    		<xs:attribute name="units" default="miles">
+    			<xs:simpleType>
+    				<xs:restriction base="xs:string" >
+    					<xs:enumeration value="miles" />
+    					<xs:enumeration value="yards" />
+    					<xs:enumeration value="feet" />
+     					<xs:enumeration value="kilometers" />
+     					<xs:enumeration value="meters" />
+     					<xs:enumeration value="blocks" />
+    				</xs:restriction>
+    			</xs:simpleType>
+    		</xs:attribute>
+    		</xs:extension>
+     	</xs:simpleContent>
+   	</xs:complexType>
+   	
+    <xs:complexType name="action">
+    	<xs:choice>
+    		<xs:element ref="action-turn" />
+    		<xs:element ref="action-bear" />
+    		<xs:element name="action-merge" />
+    		<xs:element name="action-exit" />
+    		<xs:element name="action-proceed" />
+    		<xs:element ref="action-follow" />
+    		<xs:element name="action-stop" />
+    	</xs:choice>
+    </xs:complexType>
+    
+    <xs:element name="action-turn">
+    	<xs:complexType>
+    		<xs:attribute name="direction" use="required" type="relative-direction"/>
+    	</xs:complexType>
+    </xs:element>
+    
+    <xs:element name="action-bear">
+    	<xs:complexType>
+    		<xs:attribute name="direction" use="required" type="relative-direction"/>
+    	</xs:complexType>
+    </xs:element>
+    
+    <xs:element name="action-follow">
+    </xs:element>
+    
+   <xs:complexType name="roadway" abstract="true">
+   </xs:complexType>
+    
+   <xs:complexType name="multi-name-road">
+   		<xs:complexContent>
+   			<xs:extension base="roadway">
+   				<xs:sequence>
+   					<xs:element name="known-as" type="single-name-roadway" maxOccurs="unbounded" />
+   				</xs:sequence>
+   			</xs:extension>
+   		</xs:complexContent>
+   </xs:complexType>
+    
+   <xs:complexType name="single-name-roadway" abstract="true">
+   		<xs:complexContent>
+   			<xs:extension base="roadway">
+   				<xs:sequence>
+   					<xs:element name="name" type="xs:string" nillable="true" />
+   				</xs:sequence>
+   			</xs:extension>
+   		</xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="interstate">
+    	<xs:complexContent>
+    	<xs:extension base="interstate-base">
+    		<xs:attribute name="nominal-direction" type="cardinal-direction" />
+     	</xs:extension>
+    	</xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="interstate-base" abstract="true">
+    	<xs:complexContent>
+    	<xs:restriction base="single-name-roadway">
+    		<xs:sequence>
+    			<xs:element name="name">
+    				<xs:simpleType>
+    					<xs:restriction base="xs:string">
+    						<xs:pattern value="\d{1,3}" />
+    					</xs:restriction>
+    				</xs:simpleType>
+    			</xs:element>
+    		</xs:sequence>
+    	</xs:restriction>
+    	</xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="US-highway">
+    	<xs:complexContent>
+    	<xs:extension base="US-highway-base">
+    		<xs:attribute name="nominal-direction" type="cardinal-direction" use="optional"/>
+     	</xs:extension>
+    	</xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="US-highway-base" abstract="true">
+    	<xs:complexContent>
+    	<xs:restriction base="single-name-roadway">
+    		<xs:sequence>
+    			<xs:element name="name">
+    				<xs:simpleType>
+    					<xs:restriction base="xs:string">
+    						<xs:pattern value="\d{1,3}" />
+    					</xs:restriction>
+    				</xs:simpleType>
+    			</xs:element>
+    		</xs:sequence>
+    	</xs:restriction>
+    	</xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="state-highway">
+    	<xs:complexContent>
+    	<xs:extension base="state-highway-base">
+    		<xs:attribute name="nominal-direction" type="cardinal-direction" use="optional"/>
+    		<xs:attribute name="state" type="state-designator" use="required"/>
+     	</xs:extension>
+    	</xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="state-highway-base" abstract="true">
+    	<xs:complexContent>
+    	<xs:restriction base="single-name-roadway">
+    		<xs:sequence>
+    			<xs:element name="name">
+    				<xs:simpleType>
+    					<xs:restriction base="xs:string">
+    						<xs:pattern value="\d{1,3}" />
+    					</xs:restriction>
+    				</xs:simpleType>
+    			</xs:element>
+    		</xs:sequence>
+    	</xs:restriction>
+    	</xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="named-street">
+    	<xs:complexContent>
+    	<xs:extension base="single-name-roadway">
+    		<xs:group ref="street-name-add-ons" />
+	   	</xs:extension>
+    	</xs:complexContent>
+    </xs:complexType>
+    
+    <xs:group name="street-name-add-ons" >
+        <xs:sequence>
+        	<xs:element name="suffix" type="street-name-suffix"	minOccurs="0" />
+        	<xs:choice minOccurs="0">
+        		<xs:element name="part" type="cardinal-direction" />
+        		<xs:element name="quadrant">
+        			<xs:complexType>
+        				<xs:simpleContent>
+        					<xs:extension base="quadrant-name">
+        						<xs:attribute name="format"	use="required">
+        							<xs:simpleType>
+        								<xs:restriction	base="xs:string">
+        									<xs:enumeration	value="prefix" />
+        									<xs:enumeration	value="suffix" />
+        								</xs:restriction>
+        							</xs:simpleType>
+        						</xs:attribute>
+        					</xs:extension>
+        				</xs:simpleContent>
+        			</xs:complexType>
+        		</xs:element>
+        	</xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:simpleType name="quadrant-name">
+    	<xs:restriction base="xs:string">
+    		<xs:enumeration value="northeast" />
+    		<xs:enumeration value="southeast" />
+    		<xs:enumeration value="southwest" />
+    		<xs:enumeration value="northwest" />
+    	</xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="numbered-street">
+    	<xs:complexContent>
+    	<xs:restriction base="named-street">
+    		<xs:sequence>
+	    	<xs:element name="name" >
+	    		<xs:simpleType>
+	    			<xs:restriction base="xs:string">
+	    				<xs:pattern value="\d+" />
+	    			</xs:restriction>
+	    		</xs:simpleType>
+	    	</xs:element>
+	   		<xs:group ref="street-name-add-ons" />
+    		</xs:sequence>
+    	</xs:restriction>
+    	</xs:complexContent>
+    </xs:complexType>
+    
+    <xs:simpleType name="street-name-suffix">
+    	<xs:restriction base="xs:string">
+    		<xs:enumeration value="Avenue" />
+    		<xs:enumeration value="Boulevard" />
+    		<xs:enumeration value="Circle" />
+    		<xs:enumeration value="Court" />
+    		<xs:enumeration value="Drive" />
+    		<xs:enumeration value="Expressway" />
+    		<xs:enumeration value="Parkway" />
+    		<xs:enumeration value="Place" />
+    		<xs:enumeration value="Road" />
+    		<xs:enumeration value="Street" />
+    		<xs:enumeration value="Turnpike" />
+    		<xs:enumeration value="Way" />
+    	</xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="connector">
+    	<xs:complexContent>
+    	<xs:extension base="roadway">
+    		<xs:group ref="directionals"/>
+	   	</xs:extension>
+    	</xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="entrance-ramp">
+    	<xs:complexContent>
+    		<xs:restriction base="connector">
+    			<xs:sequence>
+			    	<xs:element name="heading" type="absolute-direction" minOccurs="0" />
+			    	<xs:element name="to" type="roadway" minOccurs="1" maxOccurs="unbounded" />
+			    	<xs:element name="toward" type="named-area"	minOccurs="0" maxOccurs="unbounded" />
+    			</xs:sequence>
+    		</xs:restriction>
+    	</xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="exit-ramp">
+    	<xs:complexContent>
+    		<xs:restriction base="connector">
+    			<xs:sequence>
+			    	<xs:element name="heading" type="absolute-direction" minOccurs="0" />
+			    	<xs:element name="to" type="roadway" minOccurs="0" maxOccurs="unbounded" />
+			    	<xs:element name="toward" type="named-area"	minOccurs="0" maxOccurs="unbounded" />
+    			</xs:sequence>
+    		</xs:restriction>
+    	</xs:complexContent>
+    </xs:complexType>
+ 
+    <xs:simpleType name="direction">
+    	<xs:restriction base="xs:string">
+    		<xs:minLength value="1" />
+	   	</xs:restriction>
+    </xs:simpleType>
+    
+    <xs:group name="directionals" >
+    	<xs:sequence>
+    		<xs:element name="heading" type="absolute-direction" minOccurs="0" />
+    		<xs:element name="to" type="roadway" minOccurs="0" maxOccurs="unbounded" />
+    		<xs:element name="toward" type="named-area" minOccurs="0" maxOccurs="unbounded" />
+    	</xs:sequence>
+    </xs:group>
+
+    <xs:simpleType name="absolute-direction">
+    	<xs:restriction base="direction">
+    		<xs:enumeration value="north" />
+    		<xs:enumeration value="northeast" />
+    		<xs:enumeration value="east" />
+    		<xs:enumeration value="southeast" />
+    		<xs:enumeration value="south" />
+    		<xs:enumeration value="southwest" />
+    		<xs:enumeration value="west" />
+    		<xs:enumeration value="northwest" />
+    	</xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="cardinal-direction">
+    	<xs:restriction base="direction">
+    		<xs:enumeration value="north" />
+    		<xs:enumeration value="east" />
+    		<xs:enumeration value="south" />
+    		<xs:enumeration value="west" />
+    	</xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="relative-direction">
+    	<xs:restriction base="direction">
+    		<xs:enumeration value="left" />
+    		<xs:enumeration value="right" />
+    	</xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="state-designator">
+    	<xs:restriction base="xs:string">
+    		<xs:enumeration value="AZ"/>
+    		<xs:enumeration value="CA"/>
+    		<xs:enumeration value="NY"/>
+    		<!-- Completing this list is left as an exercise for the reader. -->
+    	</xs:restriction>
+    </xs:simpleType>
+
+	<xs:complexType name="nil-name">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="foo" fixed="true" /> <!-- ref="xsi:nil" -->
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+</xs:schema>

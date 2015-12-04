@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DOCTYPE minutes SYSTEM "meeting_minutes.dtd" -->
+<minutes>
+    <head>
+        <disclaimer>
+            This document is an example of minutes of meeting and doesn't correspond to validity.
+            All the names and clauses of the meeting are invented.
+        </disclaimer>
+        <title>Minutes of Meeting of Board of "Castle Commerce" LTD.</title>
+        <date>January 11th, 2004</date>
+        <attending>
+          <name>Steve Robinson</name>
+          <name>Alex Goodwin</name>
+          <name>Jonathan Smithson</name>
+          <name>Michael Bull</name>
+        </attending>
+        <agenda>
+            <subject>Change in board membership</subject>
+          <subject>Approve meeting minutes for July 10, August 7, September 17,
+              October 22 and November 13 meetings of this year</subject>
+          <subject>Modification of email voting</subject>
+          <subject>Treasurer report</subject>
+          <subject>Next meeting</subject>
+        </agenda>
+    </head>
+    <body>
+        <discussion>
+            <header>Change in board membership</header>
+            <text>
+                <p>
+                    Alex reports that Martin Duke has sent his resignation to the board of directors and notes we will need another
+                    board member at some point to get back to 5 people on the board. He suggests people come up with names so they
+                    can be discussed on the board list and the people we like can be added to the board at the next meeting.
+                </p>
+                <p>
+                    Three people are mentioned:
+                </p>
+              <p indent="10">
+                  * Michael Bull suggests Drew Streib. Drew was one of the early "Castle Commerce" people, and is also active in
+                    projects such as the Unic Standards Group's key analysis and others.
+              </p>
+                <p indent="10">
+                  * Alex asks Martin if he would be interesting in becoming a board member. Martin is interested but would like more
+                    time to consider it.
+                </p>
+                <p indent="10">
+                  * Alex also proposes Thomas Bushnell, one of the Hurd developers.
+                </p>
+            </text>
+        </discussion>
+        <discussion>
+            <header>Approving minutes from previous meetings</header>
+            <text>
+                <p>
+                    Alex asks Michael if he has incorporated the changes he suggested
+                    for the July 17 minutes. Michael replies that he has.
+                </p>
+                <p>
+                    Since Jonathan lost his changes for the August 7 minutes, and the September 17 minutes
+                    are not in order yet, voting for them is postponed until the next board meeting.
+                </p>
+                <p>
+                    Michael asks everyone to use ISO 8601 notation for dates in order to prevent confusion. Nobody objects.
+                </p>
+                <p>
+                    Since the minutes for August 7 and September 17 are not ready
+                    voting on them is postponed until the next board meeting.
+                </p>
+                <p>
+                    The vote to approve the minutes of the October 22 meeting minutes was anonymous.
+                </p>
+                <p>
+                    The vote to approve the minutes of the November 13 meeting minutes was anonymous.
+                </p>
+            </text>
+        </discussion>
+        <discussion>
+            <header>Modification of email voting</header>
+            <text>
+                <p>
+                    Alex asked everyone if they have read Ian's email. Not everyone has. Ian offers to
+                    rewrite his proposal as a resolution which will be resolution N-2001-11-26.1. Michael
+                    remarks he has no strong feelings on this topic and will vote with the majority.
+                </p>
+                <p>
+                    Ian asks over how long a period votes should be counted. Alex proposes a week.
+                </p>
+                <p>
+                    The resolution is passed with 4votes in favour and none against.
+                </p>
+            </text>
+        </discussion>
+        <discussion>
+            <header>Treasurer report</header>
+            <text>
+                <p>
+                    Michael asks for permission to ask Chris to go ahead and mail a letter to
+                    Darren Benham pressuring him to surrender all "Castle Commerce" materials
+                    he still holds. Alex asks Sean Perry for a last check to see if he has made
+                    any progressing in obtaining them. Michael proposes to try and contact Sean
+                    and Darren today for a last time, and if no progress has been made yet to
+                    proceed with the letter. Nobody objects.
+                </p>
+                <p>
+                    Jonathan mentions we also need to take care of the P.O.Box and ask if he can
+                    spend the 19 US dollar needed to open a P.O.Box in Indianapolis. Alex says he
+                    would rather have a forwarding service that we can continue to use when the
+                    board changes. Jonathan agrees but explains that we need a registered agent
+                    to do that so can not be done until he has the "Castle Commerce" materials
+                    that Darren currently holds.
+                </p>
+            </text>
+        </discussion>
+        <discussion>
+            <header>Next meeting</header>
+            <text>
+                <p>
+                    The next "Castle Commerce" board meeting is set for January 30, 2004 at 2:00 pm.
+                </p>
+            </text>
+        </discussion>
+    </body>
+</minutes>

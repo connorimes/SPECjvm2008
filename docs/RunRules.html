@@ -1,0 +1,421 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+        <link href="./stylesheet.css" rel=stylesheet type=text/css>
+	<TITLE>SPECjvm2008 Run and Reporting Rules</TITLE>
+</HEAD>
+
+<BODY LANG="en-US" TEXT="#333333" LINK="#2222bb" VLINK="#4c0077" BGCOLOR="#ffffff" DIR="LTR">
+<H1 ALIGN=CENTER>SPECjvm2008 Run and Reporting Rules</H1>
+<P ALIGN=CENTER>Version 1.1<BR>Last modified: April 14, 2008</P>
+<HR>
+<H3><A HREF="#_Toc102806098">1.0 Introduction</A></H3>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#_Toc102806099">1.1 Applicability</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#_Toc102806100">1.2 Philosophy</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#_Toc123456789">1.3 Rules on the Use of Open Source Implementations</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#_Toc102806100b">1.4 Base and Peak</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#_Toc102806101">1.5 Caveat</A></H4>
+<H3><A HREF="#_Toc102806102">2.0 Running the SPECjvm2008 Release 1.0 Benchmark</A></H3>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#_Toc102806103">2.1 Java Specifications</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#_Toc102806104">2.2 Benchmark Binaries and Recompilation</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#_Toc102806106">2.3 Runtime Checks</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#_Toc102806107">2.4 Configuration of System Under Test (SUT)</A></H4>
+<H3><A HREF="#_Toc102806109">3.0 Results from the Benchmark</A></H3>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#3.1%20Metrics">3.1 Metrics</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#_Toc102806110">3.2 Compliancy</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#_Toc102806111">3.3 General Availability</A></H4>
+<H3><A HREF="#_Toc102806114">4.0 Results Disclosure, Usage, and Submission</A></H3>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#_Toc102806115">4.1 Compliance</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#_Toc102806116">4.2 Submission Requirements for SPECjvm2008</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#_Toc102806117">4.3 Estimates</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#_Toc102806118">4.4 Comparison to Other Benchmarks</A></H4>
+<H4>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#_Toc102806119">4.5 Fair Use</A></H4>
+<H3><A HREF="#_Toc102806123">5.0 Research and Academic Usage of SPECjvm2008</A></H3>
+<HR>
+
+<H2><A NAME="Introduction"></A><A NAME="_Toc102806098"></A>1.0
+Introduction</H2>
+<P>This document specifies how the SPECjvm2008
+benchmark is to be run for measuring and publicly reporting
+performance results. These rules abide by the norms laid down by
+SPEC. This ensures that results generated with this benchmark are
+meaningful, comparable to other generated results, and are repeatable
+(with documentation covering factors pertinent to duplicating the
+results). 
+</P>
+<P>Per the SPEC license agreement, all results publicly disclosed
+must adhere to these Run and Reporting Rules. 
+</P>
+<H3><A NAME="Applicability"></A><A NAME="_Toc102806099"></A>1.1
+Applicability</H3>
+<P>SPEC intends that this benchmark measure the overall performance
+of systems and Java Virtual Machines running on those systems. 
+</P>
+<H3><A NAME="Philosophy"></A><A NAME="_Toc102806100"></A>1.2 Philosophy</H3>
+<P>The general philosophy behind the rules for running the
+SPECjvm2008 benchmark is to ensure that an independent party can
+reproduce the reported results.</P>
+<P>For results to be publishable, SPEC expects: 
+</P>
+<UL>
+	<LI><P>Proper use of the SPEC benchmark
+	tools as provided. 
+	</P>
+	<LI><P>&nbsp;Availability of an
+	appropriate full disclosure report. 
+	</P>
+	<LI><P>A base submission and an optional
+	peak submission. 
+	</P>
+	<LI><P>&nbsp;Support for all of the appropriate APIs. 
+	</P>
+</UL>
+<P>SPEC is aware of the importance of optimizations in producing the
+best system performance. SPEC is also aware that it is sometimes hard
+to draw an exact line between legitimate optimizations that happen to
+benefit SPEC benchmarks and optimizations that specifically target
+the SPEC benchmarks. However, with the rules below, SPEC wants to
+increase the awareness by implementers and end users of issues of
+unwanted benchmark-specific optimizations that would be incompatible
+with SPEC's goal of fair benchmarking. 
+</P>
+<UL>
+	<LI><P>Hardware and software used to run
+	the SPECjvm2008 benchmark must provide a suitable environment for
+	running typical Java applications. 
+	</P>
+	<LI><P>&nbsp;Optimizations must generate
+	correct code for all java programs. 
+	</P>
+	<LI><P>&nbsp;Optimizations must improve
+	performance for a class of programs, where the class of programs
+	must be larger than a single SPEC benchmark. 
+	</P>
+	<LI><P>&nbsp;The vendor encourages the
+	implementation for general use. 
+	</P>
+	<LI><P>&nbsp;The implementation is generally available, documented
+	and supported by the providing vendor. 
+	</P>
+</UL>
+<P>Furthermore, SPEC expects that any public use of results from this
+benchmark shall be for configurations that are appropriate for public
+consumption and comparison. 
+</P>
+<P>In the case where it appears that the above guidelines have not
+been followed, SPEC may investigate such a claim and request that the
+offending optimization (e.g. a SPEC-benchmark specific pattern
+matching) be backed off and the results resubmitted. Or, SPEC may
+request that the vendor correct the deficiency (e.g. make the
+optimization more general purpose or correct problems with code
+generation) before submitting results based on the optimization.</P>
+
+<H3><A NAME="OpenSourceImplementations"></A><A NAME="_Toc123456789"></A>1.3 Rules on the Use of Open Source Implementations</H3>
+<P>SPECjvm2008 does permit Open Source Applications outside of a commercial distribution or support contract with some limitations. The following are the rules that govern the admissibility of the Open Source Application in the context of a benchmark run or implementation. Open Source Applications do not include shareware and freeware, where the source is not part of the distribution.
+</P>
+<table cellpadding=5 cellspacing=5 valign="top">
+  <tr valign="top">
+    <td>1.</td>
+    <td>Open Source Application rules do not apply to Open Source operating systems, which would still require a commercial distribution and support.</td>
+  </tr>
+  <tr valign="top">
+    <td>2.</td>
+    <td>Only a "stable" release can be used in the benchmark environment; non-"stable" releases (alpha, beta, or release candidates) cannot be used.<br>
+      Reason: An open source project is not contractually bound and volunteer resources make predictable future release dates unlikely (i.e. may be more likely to miss SPEC's 90 day General Availability window). A "stable" release is one that is clearly denoted as a stable release or a release that is available and recommended for general use. It must be a release that is not on the development fork, not designated as an alpha, beta, test, preliminary, pre- released, prototype, release-candidate, or any other terms that indicate that it may not be suitable for general use.</td>
+  </tr>
+  <tr valign="top">
+    <td>3.</td>
+    <td>The initial "stable" release of the application must be a minimum of 12 months old.<br>
+      Reason: This helps ensure that the software has real application to the intended user base and is not a benchmark special that's put out with a benchmark result and only available for the 1st three months to meet SPEC's forward availability window.
+    </td>
+  </tr>
+  <tr valign="top">
+    <td>4.</td>
+    <td>At least two additional stable releases (major, minor, or bug fix) must have been completed, announced and shipped beyond the initial stable release.<br>
+      Reason: This helps establish a track record for the project and shows that it is actively maintained.
+    </td>
+  </tr>
+  <tr valign="top">
+    <td>5.</td>
+    <td>An established online support forum must be in place and clearly active, "usable", and "useful". It’s expected that there be at least one posting within the last 90 days. Postings from the benchmarkers or their representatives, or members of the Web subcommittee will not be included in the count.<br>
+      Reason: Another aspect that establishes that support is available for the software. However, benchmarkers must not cause the forum to appear active when it otherwise would not be. A "useful" support forum is defined as one that provides useful responses to users’ questions, such that if a previously unreported problem is reported with sufficient detail, it is responded to by a project developer or community member with sufficient information that the user ends up with a solution, a workaround, or has been notified that the issue will be address in a future release, or that its outside the scope of the project. The archive of the problem-reporting tool must have examples of this level of conversation. A "usable" support forum is defined as one where the problem reporting tool was available without restriction, had a simple user-interface, and users can access old reports.
+    </td>
+  </tr>
+  <tr valign="top">
+    <td>6.</td>
+    <td>The project must have at least 2 identified developers contributing and maintaining the application.<br>
+      Reason: To help ensure that this is a real application with real developers and not a fly-by-night benchmark special.
+    </td>
+  </tr>
+  <tr valign="top">
+    <td>7.</td>
+    <td>The application must use a standard open source license such as one of those listed at http://www.opensource.org/licenses/.</td>
+  </tr>
+  <tr valign="top">
+    <td>8.</td>
+    <td>The "stable" release used in the actual test run must be the current stable release at the time the test result is run or the prior "stable" release if the superseding/current "stable" release will be less than 90 days old at the time the result is made public.</td>
+  </tr>
+  <tr valign="top">
+    <td>9.</td>
+    <td>The "stable" release used in the actual test run must be no older than 18 months. If there has not been a "stable" release within 18 months, then the open source project may no longer be active and as such may no longer meet these requirements. An exception may be made for "mature" projects (see below).</td>
+  </tr>
+  <tr valign="top">
+    <td>10.</td>
+    <td>In rare cases, open source projects may reach "maturity" where the software requires little or no maintenance and there may no longer be active development. If it can be demonstrated that the software is still in general use and recommended either by commercial organizations or active open source projects or user forums and the source code for the software is less than 20,000 lines, then a request can be made to the subcommittee to grant this software "mature" status. This status may be reviewed semi-annually.</td>
+  </tr>
+</table>
+
+<H3><A NAME="BaseAndPeak"></A><A NAME="_Toc102806100b"></A>1.4 Base and Peak</H3>
+<p>There are two run categories in SPECjvm2008, base and peak.
+In a peak run, the Java Virtual Machine (JVM) can be configured 
+in order to obtain the best score possible, including command line 
+parameters, property files, or other means used, which must be explained in the 
+submission. The user may also increase the duration for warmup and iteration time.</p>
+<p>
+In a base run, no configuration or hand tuning of the JVM or benchmark runtime is allowed. 
+Any user making a submission of a result at peak must also submit a corresponding base result.</p>
+
+
+<H3><A NAME="Caveat"></A><A NAME="_Toc102806101"></A>1.5 Caveat</H3>
+<P>SPEC reserves the right to adapt the benchmark codes, workloads,
+and rules of SPECjvm2008 as deemed necessary to preserve the goal of
+fair benchmarking. SPEC will notify members and licensees whenever it
+makes changes to the benchmark and may rename the metrics. In the
+event that the workload or metric is changed, SPEC reserves the right
+to republish in summary form &quot;adapted&quot; results for
+previously published systems, converted to the new metric. In the
+case of other changes, a republication may necessitate retesting and
+may require support from the original test sponsor.</P>
+
+
+
+<H2><A NAME="Running"></A><A NAME="_Toc102806102"></A>2.0 Running the
+SPECjvm2008 Benchmark</H2>
+<H3><A NAME="Standards"></A><A NAME="_Toc102806103"></A>2.1 Java
+Specifications</H3>
+<P>Tested systems must provide an environment suitable for running
+typical Java SE applications and must be generally available for that
+purpose. Any tested system must include an implementation of the Java
+(TM) Virtual Machine as described by the following references, or as
+amended by SPEC for later Java versions: 
+</P>
+<UL>
+	<LI><P>&nbsp; Java Virtual Machine Specification Second Edition
+	(ISBN: 0201432943) 
+	</P>
+</UL>
+<P>The following are specifically allowed, within the bounds of the
+Java Platform: 
+</P>
+<UL>
+	<LI><P>Precompilation and on-disk storage
+	of compiled executables are specifically allowed. However, support
+	for dynamic loading is required. Additional rules are defined in
+	<A HREF="#Feedback_Optimization">section 2.1.1</A>.</P>
+</UL>
+<P><A NAME="APIs"></A>The system must include a complete
+implementation of those classes that are referenced by this benchmark
+as in the <A HREF="http://java.sun.com/j2se/1.5.0">Java SE 1.5.0</a> or later
+specifications.</P>
+<P>SPEC does not check for implementation of APIs not used in the
+benchmark. </P>
+
+<H4><A NAME="Feedback_Optimization"></A>2.1.1 Feedback Optimization</H4>
+<P>Feedback directed optimization targeting the SPECjvm2008 benchmark is 
+allowed only in a peak submission, subject to the restrictions regarding 
+benchmark-specific optimizations in section 1.2. A base submission must be 
+possible to produce in the first run using a product. Feedback-optimization 
+before the measured invocation of the benchmark are therefore allowed only 
+in peak category. Steps taken to produce such a result must be fully disclosed.</P>
+<H3><A NAME="Benchmark_Binaries"></A><A NAME="_Toc102806104"></A>2.2
+Benchmark Binaries and Recompilation</H3>
+<P>The SPECjvm2008 benchmark binaries are provided in jar files
+containing the Java classes and in resource files containing input
+and validation data. Compliant runs must use the provided jar files
+and resource files and these files must not be updated or modified in
+any way. While the source code of the benchmark is provided for
+reference, any runs that use recompiled class files and/or modified
+resource files are not compliant. 
+</P>
+<H3><A NAME="RuntimeChecks"></A><A NAME="_Toc102806106"></A>2.3 Runtime Checks</H3>
+<P>In addition to other run rule requirements, it is required that for a compliant run, these automatically performed checks pass:</P>
+<UL>
+        <LI>Correctness, verified by comparing the result produced by each benchmark to the expected output.
+        <LI>Verification of checksum of classes and resources.
+        <LI>Version of the product used for startup benchmarks matches the version of the product used for the remaining benchmarks.
+        <LI>Configuration of the harness is compliant, including the number of iterations as well as the duration of the warmup and iterations.
+        <LI>The full suite of benchmarks is run in one process (startup excluded) and in the order they are enumerated by the benchmark.
+        <LI>No JVM or runtime harness configuration is done in base.
+	<LI>The Java environment must pass the partial conformance testing done by the benchmark prior to running
+	any of the individual benchmarks, which checks basic java functionality like class inheritance and polymorphism, exception handling, cloning, floating point arithmetic.
+</UL>
+<H3><A NAME="System_Configuration"></A><A NAME="_Toc102806107"></A>2.4
+Configuration of System Under Test (SUT) 
+</H3>
+<H4><A NAME="JVM_Tuning"></A>2.4.1 Java Virtual Machine Tuning</H4>
+<P>Two run categories are described in Section 1.4, base and peak.</P>
+<P>In a peak run, the Java Virtual Machine (JVM) can be configured in
+any way the benchmarker likes, by using command line parameters, 
+properties files, system variables or by other means, which must 
+explained in the submission. These changes must be &quot;generally available&quot;, 
+i.e. available, supported and documented. </P>
+<P>In a base run, no configuration or hand tuning of the JVM is
+allowed. Any install options or other things affecting the result
+must be disclosed to provide full reproducibility.  A base submission 
+must be possible to produce in the first run using a product.
+</P>
+<H4><A NAME="OS_Tuning"></A>2.4.2 Hardware and Operating System Tuning</H4>
+<P>Any deviations from the standard, default configuration for the
+SUT will need to be documented so an independent party would be able
+to reproduce the result without further assistance. Changes to hardware, 
+bios and operating system are allowed both in base and peak.</P>
+<P>These changes must be &quot;generally available&quot;, i.e.
+available, supported and documented. For example, if a special tool
+is needed to change the OS state, it must be provided to users and
+documented. </P>
+<H4><A NAME="parameters"></A>2.4.3 Benchmark Harness Configuration</H4>
+<P>There are several parameters that control the operation of the
+SPECjvm2008 harness. These are checked at startup of the harness.</P>
+Configuration in base and peak:
+<table CELLPADDING=20><tr valign="top"><td>&nbsp;</td><td>
+<table CELLPADDING=0 CELLSPACING=5>
+  <tr valign="top"><th align="left">Property</th><th>&nbsp;</th><th align="left">Base</th><th>&nbsp;</th><th align="left">Peak</th></tr>
+  <tr valign="top"><td>Iterations</td><td>&nbsp;</td><td>1</td><td>&nbsp;</td><td>1</td></tr>
+  <tr valign="top"><td>Warmup time</td><td>&nbsp;</td><td>120</td><td>&nbsp;</td><td><i>free</i></td></tr>
+  <tr valign="top"><td>Iteration time</td><td>&nbsp;</td><td>240</td><td>&nbsp;</td><td>240 to &infin;</td></tr>
+  <tr valign="top"><td>Benchmark threads</td><td>&nbsp;</td><td><i>free</i></td><td>&nbsp;</td><td><i>free</i></td></tr>
+</table>
+</td></tr></table>
+Any changes to default configuration must be included in the report. 
+</P>
+
+<H4><A NAME="parameters"></A>2.4.4 Benchmark Analyzers</H4>
+
+<P>Analyzers may be used when running, but the analyzers may not noticeably affect the results, i.e. it must be possible to reproduce the result without the analyzers. So, for example, even if it is possible to write a analyzer that invokes a garbage collection before each benchmark, it is not allowed. If analyzers are used that are not part of the SPECjvm2008 kit, the source code for them should be included with the submission for review.</P>
+
+<H2><A NAME="Results"></A><A NAME="_Toc102806109"></A>3.0 Results from the Benchmark</H2>
+<H3><A NAME="3.1%20Metrics"></A>3.1 Metrics</H3>
+<P>SPECjvm2008 produces these throughput metrics in operations per minute (ops/m):</P>
+<UL>
+<LI>The total base throughput measurement, <I>SPECjvm2008 base ops/m</I><br>
+    This is the overall throughput result obtained from a full compliant base run.
+<LI>The total peak throughput measurement, <I>SPECjvm2008 peak ops/m</I><br>
+    This is the overall throughput result obtained from a full compliant peak run.
+</UL>
+<P>The method used to compute the overall throughput result is discussed in the
+<A HREF="UserGuide.html"><FONT COLOR="#0000bb"><U>&quot;User's Guide&quot;</U></FONT></A> 
+<P>A throughput result that does not qualify as one of the metrics above can be mentioned with metric ops/m.</P>
+<H3><A NAME="ResultsCompliancy"></A><A NAME="_Toc102806110"></A>3.2 Compliancy</H3>
+<P>The run must meet all requirements described in <A HREF="#_Toc102806102">section 2</A> to be a compliant run. This includes producing correct result for the full run.</P>
+<H3><A NAME="Availability"></A><A NAME="_Toc102806111"></A>3.3 General Availability</H3>
+<P>All components, both hardware and software, must be generally
+available within 3 months of the publication date in order to be a
+valid publication. However, if JVM licensing issues cause a change in
+software availability date after publication date, the change will be
+allowed to be made without penalty, subject to subcommittee review. 
+</P>
+<P>If pre-release hardware or software is tested, then the test
+sponsor represents that the performance measured is generally
+representative of the performance to be expected on the same
+configuration of the released system. If the sponsor later finds the
+performance of the released system to be 5% lower than that reported
+for the pre-release system, then the sponsor is obligated to report a
+corrected test result. 
+</P>
+<H2><A NAME="_Toc102806114"></A>4.0 Results Disclosure, Usage, and
+Submission</H2>
+<P>In order to publicly disclose SPECjvm2008 results, the tester must
+adhere to these reporting rules in addition to having followed the
+run rules above. The goal of the reporting rules is to ensure the
+system under test is sufficiently documented such that someone could
+reproduce the test and its results. 
+</P>
+<H3><A NAME="Compliance"></A><A NAME="_Toc102806115"></A>4.1 Compliance</H3>
+
+<P>SPEC encourages the submission of results to SPEC for review by
+the relevant subcommittee and subsequent publication on SPEC's
+website. Vendors may publish compliant results independently. However
+any SPEC member may request a full disclosure report for that result
+and the tester must comply within 10 business days. Issues raised
+concerning a result's compliance to the run and reporting rules will
+be taken up by the relevant subcommittee regardless of whether or not
+the result was formally submitted to SPEC. 
+</P>
+<P>Any SPECjvm2008 result produced in compliance with these run and
+reporting rules may be publicly disclosed and represented as valid
+SPECjvm2008 results. 
+</P>
+<P>Any test result not in full compliance with the run and reporting
+rules must not be represented using the SPECjvm2008 base ops/m and
+SPECjvm2008 peaks ops/m metrics. 
+</P>
+<H3><A NAME="Submission"></A><A NAME="_Toc102806116"></A>4.2 Submission Requirements for SPECjvm2008</H3>
+<P>Once you have a compliant run and wish to submit it to SPEC for
+review, you will need to provide the raw file created by the run.  If
+a result from a peak run is submitted, a corresponding result from a
+base run on the same system must also be submitted.</P>
+<P>How to submit results is described in <A HREF="UserGuide.html#SubmittingResults">the user guide</A>.
+</P>
+
+<H3><A NAME="Estimates"></A><A NAME="_Toc102806117"></A>4.3 Estimates</H3>
+<P>Estimated results are not allowed and may not be publicly disclosed.</P>
+<H3><A NAME="Comparison_to_other_benchmarks"></A><A NAME="_Toc102806118"></A>
+4.4 Comparison to Other Benchmarks</H3>
+<P>SPECjvm2008 results must not be publicly compared to results from
+any other benchmark. This would be a violation of the SPECjvm2008
+reporting rules. 
+</P>
+<H3><A NAME="Fair_Use"></A><A NAME="_Toc102806119"></A>4.5 Fair Use</H3>
+<P>SPECjvm2008 requires adherence to the SPEC Fair Use Rules, which
+can be found at <a href="http://www.spec.org/fairuse.html">http://www.spec.org/fairuse.html</a>.</P>
+<H3><A NAME="Software Tuning Disclosure"></A><A NAME="_Toc102806120"></A>4.6 Software Tuning Disclosure</H3>
+<P>SPECjvm2008 requires full disclosure of all software configuration and tuning applied to the
+software stack, including all modifications to the system firmware or BIOS, OS, JRE, and other dependent software.  A detailed 
+description is necessary to allow SPEC members to reproduce results within 5% of a reported score.</P>
+<H3><A NAME="Hardware Tuning Disclosure"></A><A NAME="_Toc102806121"></A>4.7 Hardware Tuning Disclosure</H3>
+<P>SPECjvm2008 requires a detailed description and full disclosure of the hardware configuration of the system under test. 
+A detailed description of the CPU, System memory with disclosure of rank, geometry, density, vendor and model number is required.  
+Disclosure of any additional hardware dependencies is required.  A detailed description is necessary to allow SPEC members to reproduce 
+results within 5% of a reported score.</P>
+<H3><A NAME="Fair_Use"></A><A NAME="_Toc102806122"></A>4.8 Individual Subtest Comparison Disclosure</H3>
+<P>SPECjvm2008 allows individual subtest competitive comparisions.  It is expected that essential information
+to reproduce the reported score is publicly disclosed.  It is acceptable to provide a url with necessary details
+to reproduce in lieu of complete disclosure included in marketing materials.  </P>
+<H2><A NAME="Research_Use"></A><A NAME="_Toc102806123"></A>5.0
+Research and Academic Usage of SPECjvm2008</H2>
+<P>SPEC encourages use of the SPECjvm2008 benchmark in academic and research
+environments. It is understood that experiments in such environments
+may be conducted in a less formal fashion than that demanded of
+licensees submitting to the SPEC web site. For example, a research
+environment may use early prototype hardware that simply cannot be
+expected to stay up for the length of time required to run the
+required number of points, or may use research compilers that are
+unsupported and are not generally available. 
+</P>
+<P>Nevertheless, SPEC encourages researchers to obey as many of the run rules as
+practical, even for informal research. SPEC respectfully suggests
+that following the rules will improve the clarity, reproducibility,
+and comparability of research results. Where the rules cannot be
+followed, SPEC requires the results be clearly distinguished from
+results officially submitted to SPEC, by disclosing the deviations
+from the rules.</P>
+
+
+<br><br><br>
+<HR>
+<P>Copyright 2008 Standard Performance Evaluation Corporation</P>
+<HR SIZE=1 NOSHADE>
+<P><A HREF="http://www.spec.org/">Home</A> - <A HREF="http://www.spec.org/spec/contact.html">Contact</A> - <A HREF="http://www.spec.org/contents.html">Site Map</A> - <A HREF="http://www.spec.org/spec/privacy_policy.html">Privacy</A> - <A HREF="http://www.spec.org/spec/">About SPEC</A>
+</P>
+<HR SIZE=1 NOSHADE>
+<P>
+<A HREF="mailto:webmaster@spec.org">webmaster@spec.org</A><BR>
+Last updated: <I>April 14, 2008</I><BR>
+<A HREF="http://www.spec.org/spec/copyright.html">Copyright</A>
+&copy; 1995 - 2008 Standard Performance Evaluation Corporation <BR>
+URL: <I>http://www.spec.org/jvm2008/docs/RunRules.html</I>
+</P>
+
+</BODY>
+</HTML>

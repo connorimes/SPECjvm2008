@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+    <head>
+        <title>Sunflow</title>
+    </head>
+    <body>
+        <h1>Sunflow</h1>
+        <h2>Description</h2>
+        <p>
+            This benchmark tests graphics visualization using an open source,
+            internally multi-threaded global illumination rendering system.
+            The sunflow library is threaded internally, i.e. it's possible to run
+            several bundles of dependent threads to render an image. The number of 
+            internal sunflow threads is required to be 4 for a compliant run. It is 
+            however possible to configure in property specjvm.benchmark.sunflow.threads.per.instance, 
+            but no more than 16, per sunflow design. Per default, the benchmark harness 
+            will use half the number of benchmark threads, i.e. will run as many sunflow
+            benchmark instances in parallel as half the number of hardware threads.
+            This can be configured in specjvm.benchmark.threads.sunflow.
+        </p>
+        <a href="../../src/spec/benchmarks/sunflow/">Browse source code</a>
+        <h2>Authors</h2>        
+        <ul>      
+            <li>Dave Dagastine      
+            <li>Evgeniya Maenkova
+            <li>Stefan Sarne   
+        </ul>
+    </body>
+</html>

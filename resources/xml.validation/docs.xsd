@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Key characteristics:
+		"Document-oriented" structure
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:include schemaLocation="workload.xsd"/>
+
+<xs:element name="library">
+	<xs:complexType>
+		<xs:complexContent>
+			<xs:extension base="workload-segment">
+				<xs:choice maxOccurs="unbounded">
+					<xs:element ref="simple-doc"/>
+					<xs:element ref="complex-doc"/>
+				</xs:choice>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="declaration" type="singlepart-doc"
+		substitutionGroup="simple-doc"/>
+
+<xs:element name="constitution" substitutionGroup="complex-doc">
+	<xs:complexType>
+		<xs:complexContent>
+			<xs:restriction base="multipart-doc">
+				<xs:sequence>
+					<xs:element name="title" type="xs:string" />
+					<xs:element ref="forepart" minOccurs="1" maxOccurs="1"/>
+					<xs:element ref="part" maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:element>
+
+<xs:complexType name="preamble" >
+	<xs:complexContent>
+		<xs:restriction base="part">
+			<xs:sequence>
+				<xs:element ref="para" maxOccurs="1" />
+			</xs:sequence>
+		</xs:restriction>
+	</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="article">
+	<xs:complexContent>
+		<xs:restriction base="numbered-part">
+		<xs:choice>
+			<xs:sequence>
+				<xs:element ref="para" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:sequence>
+				<xs:element ref="part" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:choice>
+		<xs:attribute name="number" type="xs:nonNegativeInteger"
+				use="required" />
+		</xs:restriction>
+	</xs:complexContent>
+</xs:complexType>
+
+<xs:element name="section" substitutionGroup="part">
+	<xs:complexType>
+		<xs:complexContent>
+			<xs:restriction base="numbered-part">
+				<xs:sequence>
+					<xs:element ref="para" maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="simple-doc" type="singlepart-doc"/>
+
+<xs:element name="complex-doc" type="multipart-doc"/>
+
+<xs:complexType name="singlepart-doc">
+	<xs:sequence>
+		<xs:element name="title" type="xs:string"/>
+		<xs:element name="body" type="part" maxOccurs="1"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="multipart-doc">
+	<xs:sequence>
+		<xs:element name="title" type="xs:string"/>
+		<xs:element ref="forepart" minOccurs="0" maxOccurs="unbounded"/>
+		<xs:element ref="part" maxOccurs="unbounded"/>
+		<xs:element ref="aftpart" minOccurs="0" maxOccurs="unbounded"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:element name="forepart" type="part"/>
+
+<xs:element name="aftpart" type="part"/>
+
+<xs:element name="numbered-part" type="numbered-part"/>
+
+<xs:complexType name="numbered-part">
+	<xs:complexContent>
+		<xs:restriction base="part">
+			<xs:choice>
+				<xs:sequence>
+					<xs:element ref="para" maxOccurs="unbounded" />
+				</xs:sequence>
+				<xs:sequence>
+					<xs:element ref="part" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:choice>
+			<xs:attribute name="number" type="xs:nonNegativeInteger"
+					use="required" />
+		</xs:restriction>
+	</xs:complexContent>
+</xs:complexType>
+
+<xs:element name="part" type="part"/>
+
+<xs:complexType name="part">
+	<xs:choice>
+		<xs:sequence>
+			<xs:element ref="para" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:sequence>
+			<xs:element ref="part" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:choice>
+	<xs:attribute name="number" type="xs:nonNegativeInteger" use="optional"/>
+</xs:complexType>
+
+<xs:element name="para" type="complex-text"/>
+
+<xs:complexType name="complex-text" mixed="true">
+	<xs:choice minOccurs="0" maxOccurs="unbounded">
+		<xs:element ref="key-phrase"/>
+		<xs:element ref="emph"/>
+	</xs:choice>
+</xs:complexType>
+
+<xs:element name="key-phrase">
+	<xs:complexType mixed="true">
+		<xs:sequence>
+			<xs:element ref="emph" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="emph" type="text"/>
+
+<xs:complexType name="text" mixed="true">
+</xs:complexType>
+
+</xs:schema>

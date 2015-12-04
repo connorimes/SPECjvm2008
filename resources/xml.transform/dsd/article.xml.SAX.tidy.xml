@@ -1,0 +1,338 @@
+<html>
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org" />
+<meta http-equiv="Content-Type"
+content="text/html; charset=UTF-8" />
+<title>DSD: A Schema Language for XML</title>
+<style type="text/css">
+  <!--
+  BODY { BACKGROUND-COLOR: #ffffff; }
+  A:link, A:visited, A:active { TEXT-DECORATION: none; FONT-WEIGHT: bold; COLOR: #0000FF}
+  
+  H1, H2 { TEXT-ALIGN: center; FONT-WEIGHT: bold; }
+  H3, H4, H5 { TEXT-ALIGN: left; FONT-WEIGHT: bold; }
+  H4.title { TEXT-ALIGN: center; }
+
+  P { TEXT-INDENT: 1em; MARGIN-TOP: 0; MARGIN-BOTTOM: 0}
+  P.CODE { TEXT-INDENT: 0; COLOR: #FF0000; }
+
+  UL, OL { MARGIN-LEFT: 1em; FONT-SIZE: medium;}
+  UL { list-style: square; }
+  LI { FONT-SIZE: small; }
+  UL EM, OL EM { FONT-WEIGHT: bold; }
+  CODE, CITE { FONT-WEIGHT: bold; }
+  
+  BLOCKQUOTE { MARGIN-LEFT: 1em; MARGIN-RIGHT: 1em }
+  IMG { VERTICAL-ALIGN: top; ALIGN: center; }
+  SUP { COLOR: #0000FF; FONT-SIZE: small; }
+  TT { FONT-FAMILY: monospace; }
+  -->
+  
+</style>
+</head>
+<body>
+<small><i>This paper is also available in <a
+href="http://www.brics.dk/DSD/dsd.ps">Postscript</a> and <a
+href="http://www.brics.dk/DSD/dsd.pdf">PDF</a> for
+printing.</i></small> <br />
+<br />
+<h1>DSD: A Schema Language for XML</h1>
+
+<h4 class="title">Nils Klarlund<br />
+<i>AT&amp;T Labs Research</i><br />
+<tt><a
+href="mailto:klarlund@research.att.com">klarlund@research.att.com</a></tt></h4>
+
+<h4 class="title">Anders Møller &amp; Michael I. Schwartzbach<br />
+<i>BRICS, University of Aarhus</i><br />
+<tt><a
+href="mailto:amoeller@brics.dk,mis@brics.dk">{amoeller,mis}@brics.dk</a></tt></h4>
+
+<table width="80%" align="center">
+<tr>
+<td>
+<h4>Abstract</h4>
+
+<p>We present DSD (Document Structure Description), which is a
+schema language for XML documents. A DSD is itself an XML document,
+which describes a family of XML application documents.</p>
+
+<p>The expressiveness of DSD goes far beyond the simple DTD
+concept, covering advanced features such as conditional
+constraints, multiple nonterminals for each element, gradual
+declaration of attributes, support for both ordered and unordered
+contents, and constraints on reference targets. We also support a
+declarative mechanism for inserting default elements and attributes
+that is reminiscent of cascading style sheets. Finally, we include
+a simple technique for evolving DSD documents through selective
+redefinitions.</p>
+
+<p>DSD is completely self-describable, meaning that the syntax of
+legal DSD documents together with all static requirements are
+captured in a special DSD document, the meta-DSD of less than 500
+lines.</p>
+
+<p>We relate DSD to other recent XML schema languages. In
+particular, we provide a critique of and comparison with the
+proposal from the W3C XML Schema Working Group.</p>
+
+<p>DSD is fully implemented and is available in an open source
+distribution. This prototype is guaranteed to process any
+application document in linear time.</p>
+</td>
+</tr>
+</table>
+
+<h3>1. Introduction</h3>
+
+<p>A Document Structure Description (DSD) is a specification of a
+class of XML documents. A DSD defines a grammar for XML documents,
+default element attributes and content, and documentation of the
+class. A DSD is itself an XML document. We have five major goals
+for the descriptive power of DSDs, namely that they should:</p>
+
+<ul>
+<li>allow context dependent descriptions of content and attributes,
+since the context of a node, such as ancestors and attribute
+values, often govern what is legal syntax;</li>
+
+<li>generalize CSS  [] (Cascading Style Sheets) so that readable,
+CSS-like rules for default attribute values and default content can
+be defined for arbitrary XML domains, not only predefined user
+formatting models;</li>
+
+<li>complement XSLT  [] in the sense that the expressive power of
+DSDs should be close to that of XSLT, so that assumptions made by
+XSLT style sheets can be made explicit in a DSD;</li>
+
+<li>permit the description of semi-structured data, that is, the
+description of what references may point to; and</li>
+
+<li>enable the redefinitions of syntactic classes, so that language
+extensions can be expressed in terms of existing DSDs.</li>
+</ul>
+
+<br />
+<br />
+ 
+
+<p>[...]</p>
+
+<h3>2. XML Concepts</h3>
+
+<p>The reader is assumed familiar with standard XML concepts, such
+as those defined in  [] . The following provides a brief
+description of the XML object model used in DSDs.</p>
+
+<p>A well-formed XML document is represented as a tree. The leaf
+nodes corespond to empty elements, chardata, processing
+instructions, and comments. The internal nodes corespond to
+non-empty elements. DTD information is not represented. Each
+element is labelled with a name and a set of attributes, each
+consisting of a name and a value. Names, values, and chardata are
+strings.</p>
+
+<p>Child nodes are ordered. The<i>content</i> of an element is the
+sequence of its child nodes. The <i>context</i> of a node is the
+path of nodes from the root of the tree to the node itself. Element
+nodes are ordered: An element <i>v</i> is <i>before</i> an element
+<i>w</i> if the start tag of <i>v</i> occurs before the start tag
+of <i>w</i> in the usual textual representation of the XML
+tree.</p>
+
+<p>Processing instructions with target <tt>dsd</tt> or
+<tt>include</tt> as well as elements and attributes with namespace
+<tt>http://www.brics.dk/DSD</tt> contain information relevant to
+the DSD processing. All other processing instructions and also
+chardata consisting of white-space only and comments are
+ignored.</p>
+
+<h3>3. The DSD Language</h3>
+
+<p>A DSD defines the syntax of a family of conforming XML
+documents. An <i>application document</i> is an XML document
+intended to conform to a given DSD. It is the job of a <i>DSD
+processor</i> to determine whether an application document is
+conforming or not.</p>
+
+<p>A DSD is itself an XML document. This section describes the main
+aspects of the DSD notation and its meaning. For a complete
+definition, we refer to  [] .<br />
+</p>
+
+<p>A DSD is associated to an application document by placing a
+special processing instruction in the document prolog. This
+processing instruction has the form</p>
+
+<br />
+     <tt>&lt;?dsd URI="</tt><i>URI</i><tt>"?&gt;</tt> <br />
+<br />
+where <i>URI</i> is the location of the DSD. A DSD processor
+basically performs one top-down traversal of the application
+document in order to check conformance. During this traversal,
+nodes are assigned <i>constraints</i> by the DSD. A constraint
+specifies a requirement of a node relative to its context and
+content that must be fulfilled in order for the document to
+conform. Initially, a constraint is assigned to the root node.
+During the checking of a node, its child nodes are assigned new
+constraints, which are checked later in the traversal. Also,
+checking a constraint may cause default attributes and child nodes
+to be inserted. The term <i>the curent element</i> is used in the
+following to refer to the node in the application document that is
+being processed at a given moment during the traversal. <br />
+<br />
+ 
+
+<p>If no constraints have been violated upon termination, then the
+original document conforms to the DSD and the resulting document
+with defaults inserted is output.</p>
+
+<p>A DSD consists of a number of definitions, each associated with
+an ID allowing reference for reuse and redefinition. In the
+following, the various kinds of definitions are described. We use a
+number of small examples, some inspired by the XHTML language  []
+and some that are fragments of the book example described in
+Section 4.</p>
+
+<h4>3.1 Element constraints</h4>
+
+<p>The central kind of definition is the <i>element definition</i>.
+An element definition defines a pair consisting of an element name
+and a constraint. During the application document processing, the
+elements in the application documents are assigned IDs of such
+element definitions. An element can only be assigned the ID of an
+element definition of the same name.</p>
+
+<p>The IDs of element definitions are reminiscent of nonterminals
+in context-free grammars. Each ID determines the requirements
+imposed on the contents, attributes, and context of the element to
+which it is assigned. We allow several different element
+definitions with the same name; thus, element names are not used as
+nonterminals. This distinction allows several versions of an
+element to coexist.</p>
+
+<p>As an example, consider a DSD describing a simple database
+containing information about books, such as, their titles, authors,
+ISBN numbers, and so on. Imagine that both the whole database and
+each book entry should contain a <tt>title</tt> tag, but with
+different structure. Book entry titles may only contain chardata
+without markup, but may optionally contain a <tt>style</tt>
+attribute; also, defaults may be specified for book titles.
+Database titles may contain arbitrary contents and no attributes.
+These two kinds of <tt>title</tt> elements can be defined as
+follows:</p>
+
+<br />
+<table border="1" cellpadding="5" width="100%" bgcolor="#f5dcb3">
+<tr>
+<td>
+<pre>
+&lt;ElementDef ID="book-title" Name="title"
+            Defaultable="yes"&gt;
+  &lt;Content&gt;&lt;StringType/&gt;&lt;/Content&gt;
+&lt;/ElementDef&gt;
+
+&lt;ElementDef ID="database-title" Name="title"&gt;
+  &lt;ZeroOrMore&gt;
+    &lt;Union&gt;
+      &lt;StringType/&gt;&lt;AnyElement/&gt;
+    &lt;/Union&gt;
+  &lt;/ZeroOrMore&gt;
+&lt;/ElementDef&gt;
+</pre>
+</td>
+</tr>
+</table>
+
+<br />
+<br />
+<br />
+ 
+
+<p>[...]</p>
+
+<h4>3.2 Attribute declarations</h4>
+
+<p>During evaluation of a constraint, attributes are declared
+gradually. Only attributes that have been declared are allowed in
+an element. Since constraints can be conditional and attributes are
+declared inside constraints, this allows hierarchical structures of
+attributes to be defined. For instance, in a <tt>input</tt>
+element, the <tt>length</tt> attribute may only be present if the
+<tt>type</tt> attribute is present and has value <tt>text</tt> or
+<tt>password</tt>.</p>
+
+<p>An attribute declaration consists of a name and a string type.
+The name specifies the name of the attribute, and the string type
+specifies the set of its allowed values. It is an eror if an
+attribute being declared is not present in the curent element,
+unless it is declared as "optional".</p>
+
+<p>[...]</p>
+
+<h4>3.3 String types</h4>
+
+<p>[...]</p>
+
+<h3>4. The Book Example</h3>
+
+<p>We now present a small example of a complete DSD. It describes
+an XML syntax for databases of books. Such a description could be
+arbitrarily detailed; we have settled for title, ISBN number,
+authors (with homepages), publisher (with homepage), publication
+year, and reviews. The main structure of the DSD is as follows:</p>
+
+<h3>References</h3>
+
+[...] <br />
+<br />
+<table>
+<tr>
+<td><img src="http://www.brics.dk/DSD/examples/klarlund.jpg"
+alt="klarlund@research.att.com" width="100" /></td>
+<td><b>Nils Klarlund</b> received his Ph.D. (Liberal Arts) from
+Finkelstein Mail-Order College in 1989. He has bungled through life
+since then, before remarkably landing a real job a AT&amp;T, whose
+stock value has subsequently plunged 43%. By the generosity of
+numerous co-authors, his name appears on several
+publications.<br />
+<br />
+ <i>Homepage:</i> <tt><a
+href="http://www.research.att.com/~klarlund/">http://www.research.att.com/~klarlund/</a></tt>
+</td>
+</tr>
+
+<tr>
+<td><img src="http://www.brics.dk/DSD/examples/amoeller.jpg"
+alt="amoeller@brics.dk" width="100" /></td>
+<td><b>Anders Møller</b> is a Ph.D. student at BRICS at the
+University of Aarhus, Denmark. His main research interests include
+programming languages, formal verification, and Web technology. In
+addition to the DSD project, he is involved in the BRICS MONA
+project and the <tt>&lt;bigwig&gt;</tt> project.<br />
+<br />
+<i>Homepage:</i> <tt><a
+href="http://www.brics.dk/~amoeller/">http://www.brics.dk/~amoeller/</a></tt>
+</td>
+</tr>
+
+<tr>
+<td><img src="http://www.brics.dk/DSD/examples/mis.jpg" alt=""
+width="100" /></td>
+<td><b>Michael I. Schwartzbach</b> received his Ph.D. (Computer
+Science) from Cornell University in 1987. He is an associate
+professor at the University of Aarhus and a kernel researcher at
+the BRICS Research Center. Michael I. Schwartzbach has studied
+design and implementation of programming languages, type systems,
+static analysis, and applications of logic.<br />
+<br />
+<i>Homepage:</i> <tt><a
+href="http://www.brics.dk/~mis">http://www.brics.dk/~mis/</a></tt>
+</td>
+</tr>
+</table>
+
+<!--this HTML page was generated by article2html.xsl-->
+</body>
+</html>
+

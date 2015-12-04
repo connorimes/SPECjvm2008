@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?><fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:svg="http://www.w3.org/2000/svg"><fo:layout-master-set><fo:simple-page-master master-name="order" page-width="210mm" page-height="297mm"><fo:region-body margin="25mm"/><fo:region-before extent="25mm"/><fo:region-after extent="0mm"/></fo:simple-page-master></fo:layout-master-set><fo:page-sequence master-reference="order"><fo:flow flow-name="xsl-region-body"><fo:block font-size="11pt" font-family="Times"><fo:block space-before="10mm" font-size="16pt">Minutes of Meeting of Board of "Castle Commerce" LTD.</fo:block><fo:block font-weight="bold" font-size="12pt" space-before="5mm">January 11th, 2004</fo:block><fo:block><fo:block><fo:block space-before="5mm" space-after="5mm" font-weight="bold">
+                Attending:
+            </fo:block><fo:block margin-left="7mm">                                            
+                    * Steve Robinson</fo:block><fo:block margin-left="7mm">                                            
+                    * Alex Goodwin</fo:block><fo:block margin-left="7mm">                                            
+                    * Jonathan Smithson</fo:block><fo:block margin-left="7mm">                                            
+                    * Michael Bull</fo:block></fo:block></fo:block><fo:block><fo:block><fo:block space-before="5mm" space-after="5mm" font-weight="bold">
+                Agenda:
+            </fo:block><fo:block margin-left="7mm">1. Change in board membership</fo:block><fo:block margin-left="7mm">2. Approve meeting minutes for July 10, August 7, September 17,
+	            October 22 and November 13 meetings of this year</fo:block><fo:block margin-left="7mm">3. Modification of email voting</fo:block><fo:block margin-left="7mm">4. Treasurer report</fo:block><fo:block margin-left="7mm">5. Next meeting</fo:block></fo:block></fo:block><fo:block><fo:block><fo:block font-weight="bold" font-size="12pt" space-before="5mm" space-after="5mm">1. Change in board membership</fo:block><fo:block><fo:block>
+                <fo:block space-after="5mm">
+                    Alex reports that Martin Duke has sent his resignation to the board of directors and notes we will need another
+                    board member at some point to get back to 5 people on the board. He suggests people come up with names so they 
+                    can be discussed on the board list and the people we like can be added to the board at the next meeting.
+                </fo:block>
+                <fo:block space-after="5mm">
+                    Three people are mentioned:
+                </fo:block>
+	            <fo:block space-after="5mm" margin-left="10mm&#xA;                ">
+	                * Michael Bull suggests Drew Streib. Drew was one of the early "Castle Commerce" people, and is also active in 
+                    projects such as the Unic Standards Group's key analysis and others.
+	            </fo:block>
+                <fo:block space-after="5mm" margin-left="10mm&#xA;                ">
+	                * Alex asks Martin if he would be interesting in becoming a board member. Martin is interested but would like more
+                    time to consider it.
+                </fo:block>
+                <fo:block space-after="5mm" margin-left="10mm&#xA;                ">
+            	    * Alex also proposes Thomas Bushnell, one of the Hurd developers.
+                </fo:block>
+            </fo:block></fo:block><fo:block font-weight="bold" font-size="12pt" space-before="5mm" space-after="5mm">2. Approving minutes from previous meetings</fo:block><fo:block><fo:block>
+                <fo:block space-after="5mm">
+                    Alex asks Michael if he has incorporated the changes he suggested
+                    for the July 17 minutes. Michael replies that he has.
+                </fo:block>
+                <fo:block space-after="5mm">
+                    Since Jonathan lost his changes for the August 7 minutes, and the September 17 minutes
+                    are not in order yet, voting for them is postponed until the next board meeting.
+                </fo:block>
+                <fo:block space-after="5mm">
+                    Michael asks everyone to use ISO 8601 notation for dates in order to prevent confusion. Nobody objects.
+                </fo:block>
+                <fo:block space-after="5mm">
+                    Since the minutes for August 7 and September 17 are not ready
+                    voting on them is postponed until the next board meeting.
+                </fo:block>
+                <fo:block space-after="5mm">
+                    The vote to approve the minutes of the October 22 meeting minutes was anonymous.
+                </fo:block>
+                <fo:block space-after="5mm">
+                    The vote to approve the minutes of the November 13 meeting minutes was anonymous.
+                </fo:block>
+            </fo:block></fo:block><fo:block font-weight="bold" font-size="12pt" space-before="5mm" space-after="5mm">3. Modification of email voting</fo:block><fo:block><fo:block>
+                <fo:block space-after="5mm">
+                    Alex asked everyone if they have read Ian's email. Not everyone has. Ian offers to
+                    rewrite his proposal as a resolution which will be resolution N-2001-11-26.1. Michael
+                    remarks he has no strong feelings on this topic and will vote with the majority.
+                </fo:block>
+                <fo:block space-after="5mm">
+                    Ian asks over how long a period votes should be counted. Alex proposes a week.
+                </fo:block>
+                <fo:block space-after="5mm">
+                    The resolution is passed with 4votes in favour and none against.
+                </fo:block>
+            </fo:block></fo:block><fo:block font-weight="bold" font-size="12pt" space-before="5mm" space-after="5mm">4. Treasurer report</fo:block><fo:block><fo:block>
+                <fo:block space-after="5mm">
+                    Michael asks for permission to ask Chris to go ahead and mail a letter to
+                    Darren Benham pressuring him to surrender all "Castle Commerce" materials
+                    he still holds. Alex asks Sean Perry for a last check to see if he has made
+                    any progressing in obtaining them. Michael proposes to try and contact Sean
+                    and Darren today for a last time, and if no progress has been made yet to
+                    proceed with the letter. Nobody objects.
+                </fo:block>
+                <fo:block space-after="5mm">
+                    Jonathan mentions we also need to take care of the P.O.Box and ask if he can
+                    spend the 19 US dollar needed to open a P.O.Box in Indianapolis. Alex says he
+                    would rather have a forwarding service that we can continue to use when the
+                    board changes. Jonathan agrees but explains that we need a registered agent
+                    to do that so can not be done until he has the "Castle Commerce" materials
+                    that Darren currently holds.
+                </fo:block>
+            </fo:block></fo:block><fo:block font-weight="bold" font-size="12pt" space-before="5mm" space-after="5mm">5. Next meeting</fo:block><fo:block><fo:block>
+                <fo:block space-after="5mm">
+                    The next "Castle Commerce" board meeting is set for January 30, 2004 at 2:00 pm.
+                </fo:block>
+            </fo:block></fo:block></fo:block></fo:block><fo:block border-top="1pt solid black" font-size="8pt" font-style="italic" space-before="110mm" padding-top="1mm">
+            This document is an example of minutes of meeting and doesn't correspond to validity.
+            All the names and clauses of the meeting are invented.
+        </fo:block></fo:block></fo:flow></fo:page-sequence></fo:root>

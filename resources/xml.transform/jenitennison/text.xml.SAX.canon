@@ -1,0 +1,81 @@
+<html>
+<head>
+<meta content="HTML Tidy, see www.w3.org" name="generator"></meta>
+<title></title>
+</head>
+<body>
+transformation XSLT source tree result tree template A
+transformation expressed in XSLT describes rules for transforming a
+source tree into a result tree. The transformation is achieved by
+associating patterns with templates. A pattern is matched against
+elements in the source tree. A template is instantiated to create
+part of the result tree. The result tree is separate from the
+source tree. The structure of the result tree can be completely
+different from the structure of the source tree. In constructing
+the result tree, elements from the source tree can be filtered and
+reordered, and arbitrary structure can be added. A transformation
+expressed in XSLT describes rules for transforming a source tree
+into a result tree. The transformation is achieved by associating
+patterns with templates. A pattern is matched against elements in
+the source tree. A template is instantiated to create part of the
+result tree. The result tree is separate from the source tree. The
+structure of the result tree can be completely different from the
+structure of the source tree. In constructing the result tree,
+elements from the source tree can be filtered and reordered, and
+arbitrary structure can be added. A transformation expressed in
+XSLT describes rules for transforming a source tree into a result
+tree. The transformation is achieved by associating patterns with
+templates. A pattern is matched against elements in the source
+tree. A template is instantiated to create part of the result tree.
+The result tree is separate from the source tree. The structure of
+the result tree can be completely different from the structure of
+the source tree. In constructing the result tree, elements from the
+source tree can be filtered and reordered, and arbitrary structure
+can be added. A transformation expressed in XSLT describes rules
+for transforming a source tree into a result tree. The
+transformation is achieved by associating patterns with templates.
+A pattern is matched against elements in the source tree. A
+template is instantiated to create part of the result tree. The
+result tree is separate from the source tree. The structure of the
+result tree can be completely different from the structure of the
+source tree. In constructing the result tree, elements from the
+source tree can be filtered and reordered, and arbitrary structure
+can be added. A transformation expressed in XSLT describes rules
+for transforming a source tree into a result tree. The
+transformation is achieved by associating patterns with templates.
+A pattern is matched against elements in the source tree. A
+template is instantiated to create part of the result tree. The
+result tree is separate from the source tree. The structure of the
+result tree can be completely different from the structure of the
+source tree. In constructing the result tree, elements from the
+source tree can be filtered and reordered, and arbitrary structure
+can be added. A transformation expressed in XSLT describes rules
+for transforming a source tree into a result tree. The
+transformation is achieved by associating patterns with templates.
+A pattern is matched against elements in the source tree. A
+template is instantiated to create part of the result tree. The
+result tree is separate from the source tree. The structure of the
+result tree can be completely different from the structure of the
+source tree. In constructing the result tree, elements from the
+source tree can be filtered and reordered, and arbitrary structure
+can be added. A transformation expressed in XSLT describes rules
+for transforming a source tree into a result tree. The
+transformation is achieved by associating patterns with templates.
+A pattern is matched against elements in the source tree. A
+template is instantiated to create part of the result tree. The
+result tree is separate from the source tree. The structure of the
+result tree can be completely different from the structure of the
+source tree. In constructing the result tree, elements from the
+source tree can be filtered and reordered, and arbitrary structure
+can be added. A transformation expressed in XSLT describes rules
+for transforming a source tree into a result tree. The
+transformation is achieved by associating patterns with templates.
+A pattern is matched against elements in the source tree. A
+template is instantiated to create part of the result tree. The
+result tree is separate from the source tree. The structure of the
+result tree can be completely different from the structure of the
+source tree. In constructing the result tree, elements from the
+source tree can be filtered and reordered, and arbitrary structure
+can be added.
+</body>
+</html>

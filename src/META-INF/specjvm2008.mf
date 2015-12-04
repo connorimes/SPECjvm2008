@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: spec.harness.Launch
+Class-Path: lib/derby.jar lib/jl1.0.jar lib/jcommon-1.0.9.jar lib/jfreechart-1.0.5.jar lib/sunflow.jar lib/janino.jar lib/javac.jar lib/xom-1.1.jar lib/Tidy.jar lib/check.jar build/classes

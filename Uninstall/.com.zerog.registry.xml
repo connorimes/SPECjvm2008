@@ -1,0 +1,1305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registry install_date="2015-12-04 16:19:53" version="1.1" last_modified="2015-12-04 16:19:54">
+	<products>
+		<product name="SPECjvm2008" id="b5009eb4-1ef3-11b2-97c4-a0fa8b886cc7" version="1.0.1.0" copyright="2009" info_url="http://www.spec.org/jvm2008" support_url="http://www.spec.org/jvm2008" location="/local/benchmarks/SPECjvm2008" last_modified="2015-12-04 16:19:53">
+			<vendor name="Standard Performance Evaluation Corporation" id="be178514-1eeb-11b2-ac48-94a382884056" home_page="http://www.spec.org" email="info@spec.org"/>
+			<feature name="Application" last_modified="2015-12-04 16:19:53">
+			<![CDATA[This installs the application feature.]]>
+				<component ref_id="be150b99-1eeb-11b2-ab58-94a382884056" version="1.0.0.0" location="/local/benchmarks/SPECjvm2008/Uninstall/Uninstall_SPECjvm2008"/>
+				<component ref_id="be150b97-1eeb-11b2-ab58-94a382884056" version="1.0.0.0" location="/local/benchmarks/SPECjvm2008/resources/crypto.signverify/validity.crypto.signverify.dat"/>
+			</feature>
+		</product>
+	</products>
+	<components>
+		<component id="be150b97-1eeb-11b2-ab58-94a382884056" version="1.0.0.0" name="Common" location="/local/benchmarks/SPECjvm2008/resources/crypto.signverify/validity.crypto.signverify.dat" vendor="Standard Performance Evaluation Corporation">
+			<resource keyfile="false" name="Uninstall" location="/local/benchmarks/SPECjvm2008/Uninstall" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="resources" location="/local/benchmarks/SPECjvm2008/resources" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="crypto.signverify" location="/local/benchmarks/SPECjvm2008/resources/crypto.signverify" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="true" name="validity.crypto.signverify.dat" location="/local/benchmarks/SPECjvm2008/resources/crypto.signverify/validity.crypto.signverify.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="scimark.fft" location="/local/benchmarks/SPECjvm2008/resources/scimark.fft" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.scimark.fft.dat" location="/local/benchmarks/SPECjvm2008/resources/scimark.fft/validity.scimark.fft.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="crypto" location="/local/benchmarks/SPECjvm2008/resources/crypto" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="track3.mp3" location="/local/benchmarks/SPECjvm2008/resources/crypto/track3.mp3" type="file" uninstall="true"/>
+			<resource keyfile="false" name="random1048576.dat" location="/local/benchmarks/SPECjvm2008/resources/crypto/random1048576.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="fredmans21.txt" location="/local/benchmarks/SPECjvm2008/resources/crypto/fredmans21.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="random96.dat" location="/local/benchmarks/SPECjvm2008/resources/crypto/random96.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="random1024.dat" location="/local/benchmarks/SPECjvm2008/resources/crypto/random1024.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="random65536.dat" location="/local/benchmarks/SPECjvm2008/resources/crypto/random65536.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="random4096.dat" location="/local/benchmarks/SPECjvm2008/resources/crypto/random4096.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="startup" location="/local/benchmarks/SPECjvm2008/resources/startup" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.startup.dat" location="/local/benchmarks/SPECjvm2008/resources/startup/validity.startup.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="crypto.rsa" location="/local/benchmarks/SPECjvm2008/resources/crypto.rsa" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.crypto.rsa.dat" location="/local/benchmarks/SPECjvm2008/resources/crypto.rsa/validity.crypto.rsa.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="compress" location="/local/benchmarks/SPECjvm2008/resources/compress" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.compress.dat" location="/local/benchmarks/SPECjvm2008/resources/compress/validity.compress.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="input" location="/local/benchmarks/SPECjvm2008/resources/compress/input" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="202.tar" location="/local/benchmarks/SPECjvm2008/resources/compress/input/202.tar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="211.tar" location="/local/benchmarks/SPECjvm2008/resources/compress/input/211.tar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="210.tar" location="/local/benchmarks/SPECjvm2008/resources/compress/input/210.tar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="209.tar" location="/local/benchmarks/SPECjvm2008/resources/compress/input/209.tar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="208.tar" location="/local/benchmarks/SPECjvm2008/resources/compress/input/208.tar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="228.tar" location="/local/benchmarks/SPECjvm2008/resources/compress/input/228.tar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="213x.tar" location="/local/benchmarks/SPECjvm2008/resources/compress/input/213x.tar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="misc.tar" location="/local/benchmarks/SPECjvm2008/resources/compress/input/misc.tar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="205.tar" location="/local/benchmarks/SPECjvm2008/resources/compress/input/205.tar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="239.tar" location="/local/benchmarks/SPECjvm2008/resources/compress/input/239.tar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="helloworld" location="/local/benchmarks/SPECjvm2008/resources/helloworld" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.helloworld.dat" location="/local/benchmarks/SPECjvm2008/resources/helloworld/validity.helloworld.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="mpegaudio" location="/local/benchmarks/SPECjvm2008/resources/mpegaudio" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.mpegaudio.dat" location="/local/benchmarks/SPECjvm2008/resources/mpegaudio/validity.mpegaudio.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="input" location="/local/benchmarks/SPECjvm2008/resources/mpegaudio/input" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="track3.mp3" location="/local/benchmarks/SPECjvm2008/resources/mpegaudio/input/track3.mp3" type="file" uninstall="true"/>
+			<resource keyfile="false" name="track5.mp3" location="/local/benchmarks/SPECjvm2008/resources/mpegaudio/input/track5.mp3" type="file" uninstall="true"/>
+			<resource keyfile="false" name="track1.mp3" location="/local/benchmarks/SPECjvm2008/resources/mpegaudio/input/track1.mp3" type="file" uninstall="true"/>
+			<resource keyfile="false" name="track2.mp3" location="/local/benchmarks/SPECjvm2008/resources/mpegaudio/input/track2.mp3" type="file" uninstall="true"/>
+			<resource keyfile="false" name="track0.mp3" location="/local/benchmarks/SPECjvm2008/resources/mpegaudio/input/track0.mp3" type="file" uninstall="true"/>
+			<resource keyfile="false" name="track4.mp3" location="/local/benchmarks/SPECjvm2008/resources/mpegaudio/input/track4.mp3" type="file" uninstall="true"/>
+			<resource keyfile="false" name="compiler.sunflow" location="/local/benchmarks/SPECjvm2008/resources/compiler.sunflow" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.compiler.sunflow.dat" location="/local/benchmarks/SPECjvm2008/resources/compiler.sunflow/validity.compiler.sunflow.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="scimark.lu" location="/local/benchmarks/SPECjvm2008/resources/scimark.lu" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.scimark.lu.dat" location="/local/benchmarks/SPECjvm2008/resources/scimark.lu/validity.scimark.lu.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="check" location="/local/benchmarks/SPECjvm2008/resources/check" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.check.dat" location="/local/benchmarks/SPECjvm2008/resources/check/validity.check.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="startup.helloworld" location="/local/benchmarks/SPECjvm2008/resources/startup.helloworld" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="scimark.sor" location="/local/benchmarks/SPECjvm2008/resources/scimark.sor" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.scimark.sor.dat" location="/local/benchmarks/SPECjvm2008/resources/scimark.sor/validity.scimark.sor.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="serial" location="/local/benchmarks/SPECjvm2008/resources/serial" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.serial.dat" location="/local/benchmarks/SPECjvm2008/resources/serial/validity.serial.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="scimark.monte_carlo" location="/local/benchmarks/SPECjvm2008/resources/scimark.monte_carlo" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.scimark.monte_carlo.dat" location="/local/benchmarks/SPECjvm2008/resources/scimark.monte_carlo/validity.scimark.monte_carlo.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="xml.transform" location="/local/benchmarks/SPECjvm2008/resources/xml.transform" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="transformations.properties" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/transformations.properties" type="file" uninstall="true"/>
+			<resource keyfile="false" name="recipes" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="recipes.xsl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes/recipes.xsl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="recipes.xml.DOM.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes/recipes.xml.DOM.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="recipes.xml.SAX.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes/recipes.xml.SAX.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="recipes.xml.Stream.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes/recipes.xml.Stream.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="recipes.xml.DOM.tidy.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes/recipes.xml.DOM.tidy.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="recipes.xml.SAX.tidy.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes/recipes.xml.SAX.tidy.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="recipes.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes/recipes.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="recipes.xml.Stream.tidy.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/recipes/recipes.xml.Stream.tidy.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="validity.xml.transform.dat" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/validity.xml.transform.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="renderx" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="examples" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="meeting" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/meeting" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="meeting_minutes.fo" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/meeting/meeting_minutes.fo" type="file" uninstall="true"/>
+			<resource keyfile="false" name="meeting_minutes.xml.DOM.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/meeting/meeting_minutes.xml.DOM.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="meeting_minutes.xml.Stream.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/meeting/meeting_minutes.xml.Stream.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="meeting_minutes.xsl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/meeting/meeting_minutes.xsl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="meeting_minutes.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/meeting/meeting_minutes.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="meeting_minutes.xml.SAX.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/meeting/meeting_minutes.xml.SAX.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="balance" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/balance" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="balance_sheet.fo" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/balance/balance_sheet.fo" type="file" uninstall="true"/>
+			<resource keyfile="false" name="balance_sheet.xml.SAX.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/balance/balance_sheet.xml.SAX.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="balance_sheet.xsl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/balance/balance_sheet.xsl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="balance_sheet.xml.DOM.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/balance/balance_sheet.xml.DOM.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="balance_sheet.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/balance/balance_sheet.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="balance_sheet.xml.Stream.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/examples/balance/balance_sheet.xml.Stream.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="chess" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Kasparov-Karpov.ps" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess/Kasparov-Karpov.ps" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Kasparov-Karpov.xml.DOM.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess/Kasparov-Karpov.xml.DOM.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="url.txt" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess/url.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Kasparov-Karpov.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess/Kasparov-Karpov.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="chess.xsl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess/chess.xsl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Kasparov-Karpov.xml.Stream.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess/Kasparov-Karpov.xml.Stream.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Kasparov-Karpov.xml.SAX.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess/Kasparov-Karpov.xml.SAX.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Kasparov-Karpov.fo" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/renderx/chess/Kasparov-Karpov.fo" type="file" uninstall="true"/>
+			<resource keyfile="false" name="jenitennison" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="index.tmpl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison/index.tmpl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="text.tmpl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison/text.tmpl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="text.xml.Stream.tidy.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison/text.xml.Stream.tidy.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index.xml.SAX.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison/index.xml.SAX.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index.xml.DOM.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison/index.xml.DOM.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="text.xml.DOM.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison/text.xml.DOM.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="markup.xsl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison/markup.xsl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="page.xsl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison/page.xsl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="text.xml.DOM.tidy.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison/text.xml.DOM.tidy.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="text.xml.Stream.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison/text.xml.Stream.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="text.xml.SAX.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison/text.xml.SAX.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="markme.xsl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison/markme.xsl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index.xml.Stream.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison/index.xml.Stream.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="text.xml.SAX.tidy.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison/text.xml.SAX.tidy.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="text.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison/text.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/jenitennison/index.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="nitf" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="nitf-stylized.xsl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf/nitf-stylized.xsl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="nitf-fishing.xml.DOM.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf/nitf-fishing.xml.DOM.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="nitf-fishing.xml.SAX.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf/nitf-fishing.xml.SAX.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="nitf-fishing.xml.Stream.tidy.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf/nitf-fishing.xml.Stream.tidy.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="nitf-fishing.xml.Stream.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf/nitf-fishing.xml.Stream.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="nitf-fishing.xml.SAX.tidy.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf/nitf-fishing.xml.SAX.tidy.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="nitf-fishing.xml.DOM.tidy.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf/nitf-fishing.xml.DOM.tidy.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="nitf-fishing.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/nitf/nitf-fishing.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="chess-fo" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/chess-fo" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Kasparov-Karpov.xml.DOM.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/chess-fo/Kasparov-Karpov.xml.DOM.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Kasparov-Karpov.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/chess-fo/Kasparov-Karpov.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="chess.xsl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/chess-fo/chess.xsl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Kasparov-Karpov.xml.Stream.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/chess-fo/Kasparov-Karpov.xml.Stream.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Kasparov-Karpov.xml.SAX.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/chess-fo/Kasparov-Karpov.xml.SAX.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Kasparov-Karpov.tmpl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/chess-fo/Kasparov-Karpov.tmpl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="spec-html" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/spec-html" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="xslt.xsl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/spec-html/xslt.xsl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="multiple.tmpl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/spec-html/multiple.tmpl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="xpath.xsl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/spec-html/xpath.xsl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="xmlspec.xsl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/spec-html/xmlspec.xsl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="multiple.xsl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/spec-html/multiple.xsl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="shared" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/shared" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="REC-xml-19980210.xml.Stream.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/shared/REC-xml-19980210.xml.Stream.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="REC-xml-19980210.xml.DOM.tidy.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/shared/REC-xml-19980210.xml.DOM.tidy.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="REC-xml-19980210.xml.SAX.tidy.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/shared/REC-xml-19980210.xml.SAX.tidy.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="REC-xml-19980210.tmpl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/shared/REC-xml-19980210.tmpl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="REC-xml-19980210.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/shared/REC-xml-19980210.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="REC-xml-19980210.xml.Stream.tidy.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/shared/REC-xml-19980210.xml.Stream.tidy.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="spec.dtd" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/shared/spec.dtd" type="file" uninstall="true"/>
+			<resource keyfile="false" name="REC-xml-19980210.xml.DOM.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/shared/REC-xml-19980210.xml.DOM.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="REC-xml-19980210.xml.SAX.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/shared/REC-xml-19980210.xml.SAX.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="version.xsl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/shared/version.xsl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="dsd" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="article.xml.DOM.tidy.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd/article.xml.DOM.tidy.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="article.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd/article.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="article.xml.DOM.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd/article.xml.DOM.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="article.xml.Stream.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd/article.xml.Stream.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="article.xml.SAX.tidy.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd/article.xml.SAX.tidy.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="article.xml.Stream.tidy.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd/article.xml.Stream.tidy.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="article.xml.SAX.canon" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd/article.xml.SAX.canon" type="file" uninstall="true"/>
+			<resource keyfile="false" name="article2html.xsl" location="/local/benchmarks/SPECjvm2008/resources/xml.transform/dsd/article2html.xsl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="compiler.compiler" location="/local/benchmarks/SPECjvm2008/resources/compiler.compiler" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.compiler.compiler.dat" location="/local/benchmarks/SPECjvm2008/resources/compiler.compiler/validity.compiler.compiler.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="sunflow" location="/local/benchmarks/SPECjvm2008/resources/sunflow" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.sunflow.dat" location="/local/benchmarks/SPECjvm2008/resources/sunflow/validity.sunflow.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="crypto.aes" location="/local/benchmarks/SPECjvm2008/resources/crypto.aes" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.crypto.aes.dat" location="/local/benchmarks/SPECjvm2008/resources/crypto.aes/validity.crypto.aes.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="scimark.sparse" location="/local/benchmarks/SPECjvm2008/resources/scimark.sparse" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.scimark.sparse.dat" location="/local/benchmarks/SPECjvm2008/resources/scimark.sparse/validity.scimark.sparse.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="xml.validation" location="/local/benchmarks/SPECjvm2008/resources/xml.validation" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="validity.xml.validation.dat" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/validity.xml.validation.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="personal.xsd" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/personal.xsd" type="file" uninstall="true"/>
+			<resource keyfile="false" name="personal.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/personal.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="periodic_table.xsd" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/periodic_table.xsd" type="file" uninstall="true"/>
+			<resource keyfile="false" name="po.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/po.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="sampler.xsd" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/sampler.xsd" type="file" uninstall="true"/>
+			<resource keyfile="false" name="structure.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/structure.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="play.xsd" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/play.xsd" type="file" uninstall="true"/>
+			<resource keyfile="false" name="periodicxsd.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/periodicxsd.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="structure.xsd" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/structure.xsd" type="file" uninstall="true"/>
+			<resource keyfile="false" name="routes.xsd" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/routes.xsd" type="file" uninstall="true"/>
+			<resource keyfile="false" name="validation_input.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/validation_input.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="sales.xsd" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/sales.xsd" type="file" uninstall="true"/>
+			<resource keyfile="false" name="docs.xsd" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/docs.xsd" type="file" uninstall="true"/>
+			<resource keyfile="false" name="xml.xsd" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/xml.xsd" type="file" uninstall="true"/>
+			<resource keyfile="false" name="workload.xsd" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/workload.xsd" type="file" uninstall="true"/>
+			<resource keyfile="false" name="validation_input.xsd" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/validation_input.xsd" type="file" uninstall="true"/>
+			<resource keyfile="false" name="po.xsd" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/po.xsd" type="file" uninstall="true"/>
+			<resource keyfile="false" name="much_adoxsd.xml" location="/local/benchmarks/SPECjvm2008/resources/xml.validation/much_adoxsd.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="derby" location="/local/benchmarks/SPECjvm2008/resources/derby" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="calls.bin" location="/local/benchmarks/SPECjvm2008/resources/derby/calls.bin" type="file" uninstall="true"/>
+			<resource keyfile="false" name="validity.derby.dat" location="/local/benchmarks/SPECjvm2008/resources/derby/validity.derby.dat" type="file" uninstall="true"/>
+			<resource keyfile="false" name="specs.bin" location="/local/benchmarks/SPECjvm2008/resources/derby/specs.bin" type="file" uninstall="true"/>
+			<resource keyfile="false" name="docs" location="/local/benchmarks/SPECjvm2008/docs" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="javadoc" location="/local/benchmarks/SPECjvm2008/docs/javadoc" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="overview-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/overview-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-files" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="index-2.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-2.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-23.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-23.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-17.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-17.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-15.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-15.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-12.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-12.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-5.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-5.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-6.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-6.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-18.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-18.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-13.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-13.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-19.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-19.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-9.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-9.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-11.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-11.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-16.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-16.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-10.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-10.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-3.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-3.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-20.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-20.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-4.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-4.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-14.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-14.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-7.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-7.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-1.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-1.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-24.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-24.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-8.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-8.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-22.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-22.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-21.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index-files/index-21.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="constant-values.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/constant-values.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="deprecated-list.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/deprecated-list.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="resources" location="/local/benchmarks/SPECjvm2008/docs/javadoc/resources" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="inherit.gif" location="/local/benchmarks/SPECjvm2008/docs/javadoc/resources/inherit.gif" type="file" uninstall="true"/>
+			<resource keyfile="false" name="allclasses-noframe.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/allclasses-noframe.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="overview-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/overview-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="help-doc.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/help-doc.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="allclasses-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/allclasses-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="serialized-form.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/serialized-form.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-list" location="/local/benchmarks/SPECjvm2008/docs/javadoc/package-list" type="file" uninstall="true"/>
+			<resource keyfile="false" name="spec" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="validity" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="DigestDefinition.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity/DigestDefinition.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Digests.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity/Digests.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="DigestDefinition.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity/class-use/DigestDefinition.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Digests.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity/class-use/Digests.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/validity/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="io" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="FileCache.CachedFile.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io/FileCache.CachedFile.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="FileCache.CachedFile.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io/class-use/FileCache.CachedFile.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ValidityCheckOutputStream.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io/class-use/ValidityCheckOutputStream.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="FileCache.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io/class-use/FileCache.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ValidityCheckOutputStream.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io/ValidityCheckOutputStream.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="FileCache.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io/FileCache.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/io/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="harness" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="analyzer" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="PollingAnalyzerExample.NumberOfOperations.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/PollingAnalyzerExample.NumberOfOperations.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="CallbackAnalyzerExample.TheNumberGenerator.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/CallbackAnalyzerExample.TheNumberGenerator.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TempSensor.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/TempSensor.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="HeapMemoryTotalAnalyzer.HeapMemoryTotal.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/HeapMemoryTotalAnalyzer.HeapMemoryTotal.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="HeapMemoryFreeAnalyzer.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/HeapMemoryFreeAnalyzer.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="PollingAnalyzerExample.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/PollingAnalyzerExample.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="PowerAnalyzer.PowerConsumtionResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/PowerAnalyzer.PowerConsumtionResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="CallbackAnalyzerExample.NumberInfo.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/CallbackAnalyzerExample.NumberInfo.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TempAnalyzer.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/TempAnalyzer.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="AnalyzerResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/AnalyzerResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="HeapMemoryFreeAnalyzer.HeapMemoryFree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/HeapMemoryFreeAnalyzer.HeapMemoryFree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="HeapMemoryTotalAnalyzer.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/HeapMemoryTotalAnalyzer.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TYInfo.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/TYInfo.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="AnalyzersRunner.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/AnalyzersRunner.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="CallbackAnalyzerExample.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/CallbackAnalyzerExample.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="PowerMeter.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/PowerMeter.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="PollingAnalyzerExample.NumberOfOperations.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/PollingAnalyzerExample.NumberOfOperations.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="CallbackAnalyzerExample.TheNumberGenerator.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/CallbackAnalyzerExample.TheNumberGenerator.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TempSensor.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/TempSensor.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="HeapMemoryTotalAnalyzer.HeapMemoryTotal.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/HeapMemoryTotalAnalyzer.HeapMemoryTotal.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="HeapMemoryFreeAnalyzer.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/HeapMemoryFreeAnalyzer.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="PollingAnalyzerExample.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/PollingAnalyzerExample.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="PowerAnalyzer.PowerConsumtionResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/PowerAnalyzer.PowerConsumtionResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="CallbackAnalyzerExample.NumberInfo.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/CallbackAnalyzerExample.NumberInfo.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TempAnalyzer.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/TempAnalyzer.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="AnalyzerResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/AnalyzerResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="HeapMemoryFreeAnalyzer.HeapMemoryFree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/HeapMemoryFreeAnalyzer.HeapMemoryFree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="HeapMemoryTotalAnalyzer.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/HeapMemoryTotalAnalyzer.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TYInfo.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/TYInfo.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="AnalyzersRunner.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/AnalyzersRunner.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="CallbackAnalyzerExample.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/CallbackAnalyzerExample.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="PowerMeter.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/PowerMeter.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="PowerAnalyzer.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/PowerAnalyzer.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="CallbackAnalyzerExample.NumberResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/CallbackAnalyzerExample.NumberResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TempAnalyzer.TemperatureResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/TempAnalyzer.TemperatureResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="AnalyzerBase.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/class-use/AnalyzerBase.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="PowerAnalyzer.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/PowerAnalyzer.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="CallbackAnalyzerExample.NumberResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/CallbackAnalyzerExample.NumberResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TempAnalyzer.TemperatureResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/TempAnalyzer.TemperatureResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="AnalyzerBase.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/AnalyzerBase.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/analyzer/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Util.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/Util.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="BenchmarkThread.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/BenchmarkThread.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="results" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="IterationResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/IterationResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SuiteResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/SuiteResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/TestResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="IterationResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/class-use/IterationResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SuiteResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/class-use/SuiteResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/class-use/TestResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="BenchmarkResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/class-use/BenchmarkResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="LoopResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/class-use/LoopResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="BenchmarkResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/BenchmarkResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="LoopResult.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/LoopResult.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/results/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecJVMBenchmark.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/SpecJVMBenchmark.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="KnownIssues.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/KnownIssues.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Launch.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/Launch.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Constants.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/Constants.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Context.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/Context.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="VMVersionTest.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/VMVersionTest.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="StopBenchmarkException.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/StopBenchmarkException.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Util.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use/Util.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="BenchmarkThread.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use/BenchmarkThread.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecJVMBenchmark.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use/SpecJVMBenchmark.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="KnownIssues.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use/KnownIssues.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Launch.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use/Launch.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Constants.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use/Constants.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Context.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use/Context.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="VMVersionTest.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use/VMVersionTest.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="StopBenchmarkException.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use/StopBenchmarkException.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Configuration.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use/Configuration.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="CommandLineParser.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use/CommandLineParser.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecJVMBenchmarkBase.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use/SpecJVMBenchmarkBase.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ProgramRunner.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/class-use/ProgramRunner.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Configuration.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/Configuration.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="CommandLineParser.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/CommandLineParser.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecJVMBenchmarkBase.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/SpecJVMBenchmarkBase.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ProgramRunner.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/ProgramRunner.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/harness/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="benchmarks" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="scimark" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="sor" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SOR.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor/SOR.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="SOR.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor/class-use/SOR.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sor/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="utils" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Stopwatch.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/Stopwatch.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="kernel.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/kernel.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Constants.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/Constants.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Random.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/Random.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Stopwatch.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/class-use/Stopwatch.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="kernel.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/class-use/kernel.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Constants.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/class-use/Constants.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Random.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/class-use/Random.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/utils/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="monte_carlo" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="MonteCarlo.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo/class-use/MonteCarlo.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="MonteCarlo.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo/MonteCarlo.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/monte_carlo/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="lu" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="LU.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu/class-use/LU.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="LU.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu/LU.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/lu/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="fft" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="FFT.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft/FFT.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="FFT.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft/class-use/FFT.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/fft/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="sparse" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SparseCompRow.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse/class-use/SparseCompRow.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SparseCompRow.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse/SparseCompRow.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/scimark/sparse/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="compiler" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Util.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/Util.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Compiler.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/Compiler.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecFileManager.CachedFileObject.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/SpecFileManager.CachedFileObject.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecFileManager.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/SpecFileManager.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="compiler" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/compiler" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/compiler/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/compiler/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/compiler/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/compiler/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/compiler/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/compiler/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/compiler/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="MainBase.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/MainBase.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecFileManager.InputFileObject.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/SpecFileManager.InputFileObject.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="sunflow" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/sunflow" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/sunflow/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/sunflow/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/sunflow/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/sunflow/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/sunflow/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/sunflow/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/sunflow/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecFileManager.OutputFileObject.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/SpecFileManager.OutputFileObject.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Util.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use/Util.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Compiler.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use/Compiler.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecFileManager.CachedFileObject.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use/SpecFileManager.CachedFileObject.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecFileManager.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use/SpecFileManager.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="MainBase.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use/MainBase.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecFileManager.InputFileObject.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use/SpecFileManager.InputFileObject.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecFileManager.OutputFileObject.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use/SpecFileManager.OutputFileObject.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecFileManager.BaseFileObject.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/class-use/SpecFileManager.BaseFileObject.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecFileManager.BaseFileObject.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/SpecFileManager.BaseFileObject.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compiler/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="crypto" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Util.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/Util.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="aes" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/aes" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/aes/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/aes/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/aes/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/aes/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/aes/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/aes/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/aes/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="rsa" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/rsa" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/rsa/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/rsa/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/rsa/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/rsa/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/rsa/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/rsa/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/rsa/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Util.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/class-use/Util.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="signverify" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/signverify" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/signverify/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/signverify/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/signverify/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/signverify/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/signverify/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/signverify/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/signverify/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/crypto/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="startup" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="StartupBenchmarkOutput.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup/StartupBenchmarkOutput.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="StartupBenchmarkOutput.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup/class-use/StartupBenchmarkOutput.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/startup/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ReadMe.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/ReadMe.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="compress" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Harness.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress/class-use/Harness.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Harness.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress/Harness.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/compress/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="helloworld" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="HelloWorld.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld/HelloWorld.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="HelloWorld.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld/class-use/HelloWorld.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/helloworld/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="mpegaudio" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Harness.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio/class-use/Harness.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Harness.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio/Harness.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/mpegaudio/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="check" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="FloatingPointCheck.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/FloatingPointCheck.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Super.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/Super.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="FloatingPointCheck.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/class-use/FloatingPointCheck.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Super.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/class-use/Super.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Sub.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/class-use/Sub.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Sub.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/Sub.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/check/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="serial" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Utils.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/Utils.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Utils.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/class-use/Utils.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="data" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="TestReadResolve.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestReadResolve.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestParent.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestParent.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestBigInteger.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestBigInteger.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestArrayDouble.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestArrayDouble.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestWithFinalField.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestWithFinalField.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestByteArray.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestByteArray.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestWithBigDecimal.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestWithBigDecimal.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestProxy.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestProxy.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestArrayList.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestArrayList.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="InterfaceForProxy.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/InterfaceForProxy.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestExternalizable.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestExternalizable.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestDomainObject.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestDomainObject.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ProxiedClass.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/ProxiedClass.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestClassReferenceTest.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestClassReferenceTest.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestPayload.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestPayload.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestArray.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestArray.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Child.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/Child.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Handler.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/Handler.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="TestReadResolve.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestReadResolve.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestParent.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestParent.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestBigInteger.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestBigInteger.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestArrayDouble.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestArrayDouble.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestWithFinalField.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestWithFinalField.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestByteArray.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestByteArray.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestWithBigDecimal.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestWithBigDecimal.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestProxy.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestProxy.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestArrayList.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestArrayList.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="InterfaceForProxy.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/InterfaceForProxy.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestExternalizable.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestExternalizable.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestDomainObject.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestDomainObject.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ProxiedClass.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/ProxiedClass.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestClassReferenceTest.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestClassReferenceTest.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestPayload.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestPayload.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestArray.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestArray.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Child.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/Child.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Handler.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/Handler.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestSimple.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestSimple.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestClassWithSQLDateOnly.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestClassWithSQLDateOnly.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestHugeData.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestHugeData.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestHandler.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestHandler.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestExceptionReference.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/class-use/TestExceptionReference.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestSimple.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestSimple.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestClassWithSQLDateOnly.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestClassWithSQLDateOnly.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestHugeData.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestHugeData.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestHandler.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestHandler.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestExceptionReference.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/TestExceptionReference.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/data/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/serial/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="sunflow" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/sunflow" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/sunflow/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/sunflow/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/sunflow/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/sunflow/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/sunflow/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/sunflow/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/sunflow/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="ReadMe.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/class-use/ReadMe.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="xml" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="XMLBenchmark.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/XMLBenchmark.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="validation" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/validation" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/validation/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/validation/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/validation/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/validation/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/validation/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/validation/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/validation/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="transform" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/transform" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/transform/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/transform/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/transform/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/transform/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/transform/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/transform/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/transform/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="XMLBenchmark.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/class-use/XMLBenchmark.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ReportingHandler.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/class-use/ReportingHandler.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ReportingHandler.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/ReportingHandler.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/xml/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="derby" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="CyclicReader.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/CyclicReader.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Utils.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/Utils.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="DataReader.Data.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/DataReader.Data.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="DataReader.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/DataReader.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="CyclicReader.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/class-use/CyclicReader.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Utils.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/class-use/Utils.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="DataReader.Data.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/class-use/DataReader.Data.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="DataReader.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/class-use/DataReader.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/class-use/Main.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="DerbyHarness.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/class-use/DerbyHarness.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="DerbyHarness.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/DerbyHarness.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/derby/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/benchmarks/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="reporter" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="BenchmarkGroupRecords.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/BenchmarkGroupRecords.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-use.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/package-use.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Writer.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/Writer.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="PlainWriter.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/PlainWriter.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Utils.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/Utils.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SPECSubmissionPreparer.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/SPECSubmissionPreparer.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Reporter.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/Reporter.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="HTMLWriter.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/HTMLWriter.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SPECSubmissionProcessor.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/SPECSubmissionProcessor.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="class-use" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="BenchmarkGroupRecords.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use/BenchmarkGroupRecords.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Writer.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use/Writer.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="PlainWriter.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use/PlainWriter.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Utils.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use/Utils.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SPECSubmissionPreparer.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use/SPECSubmissionPreparer.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Reporter.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use/Reporter.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="HTMLWriter.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use/HTMLWriter.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SPECSubmissionProcessor.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use/SPECSubmissionProcessor.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="BenchmarkChart.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use/BenchmarkChart.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="BenchmarkRecord.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use/BenchmarkRecord.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ReportGenerator.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/class-use/ReportGenerator.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="BenchmarkChart.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/BenchmarkChart.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="BenchmarkRecord.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/BenchmarkRecord.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ReportGenerator.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/ReportGenerator.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/spec/reporter/package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/index.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="overview-frame.html" location="/local/benchmarks/SPECjvm2008/docs/javadoc/overview-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="stylesheet.css" location="/local/benchmarks/SPECjvm2008/docs/javadoc/stylesheet.css" type="file" uninstall="true"/>
+			<resource keyfile="false" name="RunRules.html" location="/local/benchmarks/SPECjvm2008/docs/RunRules.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="FAQ.html" location="/local/benchmarks/SPECjvm2008/docs/FAQ.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="KnownIssues.html" location="/local/benchmarks/SPECjvm2008/docs/KnownIssues.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="summary.html" location="/local/benchmarks/SPECjvm2008/docs/summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="UserGuide.html" location="/local/benchmarks/SPECjvm2008/docs/UserGuide.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TechSupport.html" location="/local/benchmarks/SPECjvm2008/docs/TechSupport.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="spec-sm.gif" location="/local/benchmarks/SPECjvm2008/docs/spec-sm.gif" type="file" uninstall="true"/>
+			<resource keyfile="false" name="menu.html" location="/local/benchmarks/SPECjvm2008/docs/menu.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="benchmarks" location="/local/benchmarks/SPECjvm2008/docs/benchmarks" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="serial.html" location="/local/benchmarks/SPECjvm2008/docs/benchmarks/serial.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="compress.html" location="/local/benchmarks/SPECjvm2008/docs/benchmarks/compress.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="xml.html" location="/local/benchmarks/SPECjvm2008/docs/benchmarks/xml.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="sunflow.html" location="/local/benchmarks/SPECjvm2008/docs/benchmarks/sunflow.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="crypto.html" location="/local/benchmarks/SPECjvm2008/docs/benchmarks/crypto.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="mpegaudio.html" location="/local/benchmarks/SPECjvm2008/docs/benchmarks/mpegaudio.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="startup.html" location="/local/benchmarks/SPECjvm2008/docs/benchmarks/startup.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="scimark.html" location="/local/benchmarks/SPECjvm2008/docs/benchmarks/scimark.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="compiler.html" location="/local/benchmarks/SPECjvm2008/docs/benchmarks/compiler.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="derby.html" location="/local/benchmarks/SPECjvm2008/docs/benchmarks/derby.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index.html" location="/local/benchmarks/SPECjvm2008/docs/benchmarks/index.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index.html" location="/local/benchmarks/SPECjvm2008/docs/index.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="stylesheet.css" location="/local/benchmarks/SPECjvm2008/docs/stylesheet.css" type="file" uninstall="true"/>
+			<resource keyfile="false" name="report.sh" location="/local/benchmarks/SPECjvm2008/report.sh" type="file" uninstall="true"/>
+			<resource keyfile="false" name="redistributable_sources" location="/local/benchmarks/SPECjvm2008/redistributable_sources" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="licenses" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="jcommon" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/jcommon" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="lgpl-3.0.txt" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/jcommon/lgpl-3.0.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="gpl-3.0.txt" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/jcommon/gpl-3.0.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="README.txt" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/README.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="README" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/README" type="file" uninstall="true"/>
+			<resource keyfile="false" name="jfreechart" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/jfreechart" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="lgpl-3.0.txt" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/jfreechart/lgpl-3.0.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="gpl-3.0.txt" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/jfreechart/gpl-3.0.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="XOM" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/XOM" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="lgpl-2.1.txt" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/XOM/lgpl-2.1.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="XOMlicense.txt" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/XOM/XOMlicense.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="gpl-2.0.txt" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/XOM/gpl-2.0.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="javazoom" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/javazoom" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="lgpl-3.0.txt" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/javazoom/lgpl-3.0.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="gpl-3.0.txt" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/javazoom/gpl-3.0.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="compiler.compiler" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/compiler.compiler" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="LICENSE" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/compiler.compiler/LICENSE" type="file" uninstall="true"/>
+			<resource keyfile="false" name="gpl-2.0.txt" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/compiler.compiler/gpl-2.0.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="sunflow" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/sunflow" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="LICENSE.txt" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/sunflow/LICENSE.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="jtidy" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/jtidy" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="LICENSE" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/jtidy/LICENSE" type="file" uninstall="true"/>
+			<resource keyfile="false" name="derby" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/derby" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="LICENSE" location="/local/benchmarks/SPECjvm2008/redistributable_sources/licenses/derby/LICENSE" type="file" uninstall="true"/>
+			<resource keyfile="false" name="README.txt" location="/local/benchmarks/SPECjvm2008/redistributable_sources/README.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="packages" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="xom" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/xom" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="xom-1.1-src.zip" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/xom/xom-1.1-src.zip" type="file" uninstall="true"/>
+			<resource keyfile="false" name="jfreechart" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/jfreechart" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="jfreechart-1.0.5.zip" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/jfreechart/jfreechart-1.0.5.zip" type="file" uninstall="true"/>
+			<resource keyfile="false" name="jcommon-1.0.9.zip" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/jfreechart/jcommon-1.0.9.zip" type="file" uninstall="true"/>
+			<resource keyfile="false" name="javazoom" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/javazoom" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="src.zip" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/javazoom/src.zip" type="file" uninstall="true"/>
+			<resource keyfile="false" name="compiler.compiler" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/compiler.compiler" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="compiler-7-ea-src-b18-16_aug_2007.zip" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/compiler.compiler/compiler-7-ea-src-b18-16_aug_2007.zip" type="file" uninstall="true"/>
+			<resource keyfile="false" name="sunflow" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/sunflow" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="sunflow-src-v0.07.2.zip" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/sunflow/sunflow-src-v0.07.2.zip" type="file" uninstall="true"/>
+			<resource keyfile="false" name="sunflow-src-v0.07.2.md5" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/sunflow/sunflow-src-v0.07.2.md5" type="file" uninstall="true"/>
+			<resource keyfile="false" name="jtidy" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/jtidy" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="jtidy_src.zip" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/jtidy/jtidy_src.zip" type="file" uninstall="true"/>
+			<resource keyfile="false" name="derby" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/derby" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="db-derby-10.3.1.4-src.zip.md5" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/derby/db-derby-10.3.1.4-src.zip.md5" type="file" uninstall="true"/>
+			<resource keyfile="false" name="db-derby-10.3.1.4-src.zip" location="/local/benchmarks/SPECjvm2008/redistributable_sources/packages/derby/db-derby-10.3.1.4-src.zip" type="file" uninstall="true"/>
+			<resource keyfile="false" name="README.txt" location="/local/benchmarks/SPECjvm2008/README.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="src" location="/local/benchmarks/SPECjvm2008/src" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="spec" location="/local/benchmarks/SPECjvm2008/src/spec" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="validity" location="/local/benchmarks/SPECjvm2008/src/spec/validity" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="DigestDefinition.java" location="/local/benchmarks/SPECjvm2008/src/spec/validity/DigestDefinition.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Digests.java" location="/local/benchmarks/SPECjvm2008/src/spec/validity/Digests.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="io" location="/local/benchmarks/SPECjvm2008/src/spec/io" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package.html" location="/local/benchmarks/SPECjvm2008/src/spec/io/package.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ValidityCheckOutputStream.java" location="/local/benchmarks/SPECjvm2008/src/spec/io/ValidityCheckOutputStream.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="FileCache.java" location="/local/benchmarks/SPECjvm2008/src/spec/io/FileCache.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="harness" location="/local/benchmarks/SPECjvm2008/src/spec/harness" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="analyzer" location="/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="HeapMemoryFreeAnalyzer.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer/HeapMemoryFreeAnalyzer.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package.html" location="/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer/package.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="HeapMemoryTotalAnalyzer.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer/HeapMemoryTotalAnalyzer.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="AnalyzerBase.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer/AnalyzerBase.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="AnalyzerResult.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer/AnalyzerResult.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TYInfo.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer/TYInfo.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="PowerMeter.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer/PowerMeter.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="PowerAnalyzer.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer/PowerAnalyzer.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TempSensor.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer/TempSensor.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="AnalyzersRunner.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer/AnalyzersRunner.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="PollingAnalyzerExample.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer/PollingAnalyzerExample.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TempAnalyzer.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer/TempAnalyzer.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="CallbackAnalyzerExample.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/analyzer/CallbackAnalyzerExample.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Launch.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/Launch.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="CommandLineParser.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/CommandLineParser.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package.html" location="/local/benchmarks/SPECjvm2008/src/spec/harness/package.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="KnownIssues.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/KnownIssues.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="results" location="/local/benchmarks/SPECjvm2008/src/spec/harness/results" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package.html" location="/local/benchmarks/SPECjvm2008/src/spec/harness/results/package.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SuiteResult.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/results/SuiteResult.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="BenchmarkResult.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/results/BenchmarkResult.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestResult.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/results/TestResult.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="IterationResult.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/results/IterationResult.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="LoopResult.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/results/LoopResult.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Constants.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/Constants.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Util.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/Util.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Context.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/Context.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="BenchmarkThread.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/BenchmarkThread.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ProgramRunner.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/ProgramRunner.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="VMVersionTest.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/VMVersionTest.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecJVMBenchmark.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/SpecJVMBenchmark.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecJVMBenchmarkBase.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/SpecJVMBenchmarkBase.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="StopBenchmarkException.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/StopBenchmarkException.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Configuration.java" location="/local/benchmarks/SPECjvm2008/src/spec/harness/Configuration.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="benchmarks" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="scimark" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="sor" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/sor" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="SOR.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/sor/SOR.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/sor/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="utils" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/utils" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Constants.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/utils/Constants.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Stopwatch.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/utils/Stopwatch.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Random.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/utils/Random.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="kernel.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/utils/kernel.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="monte_carlo" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/monte_carlo" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/monte_carlo/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="MonteCarlo.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/monte_carlo/MonteCarlo.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="lu" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/lu" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/lu/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="LU.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/lu/LU.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="fft" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/fft" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/fft/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="FFT.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/fft/FFT.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="sparse" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/sparse" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/sparse/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SparseCompRow.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/scimark/sparse/SparseCompRow.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package.html" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/package.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="compiler" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compiler" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Compiler.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compiler/Compiler.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="compiler" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compiler/compiler" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compiler/compiler/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="MainBase.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compiler/MainBase.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Util.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compiler/Util.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SpecFileManager.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compiler/SpecFileManager.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="sunflow" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compiler/sunflow" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compiler/sunflow/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="chart" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/chart" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="crypto" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/crypto" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="aes" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/crypto/aes" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/crypto/aes/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Util.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/crypto/Util.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="rsa" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/crypto/rsa" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/crypto/rsa/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="signverify" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/crypto/signverify" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/crypto/signverify/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="startup" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/startup" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="StartupBenchmarkOutput.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/startup/StartupBenchmarkOutput.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/startup/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="compress" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compress" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Harness.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compress/Harness.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compress/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Compress.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/compress/Compress.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="helloworld" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/helloworld" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="HelloWorld.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/helloworld/HelloWorld.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/helloworld/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="mpegaudio" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/mpegaudio" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Harness.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/mpegaudio/Harness.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/mpegaudio/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="check" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/check" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="PepTest.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/check/PepTest.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="LoopBounds.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/check/LoopBounds.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Sub.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/check/Sub.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="FloatingPointCheck.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/check/FloatingPointCheck.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/check/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Super.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/check/Super.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="serial" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Utils.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/Utils.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="data" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="TestBigInteger.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestBigInteger.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestExceptionReference.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestExceptionReference.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestArray.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestArray.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestHandler.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestHandler.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestExternalizable.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestExternalizable.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestArrayList.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestArrayList.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestWithFinalField.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestWithFinalField.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestWithBigDecimal.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestWithBigDecimal.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestProxy.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestProxy.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestByteArray.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestByteArray.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ProxiedClass.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/ProxiedClass.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="InterfaceForProxy.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/InterfaceForProxy.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestParent.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestParent.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestHugeData.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestHugeData.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Handler.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/Handler.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestClassReferenceTest.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestClassReferenceTest.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestSimple.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestSimple.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestArrayDouble.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestArrayDouble.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestPayload.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestPayload.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestClassWithSQLDateOnly.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestClassWithSQLDateOnly.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Child.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/Child.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestDomainObject.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestDomainObject.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TestReadResolve.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/serial/data/TestReadResolve.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="sunflow" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/sunflow" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/sunflow/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ReadMe.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/ReadMe.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="xml" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/xml" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="XMLBenchmark.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/xml/XMLBenchmark.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ReportingHandler.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/xml/ReportingHandler.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="validation" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/xml/validation" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/xml/validation/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="transform" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/xml/transform" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="ExtOutputStream.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/xml/transform/ExtOutputStream.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/xml/transform/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="BaseOutputStream.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/xml/transform/BaseOutputStream.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="derby" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/derby" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="CyclicReader.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/derby/CyclicReader.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="DerbyHarness.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/derby/DerbyHarness.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="InitThread.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/derby/InitThread.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Main.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/derby/Main.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Utils.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/derby/Utils.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="DataReader.java" location="/local/benchmarks/SPECjvm2008/src/spec/benchmarks/derby/DataReader.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="reporter" location="/local/benchmarks/SPECjvm2008/src/spec/reporter" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="HTMLWriter.java" location="/local/benchmarks/SPECjvm2008/src/spec/reporter/HTMLWriter.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package.html" location="/local/benchmarks/SPECjvm2008/src/spec/reporter/package.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ReportGenerator.java" location="/local/benchmarks/SPECjvm2008/src/spec/reporter/ReportGenerator.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SPECSubmissionProcessor.java" location="/local/benchmarks/SPECjvm2008/src/spec/reporter/SPECSubmissionProcessor.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Reporter.java" location="/local/benchmarks/SPECjvm2008/src/spec/reporter/Reporter.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Utils.java" location="/local/benchmarks/SPECjvm2008/src/spec/reporter/Utils.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Writer.java" location="/local/benchmarks/SPECjvm2008/src/spec/reporter/Writer.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SPECSubmissionPreparer.java" location="/local/benchmarks/SPECjvm2008/src/spec/reporter/SPECSubmissionPreparer.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="BenchmarkGroupRecords.java" location="/local/benchmarks/SPECjvm2008/src/spec/reporter/BenchmarkGroupRecords.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="BenchmarkRecord.java" location="/local/benchmarks/SPECjvm2008/src/spec/reporter/BenchmarkRecord.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="PlainWriter.java" location="/local/benchmarks/SPECjvm2008/src/spec/reporter/PlainWriter.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="BenchmarkChart.java" location="/local/benchmarks/SPECjvm2008/src/spec/reporter/BenchmarkChart.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="META-INF" location="/local/benchmarks/SPECjvm2008/src/META-INF" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="specjvm2008reporter.mf" location="/local/benchmarks/SPECjvm2008/src/META-INF/specjvm2008reporter.mf" type="file" uninstall="true"/>
+			<resource keyfile="false" name="specjvm2008.mf" location="/local/benchmarks/SPECjvm2008/src/META-INF/specjvm2008.mf" type="file" uninstall="true"/>
+			<resource keyfile="false" name="lib" location="/local/benchmarks/SPECjvm2008/lib" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="jfreechart-1.0.5.jar" location="/local/benchmarks/SPECjvm2008/lib/jfreechart-1.0.5.jar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="sunflow.jar" location="/local/benchmarks/SPECjvm2008/lib/sunflow.jar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="jcommon-1.0.9.jar" location="/local/benchmarks/SPECjvm2008/lib/jcommon-1.0.9.jar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="xom-1.1.jar" location="/local/benchmarks/SPECjvm2008/lib/xom-1.1.jar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="janino.jar" location="/local/benchmarks/SPECjvm2008/lib/janino.jar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="jl1.0.jar" location="/local/benchmarks/SPECjvm2008/lib/jl1.0.jar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Tidy.jar" location="/local/benchmarks/SPECjvm2008/lib/Tidy.jar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ant-launcher.jar" location="/local/benchmarks/SPECjvm2008/lib/ant-launcher.jar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ant.jar" location="/local/benchmarks/SPECjvm2008/lib/ant.jar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="check.jar" location="/local/benchmarks/SPECjvm2008/lib/check.jar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="javac.jar" location="/local/benchmarks/SPECjvm2008/lib/javac.jar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="derby.jar" location="/local/benchmarks/SPECjvm2008/lib/derby.jar" type="file" uninstall="true"/>
+			<resource keyfile="false" name="build-tools.zip" location="/local/benchmarks/SPECjvm2008/build-tools.zip" type="file" uninstall="true"/>
+			<resource keyfile="false" name="props" location="/local/benchmarks/SPECjvm2008/props" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="specjvm.properties" location="/local/benchmarks/SPECjvm2008/props/specjvm.properties" type="file" uninstall="true"/>
+			<resource keyfile="false" name="specjvm.reporter.properties" location="/local/benchmarks/SPECjvm2008/props/specjvm.reporter.properties" type="file" uninstall="true"/>
+			<resource keyfile="false" name="version.txt" location="/local/benchmarks/SPECjvm2008/version.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="run-specjvm.sh" location="/local/benchmarks/SPECjvm2008/run-specjvm.sh" type="file" uninstall="true"/>
+			<resource keyfile="false" name="report.cmd" location="/local/benchmarks/SPECjvm2008/report.cmd" type="file" uninstall="true"/>
+			<resource keyfile="false" name="run-specjvm.cmd" location="/local/benchmarks/SPECjvm2008/run-specjvm.cmd" type="file" uninstall="true"/>
+			<resource keyfile="false" name="license" location="/local/benchmarks/SPECjvm2008/license" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="Peptest.txt" location="/local/benchmarks/SPECjvm2008/license/Peptest.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="CodeSynthesisLicense" location="/local/benchmarks/SPECjvm2008/license/CodeSynthesisLicense" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Licence.txt" location="/local/benchmarks/SPECjvm2008/license/Licence.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SPECjvm2008.jar" location="/local/benchmarks/SPECjvm2008/SPECjvm2008.jar" type="file" uninstall="true"/>
+		</component>
+		<component id="be150b99-1eeb-11b2-ab58-94a382884056" version="1.0.0.0" name="InstallAnywhere Uninstall Component" location="/local/benchmarks/SPECjvm2008/Uninstall/Uninstall_SPECjvm2008" vendor="Standard Performance Evaluation Corporation">
+			<resource keyfile="false" name="SPECjvm2008_InstallLog.xml" location="/local/benchmarks/SPECjvm2008/SPECjvm2008_InstallLog.xml" type="file" uninstall="true"/>
+			<resource keyfile="false" name="SPECjvm2008" location="/local/benchmarks/SPECjvm2008" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Uninstall" location="/local/benchmarks/SPECjvm2008/Uninstall" type="directory" uninstall="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="uninstaller.jar" location="/local/benchmarks/SPECjvm2008/Uninstall/uninstaller.jar" type="file" uninstall="true"/>
+			<resource keyfile="false" name=".com.zerog.registry.xml" location="/local/benchmarks/SPECjvm2008/Uninstall/.com.zerog.registry.xml" type="file" uninstall="true"/>
+		</component>
+	</components>
+</registry>

@@ -1,0 +1,365 @@
+<?xml version="1.0"?>
+
+<!--
+
+file      : structure.xsd
+author    : Boris Kolpackov <boris@codesynthesis.com>
+copyright : Copyright (c) 2006 Code Synthesis Tools CC
+license   : The structure.xml and structure.xsd files are part of the XSDBench W3C XML Schema
+            benchmark: http://www.codesynthesis.com/projects/xsdbench/
+
+-->
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:s="http://www.codesynthesis.com/xmlns/xsdbench/structure"
+	targetNamespace="http://www.codesynthesis.com/xmlns/xsdbench/structure"
+	elementFormDefault="qualified">
+
+  <!--
+  Strcuture elements:
+
+    - attribute
+    - anyAttribute
+
+    - element
+    - any
+
+    - all
+    - choice
+    - sequnce
+
+    - complex type empty content
+    - complex type simple content
+    - complex type complex content
+
+  Notes:
+    - individual tests are sometimes "padded" with other constructs to
+      make it more realistic, e.g., almost all tests include both
+      attributes and elements.
+  -->
+
+
+  <!--
+  attribute
+
+  use = {optional,required}
+
+  Notes:
+    - using realistic names instead of 'a', 'b' or 'attr_1', 'attr_2'
+  -->
+  <complexType name="Attribute">
+    <sequence>
+      <element name="potato" type="string"/>
+      <element name="carrot" type="string" minOccurs="0"/>
+      <element name="onion" type="string" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+    <attribute name="apple" type="string"/>
+    <attribute name="orange" type="string" use="required"/>
+    <attribute name="mango" type="string"/>
+    <attribute name="grapefruit" type="string" use="required"/>
+  </complexType>
+
+
+  <!--
+  element
+
+  min = {0,1}
+  max = {1,unbounded}
+
+  Notes:
+    - using realistic names instead of 'a', 'b' or 'element_1', 'element_2'
+  -->
+  <complexType name="Element">
+    <sequence>
+      <element name="apple" type="string" minOccurs="0" maxOccurs="1"/>
+      <element name="orange" type="string" minOccurs="0" maxOccurs="unbounded"/>
+      <element name="mango" type="string" minOccurs="1" maxOccurs="1"/>
+      <element name="grapefruit" type="string" minOccurs="1" maxOccurs="unbounded"/>
+    </sequence>
+    <attribute name="potato" type="string"/>
+    <attribute name="carrot" type="string" use="required"/>
+  </complexType>
+
+
+
+  <!--
+  any
+
+  min = {0,1}
+  max = {1,unbounded}
+  namespace = {##any,##other,##local,##targetNamespace}
+  processContents = {skip}
+
+  Notes:
+    - there does not appear to be any real-world schemas that use
+      processContents value strict.
+  -->
+
+  <complexType name="Any">
+    <sequence>
+      <any namespace="##other" processContents="skip" minOccurs="0" maxOccurs="1"/>
+      <element name="apple" type="string"/>
+      <any namespace="##local" processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+      <element name="orange" type="string"/>
+      <any namespace="##targetNamespace" processContents="skip" minOccurs="1" maxOccurs="1"/>
+      <element name="mango" type="string"/>
+      <any namespace="##any" processContents="skip" minOccurs="1" maxOccurs="unbounded"/>
+    </sequence>
+    <attribute name="potato" type="string"/>
+    <attribute name="carrot" type="string" use="required"/>
+    <anyAttribute namespace="##any" processContents="skip"/>
+  </complexType>
+
+
+  <!--
+  all
+
+  min = {0,1}
+  max = {1}
+
+  -->
+  <complexType name="AllOptional">
+    <all minOccurs="0">
+      <element name="apple" type="string"/>
+      <element name="orange" type="string" minOccurs="0"/>
+      <element name="mango" type="string"/>
+      <element name="grapefruit" type="string" minOccurs="0"/>
+    </all>
+  </complexType>
+
+  <complexType name="AllRequired">
+    <all>
+      <element name="apple" type="string"/>
+      <element name="orange" type="string" minOccurs="0"/>
+      <element name="mango" type="string"/>
+      <element name="grapefruit" type="string" minOccurs="0"/>
+    </all>
+  </complexType>
+
+
+  <!--
+  choice
+
+  min = {0,1}
+  max = {1,unbounded}
+
+  -->
+
+  <complexType name="Choice">
+    <sequence>
+      <choice minOccurs="0" maxOccurs="1">
+        <element name="apple" type="string" minOccurs="0" maxOccurs="1"/>
+	<element name="orange" type="string" minOccurs="0" maxOccurs="unbounded"/>
+	<element name="mango" type="string" minOccurs="1" maxOccurs="1"/>
+	<element name="grapefruit" type="string" minOccurs="1" maxOccurs="unbounded"/>
+      </choice>
+      <element name="peach" type="string"/> <!-- UPA delimiter -->
+      <choice minOccurs="0" maxOccurs="unbounded">
+        <element name="apple" type="string" minOccurs="0" maxOccurs="1"/>
+	<element name="orange" type="string" minOccurs="0" maxOccurs="unbounded"/>
+	<element name="mango" type="string" minOccurs="1" maxOccurs="1"/>
+	<element name="grapefruit" type="string" minOccurs="1" maxOccurs="unbounded"/>
+      </choice>
+      <element name="apricot" type="string"/> <!-- UPA delimiter -->
+      <choice minOccurs="1" maxOccurs="1">
+        <element name="apple" type="string" minOccurs="0" maxOccurs="1"/>
+	<element name="orange" type="string" minOccurs="0" maxOccurs="unbounded"/>
+	<element name="mango" type="string" minOccurs="1" maxOccurs="1"/>
+	<element name="grapefruit" type="string" minOccurs="1" maxOccurs="unbounded"/>
+      </choice>
+      <element name="tangerine" type="string"/> <!-- UPA delimiter -->
+      <choice minOccurs="1" maxOccurs="unbounded">
+        <element name="apple" type="string" minOccurs="0" maxOccurs="1"/>
+	<element name="orange" type="string" minOccurs="0" maxOccurs="unbounded"/>
+	<element name="mango" type="string" minOccurs="1" maxOccurs="1"/>
+	<element name="grapefruit" type="string" minOccurs="1" maxOccurs="unbounded"/>
+      </choice>
+    </sequence>
+  </complexType>
+
+
+  <!--
+  sequence
+
+  min = {0,1}
+  max = {1,unbounded}
+
+  -->
+
+  <complexType name="Sequence">
+    <sequence>
+      <sequence minOccurs="0" maxOccurs="1">
+        <element name="apple" type="string" minOccurs="0" maxOccurs="1"/>
+	<element name="orange" type="string" minOccurs="0" maxOccurs="unbounded"/>
+	<element name="mango" type="string" minOccurs="1" maxOccurs="1"/>
+	<element name="grapefruit" type="string" minOccurs="1" maxOccurs="unbounded"/>
+      </sequence>
+      <element name="peach" type="string"/> <!-- UPA delimiter -->
+      <sequence minOccurs="0" maxOccurs="unbounded">
+        <element name="apple" type="string" minOccurs="0" maxOccurs="1"/>
+	<element name="orange" type="string" minOccurs="0" maxOccurs="unbounded"/>
+	<element name="mango" type="string" minOccurs="1" maxOccurs="1"/>
+	<element name="grapefruit" type="string" minOccurs="1" maxOccurs="unbounded"/>
+      </sequence>
+      <element name="apricot" type="string"/> <!-- UPA delimiter -->
+      <sequence minOccurs="1" maxOccurs="1">
+        <element name="apple" type="string" minOccurs="0" maxOccurs="1"/>
+	<element name="orange" type="string" minOccurs="0" maxOccurs="unbounded"/>
+	<element name="mango" type="string" minOccurs="1" maxOccurs="1"/>
+	<element name="grapefruit" type="string" minOccurs="1" maxOccurs="unbounded"/>
+      </sequence>
+      <element name="tangerine" type="string"/> <!-- UPA delimiter -->
+      <sequence minOccurs="1" maxOccurs="unbounded">
+        <element name="apple" type="string" minOccurs="0" maxOccurs="1"/>
+	<element name="orange" type="string" minOccurs="0" maxOccurs="unbounded"/>
+	<element name="mango" type="string" minOccurs="1" maxOccurs="1"/>
+	<element name="grapefruit" type="string" minOccurs="1" maxOccurs="unbounded"/>
+      </sequence>
+    </sequence>
+  </complexType>
+
+
+  <!--
+  complex type empty content
+  -->
+
+  <complexType name="Empty">
+    <attribute name="potato" type="string"/>
+    <attribute name="carrot" type="string" use="required"/>
+  </complexType>
+
+  <complexType name="EmptyExtension">
+    <complexContent>
+      <extension base="s:Empty">
+        <attribute name="onion" type="string"/>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <complexType name="EmptyRestriction">
+    <complexContent>
+      <restriction base="s:EmptyExtension">
+        <attribute name="potato" type="string" use="required"/>
+	<attribute name="carrot" type="string" use="required"/>
+	<attribute name="onion" type="string" use="required"/>
+      </restriction>
+    </complexContent>
+  </complexType>
+
+
+  <!--
+  complex type simple content
+  -->
+
+  <complexType name="Simple">
+    <simpleContent>
+      <extension base="string">
+        <attribute name="potato" type="string"/>
+        <attribute name="carrot" type="string" use="required"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="SimpleExtension">
+    <simpleContent>
+      <extension base="s:Simple">
+        <attribute name="onion" type="string"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="SimpleRestriction">
+    <simpleContent>
+      <restriction base="s:SimpleExtension">
+        <attribute name="potato" type="string" use="required"/>
+        <attribute name="carrot" type="string" use="required"/>
+	<attribute name="onion" type="string" use="required"/>
+      </restriction>
+    </simpleContent>
+  </complexType>
+
+
+  <!--
+  complex type complex content
+  -->
+
+  <complexType name="Complex">
+    <sequence minOccurs="0" maxOccurs="unbounded">
+      <element name="apple" type="string" minOccurs="0" maxOccurs="1"/>
+      <element name="orange" type="string" minOccurs="0" maxOccurs="unbounded"/>
+      <element name="mango" type="string" minOccurs="1" maxOccurs="1"/>
+      <element name="grapefruit" type="string" minOccurs="1" maxOccurs="unbounded"/>
+    </sequence>
+    <attribute name="potato" type="string"/>
+    <attribute name="carrot" type="string" use="required"/>
+  </complexType>
+
+  <complexType name="ComplexExtension">
+    <complexContent>
+      <extension base="s:Complex">
+        <choice minOccurs="0" maxOccurs="unbounded">
+          <element name="peach" type="string" minOccurs="0" maxOccurs="1"/>
+	  <element name="apricot" type="string" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="tangerine" type="string" minOccurs="1" maxOccurs="1"/>
+	  <element name="banana" type="string" minOccurs="1" maxOccurs="unbounded"/>
+        </choice>
+	<attribute name="onion" type="string"/>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <complexType name="ComplexRestriction">
+    <complexContent>
+      <restriction base="s:ComplexExtension">
+        <sequence>
+	  <sequence minOccurs="1" maxOccurs="unbounded">
+            <element name="apple" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="orange" type="string" minOccurs="1" maxOccurs="unbounded"/>
+            <element name="mango" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="grapefruit" type="string" minOccurs="1" maxOccurs="1"/>
+          </sequence>
+	  <choice minOccurs="1" maxOccurs="unbounded">
+            <element name="peach" type="string" minOccurs="1" maxOccurs="1"/>
+	    <element name="apricot" type="string" minOccurs="1" maxOccurs="unbounded"/>
+            <element name="tangerine" type="string" minOccurs="1" maxOccurs="1"/>
+	    <element name="banana" type="string" minOccurs="1" maxOccurs="1"/>
+          </choice>
+	</sequence>
+	<attribute name="potato" type="string" use="required"/>
+	<attribute name="carrot" type="string" use="required"/>
+	<attribute name="onion" type="string" use="required"/>
+      </restriction>
+    </complexContent>
+  </complexType>
+
+
+
+  <complexType name="Structure">
+    <sequence>
+      <element name="attribute" type="s:Attribute" maxOccurs="unbounded"/>
+
+      <element name="element" type="s:Element" maxOccurs="unbounded"/>
+      <element name="any" type="s:Any" maxOccurs="unbounded"/>
+
+      <element name="all-optional" type="s:AllOptional" maxOccurs="unbounded"/>
+      <element name="all-required" type="s:AllRequired" maxOccurs="unbounded"/>
+      <element name="choice" type="s:Choice" maxOccurs="unbounded"/>
+      <element name="sequence" type="s:Sequence" maxOccurs="unbounded"/>
+
+      <element name="empty" type="s:Empty" maxOccurs="unbounded"/>
+      <element name="empty-extension" type="s:EmptyExtension" maxOccurs="unbounded"/>
+      <element name="empty-restriction" type="s:EmptyRestriction" maxOccurs="unbounded"/>
+
+      <element name="simple" type="s:Simple" maxOccurs="unbounded"/>
+      <element name="simple-extension" type="s:SimpleExtension" maxOccurs="unbounded"/>
+      <element name="simple-restriction" type="s:SimpleRestriction" maxOccurs="unbounded"/>
+
+      <element name="complex" type="s:Complex" maxOccurs="unbounded"/>
+      <element name="complex-extension" type="s:ComplexExtension" maxOccurs="unbounded"/>
+      <element name="complex-restriction" type="s:ComplexRestriction" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+
+  <element name="structure" type="s:Structure"/>
+
+</schema>

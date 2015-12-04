@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PERIODIC_TABLE">
+    <xs:complexType>
+      <xs:sequence>
+	<xs:element maxOccurs="unbounded" ref="ATOM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ATOM">
+    <xs:complexType>
+      <xs:sequence>
+	<xs:element ref="NAME" />
+	<xs:element ref="ATOMIC_WEIGHT" />
+	<xs:element ref="ATOMIC_NUMBER" />
+	<xs:element minOccurs="0" ref="OXIDATION_STATES" />
+	<xs:element minOccurs="0" ref="BOILING_POINT" />
+	<xs:element minOccurs="0" ref="MELTING_POINT" />
+	<xs:element ref="SYMBOL" />
+	<xs:element minOccurs="0" ref="DENSITY" />
+	<xs:element ref="ELECTRON_CONFIGURATION" />
+	<xs:element minOccurs="0" ref="COVALENT_RADIUS" />
+	<xs:element minOccurs="0" ref="ELECTRONEGATIVITY" />
+	<xs:element minOccurs="0" ref="ATOMIC_RADIUS" />
+	<xs:element minOccurs="0" ref="HEAT_OF_VAPORIZATION" />
+	<xs:element minOccurs="0" ref="ATOMIC_VOLUME" />
+	<xs:element minOccurs="0" ref="HEAT_OF_FUSION" />
+	<xs:element minOccurs="0" ref="IONIZATION_POTENTIAL" />
+	<xs:element minOccurs="0" ref="SPECIFIC_HEAT_CAPACITY" />
+	<xs:element minOccurs="0" ref="THERMAL_CONDUCTIVITY" />
+      </xs:sequence>
+      <xs:attribute name="STATE">
+	<xs:simpleType>
+	  <xs:restriction base="xs:string">
+	    <xs:enumeration value="GAS" />
+	    <xs:enumeration value="SOLID" />
+	  </xs:restriction>
+	</xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ATOMIC_NUMBER" type="xs:string" />
+  <xs:element name="ATOMIC_RADIUS">
+    <xs:complexType>
+      <xs:simpleContent>
+	<xs:extension base="xs:string">
+	  <xs:attribute name="UNITS" type="xs:string" use="required" />
+	</xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ATOMIC_VOLUME">
+    <xs:complexType>
+      <xs:simpleContent>
+	<xs:extension base="xs:string">
+	  <xs:attribute name="UNITS" type="xs:string" use="required" />
+	</xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ATOMIC_WEIGHT" type="xs:string" />
+  <xs:element name="BOILING_POINT">
+    <xs:complexType>
+      <xs:simpleContent>
+	<xs:extension base="xs:string">
+	  <xs:attribute name="UNITS" type="xs:string" use="required" />
+	</xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="COVALENT_RADIUS">
+    <xs:complexType>
+      <xs:simpleContent>
+	<xs:extension base="xs:string">
+	  <xs:attribute name="UNITS" type="xs:string" use="required" />
+	</xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DENSITY">
+    <xs:complexType>
+      <xs:simpleContent>
+	<xs:extension base="xs:string">
+	  <xs:attribute name="UNITS" type="xs:string" use="required" />
+	</xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ELECTRONEGATIVITY" type="xs:string" />
+  <xs:element name="ELECTRON_CONFIGURATION" type="xs:string" />
+  <xs:element name="HEAT_OF_FUSION">
+    <xs:complexType>
+      <xs:simpleContent>
+	<xs:extension base="xs:string">
+	  <xs:attribute name="UNITS" type="xs:string" use="required" />
+	</xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HEAT_OF_VAPORIZATION">
+    <xs:complexType>
+      <xs:simpleContent>
+	<xs:extension base="xs:string">
+	  <xs:attribute name="UNITS" type="xs:string" use="required" />
+	</xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IONIZATION_POTENTIAL" type="xs:string" />
+  <xs:element name="MELTING_POINT">
+    <xs:complexType>
+      <xs:simpleContent>
+	<xs:extension base="xs:string">
+	  <xs:attribute name="UNITS" type="xs:string" use="required" />
+	</xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NAME" type="xs:string" />
+  <xs:element name="OXIDATION_STATES" type="xs:string" />
+  <xs:element name="SPECIFIC_HEAT_CAPACITY">
+    <xs:complexType>
+      <xs:simpleContent>
+	<xs:extension base="xs:string">
+	  <xs:attribute name="UNITS" type="xs:string" use="required" />
+	</xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SYMBOL" type="xs:string" />
+  <xs:element name="THERMAL_CONDUCTIVITY">
+    <xs:complexType>
+      <xs:simpleContent>
+	<xs:extension base="xs:string">
+	  <xs:attribute name="UNITS" type="xs:string" use="required" />
+	</xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+

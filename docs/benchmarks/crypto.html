@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+    <head>
+        <title>Crypto</title>
+    </head>
+    <body>
+        <h1>Crypto</h1>
+        <h2>Description</h2>
+        <p>
+            This benchmark focuses on different areas of crypto and are 
+            split in three different sub-benchmarks. The different benchmarks 
+            use the implementation inside the product and will therefore focus 
+            on both the vendor implementation of the protocol as well as how it 
+            is executed.
+        	<ul>
+            	<li><b>aes</b> encrypt and decrypt using the AES and DES protocols, using CBC/PKCS5Padding and CBC/NoPadding. Input data size is 100 bytes and 713 kB.
+            	<li><b>rsa</b> encrypt and decrypt using the RSA protocol, using input data of size 100 bytes and 16 kB.
+            	<li><b>signverify</b> sign and verify using MD5withRSA, SHA1withRSA, SHA1withDSA and SHA256withRSA protocols. Input data size of 1 kB, 65 kB and 1 MB.
+        	</ul>
+        </p>
+        <a href="../../src/spec/benchmarks/crypto/">Browse source code</a>
+        <h2>Authors</h2>        
+        <ul>
+            <li>Stefan S&auml;rne
+        </ul>
+    </body>
+</html>
