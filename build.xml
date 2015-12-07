@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SPECjvm2008" default="release" basedir=".">
+    
+  <property name="specjvm2008.version" value="1.01"/>
+  <property name="specjvm2008.reporter.version" value="0"/>
+  <property name="build.dir" value="${basedir}/build"/>
+  <property name="dist.dir" value="${build.dir}/dist"/>
+  <property name="javadoc.dir" value="${build.dir}/javadoc"/>
+  <property name="classes.dir" value="${build.dir}/classes"/>
+  <property name="classes.reporter.dir" value="${build.dir}/reporter_classes"/>
+  <property name="checksrc.dir" value="${build.dir}/check_src"/>
+  <property name="checkclasses.dir" value="${build.dir}/check_classes"/>
+  <property name="digestclasses.dir" value="${build.dir}/digest_classes"/>
+  <property name="release.basedir" value="${build.dir}/release"/>
+  <property name="src.dir" value="${basedir}/src"/>
+  <property name="sign.dir" value="${basedir}/src_signing"/>
+  <property name="src.redist" value="${basedir}/redistributable_sources"/>
+  <property name="lib.dir" value="${basedir}/lib"/>
+  <property name="resources.dir" value="${basedir}/resources"/>
+  <property name="properties.dir" value="${basedir}/props"/>
+  <property name="debug" value="line,vars,source"/>
+  <property name="release.dir" value="${release.basedir}/SPECjvm2008"/>
+  <property name="release.reporter.dir" value="${build.dir}/SPECjvm2008-reporter"/>
+  
+    <target name="init">
+        <condition property="is.zOS"><isset property="zOS"/></condition> 
+        <condition property="unzip.name" value="unzip.zOS" else="unzip.simple"><isset property="zOS"/></condition> 
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${classes.reporter.dir}"/>
+        <mkdir dir="${release.reporter.dir}"/>
+	   	<mkdir dir="${release.basedir}"/>
+        <mkdir dir="${release.dir}"/>
+        <mkdir dir="${javadoc.dir}"/>
+        <mkdir dir="${digestclasses.dir}"/>
+        <mkdir dir="${checksrc.dir}/spec/validity"/>
+        <mkdir dir="${checksrc.dir}/spec/validity"/>
+        <mkdir dir="${checkclasses.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+    </target>
+    
+    <target name="clean" description="Remove build files.">
+       <!-- checked in, so do not delete delete delete dir="${build.dir}"/ -->
+       <delete dir="${classes.dir}"/>
+       <delete dir="${release.basedir}"/>
+       <!--delete dir="${release.dir}"/-->
+       <delete dir="${checksrc.dir}"/>
+       <delete dir="${checkclasses.dir}"/>
+       <delete dir="${digestclasses.dir}"/>
+       <delete dir="${classes.reporter.dir}"/>
+       <delete dir="${release.reporter.dir}"/>
+       <delete dir="${javadoc.dir}"/>
+       <delete dir="${dist.dir}"/>
+    </target>
+          
+    <target name="compile" depends="init"
+            description="Compile the classes to folder ${build.dir}/classes">
+        <property name="jdk.level" value="1.5"/>
+        <javac srcdir="${src.dir}"
+               destdir="${classes.dir}"
+               includes="**/*.java"
+	       excludes="**/validity/*.java"
+               source="${jdk.level}"
+               target="${jdk.level}"
+               debug="true">
+            <compilerarg value="-Xlint:unchecked"/>
+            <compilerarg value="-Xlint:deprecation"/>
+            <classpath>
+                <fileset dir="${lib.dir}">
+                    <include name="*.jar"/>
+                </fileset>
+                <pathelement location="${sunflow.jar.present}"/>
+                <pathelement location="${javac.jar.present}"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="compile-reporter" depends="init">
+        <property name="jdk.level" value="1.5"/>
+        <javac srcdir="${src.dir}"
+               destdir="${classes.reporter.dir}"
+               includes="spec/reporter/**/*.java"
+               source="${jdk.level}"
+               target="${jdk.level}"
+               debug="true">
+            <compilerarg value="-Xlint:unchecked"/>
+            <compilerarg value="-Xlint:deprecation"/>
+            <classpath>
+              <pathelement location="${lib.dir}/jfreechart-1.0.5.jar"/>
+              <pathelement location="${lib.dir}/jcommon-1.0.9.jar"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="release-reporter" depends="init, compile-reporter"
+            description="Compile the reporter classes and create a jar of all the reporter needs.">
+
+    	<unzip src="${lib.dir}/jfreechart-1.0.5.jar" dest="${classes.reporter.dir}"/>
+        <unzip src="${lib.dir}/jcommon-1.0.9.jar" dest="${classes.reporter.dir}"/>
+
+        <tstamp prefix="build.time"/>
+        <echo file="${classes.reporter.dir}/SPECjvm2008-reporter-version.txt">
+                Benchmark=     SPECjvm2008
+                Reporter=      SPECjvm2008-reporter
+                Kit_version=   ${specjvm2008.version}.${specjvm2008.reporter.version}
+                Build_user=    ${user.name}
+                Build_date=    ${build.time.DSTAMP}
+        </echo>
+    	
+        <property name="reporter.jar.file.name" value="${release.reporter.dir}/SPECjvm2008-reporter.jar"/>
+        <jar jarfile="${reporter.jar.file.name}" manifest="${src.dir}/META-INF/specjvm2008reporter.mf">
+            <fileset dir="${classes.reporter.dir}"/>
+        </jar>
+    	<copy file="${classes.reporter.dir}/SPECjvm2008-reporter-version.txt" todir="${release.reporter.dir}"/>
+    </target>
+    
+    <target name="unzip.zOS">
+            <!--description="unzip for zOS ${param1} to ${param2}"-->
+        <exec dir="${param2}" executable="unzip">
+           <arg value="-a"/>
+           <arg value="${param1}"/>
+           </exec>
+    </target>
+    
+    <target name="unzip.simple">
+            <!--description="unzip ${param1} to ${param2}"-->
+        <unzip src="${param1}" dest="${param2}"/>
+    </target>
+                   
+    
+    <target name="copy-ext" depends="init"
+            description="Copy external source code to release bundle from ${src.redist}">
+        <!-- copy entire tree -->
+        <copy todir="${release.dir}/redistributable_sources">
+            <fileset dir="${src.redist}"/>
+        </copy>
+    </target>
+    
+    <target name="jar" depends="compile"
+            description="Build a jar file of the classes in ${build.dir}/release">
+
+    	<property name="jar.file.name" value="${release.dir}/SPECjvm2008.jar"/>
+        <jar jarfile="${jar.file.name}" manifest="${src.dir}/META-INF/specjvm2008.mf">
+            <fileset dir="${classes.dir}" excludes="spec/validity/**"/>
+        </jar>
+    </target>
+    
+    <target name="build" depends="jar"
+            description="Build in ${build.dir}/release">
+        <echo message="Compiling done..."/>
+    </target>
+    
+    <target name="release" depends="build, copy-ext, javadoc"
+            description="Build a release kit in ${build.dir}/release">
+        
+        <tstamp prefix="build.time"/>
+        <echo file="${release.dir}/version.txt">
+            Benchmark=     SPECjvm2008
+            Kit_version=   ${specjvm2008.version}
+            Build_user=    ${user.name}
+            Build_date=    ${build.time.DSTAMP}
+        </echo>
+        
+        <!-- Copy all to zip dir that should be included. -->
+        <!-- This is done explicitly, to not ship strange files. -->
+        <copy todir="${release.dir}/src">
+            <fileset dir="${src.dir}"/>
+        </copy>
+        <copy todir="${release.dir}/lib">
+            <fileset dir="${lib.dir}"/>
+        </copy>
+        <copy todir="${release.dir}/docs">
+            <fileset dir="${basedir}/docs" />
+        </copy>
+        <copy todir="${release.dir}/docs/benchmarks">
+            <fileset dir="${basedir}/docs/benchmarks" />
+        </copy>
+        <copy todir="${release.dir}/docs/javadoc">
+            <fileset dir="${javadoc.dir}" excludes="**/db/**"/>
+        </copy>
+        <copy todir="${release.dir}/props">
+            <fileset dir="${properties.dir}" />
+        </copy>
+        <copy todir="${release.dir}/resources">
+            <fileset dir="${basedir}/resources" excludes="**/db/**,**/jess/**,**/raytrace/**"/>
+        </copy>
+        <copy todir="${release.dir}/license">
+            <fileset dir="${basedir}/license" />
+        </copy>
+        <copy todir="${release.dir}" file="${basedir}/run-specjvm.sh"/>
+        <copy todir="${release.dir}" file="${basedir}/run-specjvm.cmd"/>
+        <copy todir="${release.dir}" file="${basedir}/report.sh"/>
+        <copy todir="${release.dir}" file="${basedir}/report.cmd"/>
+        <copy todir="${release.dir}" file="${basedir}/README.txt"/>
+        <zip destfile="${release.dir}/build-tools.zip">
+          <fileset dir="${basedir}" includes="build-specjvm.sh"/>
+          <fileset dir="${basedir}" includes="build-specjvm.cmd"/>
+          <fileset dir="${basedir}" includes="build.xml"/>
+        </zip>
+    </target>
+    
+    <target name="javadoc" depends="init" unless="skip.javadoc"
+            description="Create the java docs in ${build.dir}/javadoc">
+
+    	<javadoc destdir="${javadoc.dir}"
+                 access="protected"
+                 use="true"
+                 notree="false"
+                 nonavbar="false"
+                 noindex="false"
+                 splitindex="true"
+                 author="true"
+                 version="true"
+                 nodeprecatedlist="false"
+                 nodeprecated="false"
+                 sourcepath="${src.dir}"
+                 doctitle="SPECjvm2008">
+            <packageset dir="${src.dir}" defaultexcludes="yes">
+                <include name="spec/**" />
+            </packageset>
+            <classpath>
+                <fileset dir="${lib.dir}">
+                    <include name="*.jar"/>
+                </fileset>
+                <pathelement location="${sunflow.jar.present}"/>
+                <pathelement location="${javac.jar.present}"/>
+            </classpath>
+        </javadoc>
+    </target>
+
+    <target name="init_checkstuff" depends="init">
+      <property file="sign.properties"/>
+      <fail unless="keystore-password" message="This is a SPEC internal target only. Missing sign.properties."/>
+    </target>
+
+    <target name="sign_jars" depends="init_checkstuff" unless="skip.sign_jars">
+        <echo message="Signing jar files, using key '${keystore-password}signjar"/>
+        <signjar jar="${release.dir}/SPECjvm2008.jar" 
+                 alias="specjvm2008" 
+                 storepass="${keystore-password}" 
+                 keystore="src_signing/specjvm2008_keystore"/> 
+        <signjar jar="${release.dir}/lib/ant.jar" 
+                 alias="specjvm2008" 
+                 storepass="${keystore-password}" 
+                 keystore="src_signing/specjvm2008_keystore"/> 
+        <signjar jar="${release.dir}/lib/ant-launcher.jar" 
+                 alias="specjvm2008" 
+                 storepass="${keystore-password}" 
+                 keystore="src_signing/specjvm2008_keystore"/> 
+        <signjar jar="${release.dir}/lib/derby.jar" 
+                 alias="specjvm2008" 
+                 storepass="${keystore-password}" 
+                 keystore="src_signing/specjvm2008_keystore"/> 
+        <signjar jar="${release.dir}/lib/janino.jar" 
+                 alias="specjvm2008" 
+                 storepass="${keystore-password}" 
+                 keystore="src_signing/specjvm2008_keystore"/> 
+        <signjar jar="${release.dir}/lib/javac.jar" 
+                 alias="specjvm2008" 
+                 storepass="${keystore-password}" 
+                 keystore="src_signing/specjvm2008_keystore"/> 
+        <signjar jar="${release.dir}/lib/jcommon-1.0.9.jar" 
+                 alias="specjvm2008" 
+                 storepass="${keystore-password}" 
+                 keystore="src_signing/specjvm2008_keystore"/> 
+        <signjar jar="${release.dir}/lib/jfreechart-1.0.5.jar" 
+                 alias="specjvm2008" 
+                 storepass="${keystore-password}" 
+                 keystore="src_signing/specjvm2008_keystore"/> 
+        <signjar jar="${release.dir}/lib/jl1.0.jar" 
+                 alias="specjvm2008" 
+                 storepass="${keystore-password}" 
+                 keystore="src_signing/specjvm2008_keystore"/> 
+        <signjar jar="${release.dir}/lib/sunflow.jar" 
+                 alias="specjvm2008" 
+                 storepass="${keystore-password}" 
+                 keystore="src_signing/specjvm2008_keystore"/> 
+		<!-- Excluded from signing. For some reason multiple blank lines are inserted. 
+    	<signjar jar="${release.dir}/lib/Tidy.jar" 
+                 alias="specjvm2008" 
+                 storepass="${keystore-password}" 
+                 keystore="src_signing/specjvm2008_keystore"/> --> 
+        <signjar jar="${release.dir}/lib/xom-1.1.jar" 
+                 alias="specjvm2008" 
+                 storepass="${keystore-password}" 
+                 keystore="src_signing/specjvm2008_keystore"/>
+        
+    </target>
+
+    <target name="check_jar" depends="init_checkstuff">
+
+        <!--exec dir="${sign.dir}" executable="sh">
+            <arg value="make_checkjar.sh"/>
+        </exec-->
+
+        <!-- description="Compile the digest classes to folder ${build.dir}/digest_classes"-->
+        <echo message="Compiling Digest generator"/>
+        <property name="jdk.level" value="1.5"/>
+        <javac srcdir="${sign.dir}"
+               destdir="${digestclasses.dir}"
+               includes="**/*.java"
+               source="${jdk.level}"
+               target="${jdk.level}"
+               debug="true">
+            <compilerarg value="-Xlint:unchecked"/>
+            <compilerarg value="-Xlint:deprecation"/>
+        </javac>
+
+        <!-- description="Generate Digest source based on jar info."-->
+        <echo message="Generating Digests source for jars"/>
+        <java classname="spec.digest.Digest"
+              classpath="${digestclasses.dir}"
+              failonerror="true">
+            <arg value="Jar"/>
+            <arg value="${checksrc.dir}/spec/validity"/>
+            <arg value="${release.dir}"/>
+            <arg line="${jarfiles}"/>
+        </java>
+
+        <!-- description="Generate Digest source based on resource info."-->
+        <echo message="Generating Digests source for resources"/>
+        <java classname="spec.digest.Digest"
+              classpath="${digestclasses.dir}"
+              failonerror="true">
+            <arg value="Resource"/>
+            <arg value="${checksrc.dir}/spec/validity"/>
+            <arg value="${release.dir}/resources"/>
+            <arg line="${resourcefiles}"/>
+        </java>
+
+        <!--description="Compile the check classes to folder ${build.dir}/check_classes"-->
+        <echo message="Compiling Digests source"/>
+        <property name="jdk.level" value="1.5"/>
+        <copy todir="${checksrc.dir}">
+            <fileset dir="${src.dir}" includes="**/validity/**"/>
+        </copy>
+        <javac srcdir="${checksrc.dir}"
+               destdir="${checkclasses.dir}"
+               includes="**/validity/*.java"
+               source="${jdk.level}"
+               target="${jdk.level}"
+               debug="true">
+            <compilerarg value="-Xlint:unchecked"/>
+            <compilerarg value="-Xlint:deprecation"/>
+            <classpath>
+                <pathelement location="${release.dir}/SPECjvm2008.jar"/>
+            </classpath>
+        </javac>
+
+        <echo message="Building check.jar"/>
+        <property name="check.jar.file.name" value="${release.dir}/lib/check.jar"/>
+        <jar jarfile="${check.jar.file.name}">
+            <fileset dir="${checkclasses.dir}" includes="spec/validity/**"/>
+        </jar>
+
+    </target>
+
+    <target name="spec-distro-benchmark" depends="init, release, sign_jars, check_jar">
+		<zip destfile="${dist.dir}/SPECjvm2008.kitv${specjvm2008.version}.zip" basedir="${release.basedir}"/>
+		<zip destfile="${dist.dir}/SPECjvm2008-docs.kitv${specjvm2008.version}.zip" basedir="${release.basedir}/SPECjvm2008/docs"/>
+    </target>
+
+    <target name="spec-distro-reporter" depends="init, release-reporter">
+        <zip destfile="${dist.dir}/SPECjvm2008-reporter.kitv${specjvm2008.version}.${specjvm2008.reporter.version}.zip" basedir="${release.reporter.dir}"/>
+    </target>
+
+    <target name="spec-distro" depends="init, spec-distro-benchmark, spec-distro-reporter"
+            description="Create signed and distributable kits in ${build.dir}/dist">
+    </target>
+
+    <target name="run" depends="init, jar"
+            description="Run the benchmark at ${release.dir}/SPECjvm2008.jar">        
+        <java jar="${release.dir}/SPECjvm2008.jar" fork="true"/>
+    </target>
+</project>
+
