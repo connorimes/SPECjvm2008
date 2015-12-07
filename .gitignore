@@ -1,0 +1,8 @@
+/build/
+/results/
+
+# Eclipse-generated files
+.classpath
+.project
+.settings/
+bin/
