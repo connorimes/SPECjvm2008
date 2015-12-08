@@ -7,6 +7,10 @@
 
 package spec.benchmarks.scimark.fft;
 
+import edu.uchicago.cs.heprofiler.HEProfiler;
+import edu.uchicago.cs.heprofiler.HEProfilerEvent;
+import edu.uchicago.cs.heprofiler.HEProfilerEventFactory;
+
 import spec.benchmarks.scimark.utils.kernel;
 import spec.harness.SpecJVMBenchmarkBase;
 import spec.harness.results.BenchmarkResult;
@@ -23,9 +27,12 @@ public class Main extends SpecJVMBenchmarkBase {
     static void runBenchmark() {
         //return new FFT().inst_main(args);
         // Loop a few times, to create some more work in each ops.
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         for (int i = kernel.FFT_LOOPS; i > 0; i --) {
             FFT.main(i);
+            event.eventEndBegin(Profiler.FFT, i);
         }
+        event.dispose();
     }
     
     public static void Main() {
@@ -41,7 +48,12 @@ public class Main extends SpecJVMBenchmarkBase {
     }
     
     public static void setupBenchmark() {
+        HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "FFT", null);
         kernel.init();
+    }
+
+    public static void tearDownBenchmark() {
+        HEProfiler.dispose();
     }
     
     public static void main(String[] args) throws Exception {

@@ -6,6 +6,9 @@
  */
 package spec.benchmarks.derby;
 
+import edu.uchicago.cs.heprofiler.HEProfilerEvent;
+import edu.uchicago.cs.heprofiler.HEProfilerEventFactory;
+
 import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -43,9 +46,11 @@ public class DerbyHarness {
         }
 
         public void run() {
+            HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
             handleAccounts();
             connectClose(connection);
             connection = null;
+            event.eventEnd(Profiler.CLIENT_RUN, 0, true);
         }
 
         public String resultsToString() {
@@ -74,6 +79,7 @@ public class DerbyHarness {
                     }
                     pstmt2 = connection.prepareStatement(Utils.UPDATE_ACCOUNTS_TABLE);
 
+                    HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
                     for (int i = shift; i < accountsNumber; i += Main.THREADSPERDB/*clientsNumber*/) {
                         accResults = Utils.initResultsArray(accResults);
                         for (int j = 0; j < tableNumber; j++) {
@@ -89,9 +95,12 @@ public class DerbyHarness {
                         pstmt2.executeUpdate();
                         pstmt2.clearWarnings();
                         results = Utils.add(results, accResults);
+                        event.eventEndBegin(Profiler.HANDLE_ACCOUNT_PREPARED, i);
                     }
+                    event.dispose();
                 } else { //not prepared statements
                     Statement stmt = null;
+                    HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
                     for (int i = shift; i < accountsNumber; i += clientsNumber) {
                         accResults = Utils.initResultsArray(accResults);
                         for (int j = 0; j < tableNumber; j++) {
@@ -105,10 +114,14 @@ public class DerbyHarness {
                         stmt.execute(Utils.getUpdateAccountsQuery(results, i));
                         stmt.clearWarnings();
                         stmt.close();
+                        event.eventEndBegin(Profiler.HANDLE_ACCOUNT_UNPREPARED, i);
                     }
+                    event.dispose();
                 }
                 if (trans) {
+                    HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
                     connection.commit();
+                    event.eventEnd(Profiler.TRANSACTION_COMMIT, 0, true);
                 }
             } catch (Exception e) {
                 e.printStackTrace(Context.getOut());
@@ -205,6 +218,7 @@ public class DerbyHarness {
     }
 
     static public void initDatabases() {
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         setDerbyProperties();
         DATABASES_NUM = Main.DATABASES_NUM;
         rmDir();
@@ -234,6 +248,7 @@ public class DerbyHarness {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        event.eventEnd(Profiler.INIT_DATABASES, 0, true);
     }
 
     public static void shutdownDerbySystem() {
@@ -454,6 +469,7 @@ public class DerbyHarness {
     }
 
     private static void doRestoring(String databaseName) {
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         try {
             Utils.print("Creating database N " + databaseName + " ...");
             Connection conn = DriverManager.getConnection(databaseName + ";createFrom=" + Utils.BACKUP_DIR);
@@ -462,10 +478,12 @@ public class DerbyHarness {
             e.printStackTrace();
             throw new StopBenchmarkException("Cannot create " + databaseName);
         }
+        event.eventEnd(Profiler.DO_RESTORING, 0, true);
     }
 
     public static void createBaseDatabase(int limit, int accounts, int clients)
             throws Exception {
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         Connection connection = getStartConnection(1);
         dropTables(connection);
         createTables(connection);
@@ -475,6 +493,7 @@ public class DerbyHarness {
         cs.execute();
         cs.close();
         connectClose(connection);
+        event.eventEnd(Profiler.CREATE_BASE_DATABASE, 0, true);
     }
 
     public static Connection getNestedConnection(int databaseIndex) {

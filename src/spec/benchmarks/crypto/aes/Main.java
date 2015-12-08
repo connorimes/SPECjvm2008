@@ -7,6 +7,10 @@
 
 package spec.benchmarks.crypto.aes;
 
+import edu.uchicago.cs.heprofiler.HEProfiler;
+import edu.uchicago.cs.heprofiler.HEProfilerEvent;
+import edu.uchicago.cs.heprofiler.HEProfilerEventFactory;
+
 import java.security.AlgorithmParameters;
 import java.security.SecureRandom;
 
@@ -73,6 +77,7 @@ public class Main extends SpecJVMBenchmarkBase {
             c.init(Cipher.ENCRYPT_MODE, key);
             algorithmParameters = c.getParameters();
             
+            HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
             for (int i = 0; i < level; i++) {
                 byte[] r1 = c.update(result);
                 byte[] r2 = c.doFinal();
@@ -83,7 +88,9 @@ public class Main extends SpecJVMBenchmarkBase {
                 result = new byte[r1.length + r2.length];
                 System.arraycopy(r1, 0, result, 0, r1.length);
                 System.arraycopy(r2, 0, result, r1.length, r2.length);
+                event.eventEndBegin(Profiler.ENCRYPT, i);
             }
+            event.dispose();
         } catch (Exception e) {
             throw new StopBenchmarkException("Exception in encrypt for " + algorithm + ".", e);
         }
@@ -110,6 +117,7 @@ public class Main extends SpecJVMBenchmarkBase {
             Cipher c = Cipher.getInstance(algorithm);
             c.init(Cipher.DECRYPT_MODE, key, algorithmParameters);
             
+            HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
             for (int i = 0; i < level; i++) {
                 byte[] r1 = c.update(result);
                 byte[] r2 = c.doFinal();
@@ -119,7 +127,9 @@ public class Main extends SpecJVMBenchmarkBase {
                 result = new byte[r1.length + r2.length];
                 System.arraycopy(r1, 0, result, 0, r1.length);
                 System.arraycopy(r2, 0, result, r1.length, r2.length);
+                event.eventEndBegin(Profiler.DECRYPT, i);
             }
+            event.dispose();
             
         } catch (Exception e) {
             throw new StopBenchmarkException("Exception in encrypt for " + algorithm + ".", e);
@@ -130,12 +140,14 @@ public class Main extends SpecJVMBenchmarkBase {
     }
     
     public void runEncryptDecrypt(SecretKey key, String algorithm, String inputFile) {
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         byte [] indata = Util.getTestData(inputFile);
         byte [] cipher = encrypt(indata, key, algorithm, level);
         byte [] plain = decrypt(cipher, key, algorithm, level);
         boolean match = Util.check(indata, plain);
         Context.getOut().println(algorithm + ":" + " plaincheck="
                 + Util.checkSum(plain) + (match ? " PASS" : " FAIL"));
+        event.eventEnd(Profiler.ENCRYPT_DECRYPT, 0, true);
     }
     
     public void harnessMain() {
@@ -151,6 +163,7 @@ public class Main extends SpecJVMBenchmarkBase {
     
     public static void setupBenchmark() {
         try {
+            HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "AES", null);
             byte [] seed =  {0x4, 0x7, 0x1, 0x1};
             SecureRandom random = new SecureRandom(seed);
             Context.getFileCache().loadFile(Util.TEST_DATA_1);
@@ -164,6 +177,10 @@ public class Main extends SpecJVMBenchmarkBase {
         } catch (Exception e) {
             throw new StopBenchmarkException("Error in setup of crypto.aes." + e);
         }
+    }
+
+    public static void tearDownBenchmark() {
+        HEProfiler.dispose();
     }
     
     public static void main(String[] args) throws Exception {

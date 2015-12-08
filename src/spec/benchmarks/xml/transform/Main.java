@@ -6,6 +6,9 @@
  */
 package spec.benchmarks.xml.transform;
 
+import edu.uchicago.cs.heprofiler.HEProfilerEvent;
+import edu.uchicago.cs.heprofiler.HEProfilerEventFactory;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -20,6 +23,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import org.xml.sax.SAXException;
 
+import spec.benchmarks.xml.Profiler;
 import spec.benchmarks.xml.XMLBenchmark;
 import spec.harness.Constants;
 import spec.harness.Context;
@@ -125,6 +129,7 @@ public class Main extends XMLBenchmark {
     }
     
     public static void setupBenchmark() {
+        XMLBenchmark.setupBenchmark();
         String tmpName = Util.getProperty(Constants.XML_TRANSFORM_OUT_DIR_PROP, null);
         OUT_DIR = tmpName != null ? tmpName : OUT_DIR;
         File file = new File(OUT_DIR);
@@ -166,6 +171,7 @@ public class Main extends XMLBenchmark {
                 && !Util.getBoolProperty(Constants.XML_TRANSFORM_LEAVE_OUT_DIR_PROP, null)) {
             remove(new File(OUT_DIR));
         }
+        XMLBenchmark.tearDownBenchmark();
     }
     
     
@@ -205,13 +211,16 @@ public class Main extends XMLBenchmark {
     }
     
     public void harnessMain() {
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         try {
             for (int i = 0; i < 3; i++) {
                 executeWorkload();
+                event.eventEndBegin(Profiler.TRANSFORM_MAIN_LOOP, i);
             }
         } catch (Exception e) {
             e.printStackTrace(Context.getOut());
         }
+        event.dispose();
     }
     
     public void setOutputStream(BaseOutputStream stream) {
@@ -236,23 +245,32 @@ public class Main extends XMLBenchmark {
     
     private void executeWorkload() throws
             TransformerException, ParserConfigurationException, SAXException, IOException {
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
+        HEProfilerEvent eventTriple = HEProfilerEventFactory.createHEProfilerEvent();
         for (int i = 0; i < INPUT_PAIR; i ++) {
             String propertyNamePrefix = XML_NAMES[i] + ".";
             int loops = (getLoopMode() == SINGLE_LOOP_MODE) ? 1 : Main.loops[i];
             Transformer transformer = precompiledTransformers[i];
+            eventTriple.eventBegin();
             for (int j = loops - 1; j >= 0; j--) {
                 transform(transformer, createSaxSource(xmlInput[i]), propertyNamePrefix + "SAX", j);
                 transform(transformer, createDomSource(xmlInput[i]), propertyNamePrefix + "DOM", j);
                 transform(transformer, xmlInput[i].asNewStreamSource(), propertyNamePrefix + "Stream", j);
+                eventTriple.eventEndBegin(Profiler.TRANSFORM_TRIPLE, j);
             }
+            event.eventEndBegin(Profiler.TRANSFORM_WORKLOAD, i);
         }
+        eventTriple.dispose();
+        event.dispose();
     }
     
     private void transform(Transformer transformer, Source source, String descr, int loop) throws
             TransformerException, ParserConfigurationException, SAXException, IOException {
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         transformer.reset();
         outputStream.setCurrentProp(descr);
         transformer.transform(source, streamResult);
         outputStream.checkResult(loop);
+        event.eventEnd(Profiler.TRANSFORM, 0, true);
     }
 }

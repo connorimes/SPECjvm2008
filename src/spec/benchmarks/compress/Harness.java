@@ -10,6 +10,9 @@
 
 package spec.benchmarks.compress;
 
+import edu.uchicago.cs.heprofiler.HEProfilerEvent;
+import edu.uchicago.cs.heprofiler.HEProfilerEventFactory;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -39,6 +42,8 @@ public final class Harness {
     
     public void runCompress(int btid) {
         spec.harness.Context.getOut().println("Loop count = " + LOOP_COUNT);
+        HEProfilerEvent eventLoop = HEProfilerEventFactory.createHEProfilerEvent(true);
+        HEProfilerEvent eventFile = HEProfilerEventFactory.createHEProfilerEvent(true);
         for (int i = 0; i < LOOP_COUNT; i++) {
             for (int j = 0; j < FILES_NUMBER; j++) {
                 Source source = SOURCES[j];
@@ -54,8 +59,12 @@ public final class Harness {
                 Context.getOut().print(source.getLength() + " " + source.getCRC() + " ");
                 Context.getOut().print(comprBuffer.getLength() + comprBuffer.getCRC() + " ");
                 Context.getOut().println(decomprBufer.getLength() + " " + decomprBufer.getCRC());
+                eventFile.eventEndBegin(Profiler.FILE, j);
             }
+            eventLoop.eventEndBegin(Profiler.LOOP, i);
         }
+        eventFile.dispose();
+        eventLoop.dispose();
     }
     
     public long inst_main(int btid) {

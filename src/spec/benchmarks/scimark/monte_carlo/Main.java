@@ -7,6 +7,10 @@
 
 package spec.benchmarks.scimark.monte_carlo;
 
+import edu.uchicago.cs.heprofiler.HEProfiler;
+import edu.uchicago.cs.heprofiler.HEProfilerEvent;
+import edu.uchicago.cs.heprofiler.HEProfilerEventFactory;
+
 import spec.benchmarks.scimark.utils.kernel;
 import spec.harness.SpecJVMBenchmarkBase;
 import spec.harness.results.BenchmarkResult;
@@ -20,9 +24,12 @@ public class Main extends SpecJVMBenchmarkBase {
     
     static void runBenchmark() {
         // Loop a few times, to create some more work in each ops.
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         for (int i = kernel.MC_LOOPS; i > 0; i --) {
             MonteCarlo.main();
+            event.eventEndBegin(Profiler.MONTE_CARLO, i);
         }
+        event.dispose();
     }
     
     public static void Main() {
@@ -39,5 +46,13 @@ public class Main extends SpecJVMBenchmarkBase {
 
     public static void main(String[] args) throws Exception {
         runSimple( Main.class, args );
+    }
+
+    public static void setupBenchmark() {
+        HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "MONTE_CARLO", null);
+    }
+
+    public static void tearDownBenchmark() {
+        HEProfiler.dispose();
     }
 }

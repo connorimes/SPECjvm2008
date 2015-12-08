@@ -6,6 +6,8 @@
  */
 package spec.benchmarks.derby;
 
+import edu.uchicago.cs.heprofiler.HEProfiler;
+
 import java.io.File;
 
 import spec.harness.Context;
@@ -70,6 +72,7 @@ public class Main extends SpecJVMBenchmarkBase {
     }
     
     public static void setupBenchmark() {
+        HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "DERBY", null);
         configure();
         clientsNumber = new int[DATABASES_NUM];
         dataBaseNum = new int[HWTFACTOR];
@@ -114,6 +117,7 @@ public class Main extends SpecJVMBenchmarkBase {
         if (derbyDir.exists() && derbyDir.isDirectory()) {
         	deleteDirectory(derbyDir);
         }
+        HEProfiler.dispose();
     }
 
     static public void deleteDirectory(File root) {

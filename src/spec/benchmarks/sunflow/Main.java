@@ -9,6 +9,9 @@
 
 package spec.benchmarks.sunflow;
 
+import edu.uchicago.cs.heprofiler.HEProfiler;
+import edu.uchicago.cs.heprofiler.HEProfilerEvent;
+import edu.uchicago.cs.heprofiler.HEProfilerEventFactory;
 
 import org.sunflow.Benchmark;
 import org.sunflow.system.UI;
@@ -55,6 +58,7 @@ public class Main extends SpecJVMBenchmarkBase {
     }
     
     public static void setupBenchmark() { 
+        HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "SUNFLOW", null);
     	int threads = Util.getIntProperty(Constants.SUNFLOW_THREADS, null);
     	int bmThreads = Launch.currentNumberBmThreads;
         benchmarks = new Benchmark[bmThreads];
@@ -63,10 +67,17 @@ public class Main extends SpecJVMBenchmarkBase {
             benchmarks[i].kernelBegin();
         }
     }
+
+    public static void tearDownBenchmark() {
+        HEProfiler.dispose();
+    }
     
     public void harnessMain() {
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         benchmark.kernelMain();
+        event.eventEndBegin(Profiler.KERNEL_MAIN, 0);
         benchmark.kernelEnd();
+        event.eventEnd(Profiler.KERNEL_END, 0, true);
     }
     
     public static void main(String[] args) throws Exception {

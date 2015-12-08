@@ -7,6 +7,10 @@
 
 package spec.benchmarks.scimark.sparse;
 
+import edu.uchicago.cs.heprofiler.HEProfiler;
+import edu.uchicago.cs.heprofiler.HEProfilerEvent;
+import edu.uchicago.cs.heprofiler.HEProfilerEventFactory;
+
 import spec.benchmarks.scimark.utils.kernel;
 import spec.harness.SpecJVMBenchmarkBase;
 import spec.harness.results.BenchmarkResult;
@@ -19,9 +23,12 @@ public class Main extends SpecJVMBenchmarkBase {
     }
     
     static void runBenchmark() {
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         for (int i = kernel.SPARSE_LOOPS; i > 0; i--) {
             SparseCompRow.main(i);
+            event.eventEndBegin(Profiler.SPARSE, i);
         }
+        event.dispose();
     }
     
     public static void Main() {
@@ -37,7 +44,12 @@ public class Main extends SpecJVMBenchmarkBase {
     }
     
     public static void setupBenchmark() {
+        HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "SPARSE", null);
         kernel.init();
+    }
+
+    public static void tearDownBenchmark() {
+        HEProfiler.dispose();
     }
 
     public static void main(String[] args) throws Exception {

@@ -21,6 +21,8 @@
   <property name="debug" value="line,vars,source"/>
   <property name="release.dir" value="${release.basedir}/SPECjvm2008"/>
   <property name="release.reporter.dir" value="${build.dir}/SPECjvm2008-reporter"/>
+  <property name="he-profiler.dir" value="/local/he-profiler-jni/he-profiler/target"/>
+  <property name="he-profiler.jar" value="he-profiler-0.0.1-SNAPSHOT.jar"/>
   
     <target name="init">
         <condition property="is.zOS"><isset property="zOS"/></condition> 
@@ -68,6 +70,9 @@
             <classpath>
                 <fileset dir="${lib.dir}">
                     <include name="*.jar"/>
+                </fileset>
+                <fileset dir="${he-profiler.dir}">
+                    <include name="${he-profiler.jar}"/>
                 </fileset>
                 <pathelement location="${sunflow.jar.present}"/>
                 <pathelement location="${javac.jar.present}"/>

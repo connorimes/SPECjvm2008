@@ -6,6 +6,9 @@
  */
 package spec.benchmarks.xml.validation;
 
+import edu.uchicago.cs.heprofiler.HEProfilerEvent;
+import edu.uchicago.cs.heprofiler.HEProfilerEventFactory;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -20,6 +23,7 @@ import javax.xml.validation.Validator;
 
 import org.xml.sax.SAXException;
 
+import spec.benchmarks.xml.Profiler;
 import spec.benchmarks.xml.XMLBenchmark;
 import spec.harness.Constants;
 import spec.harness.Context;
@@ -76,6 +80,7 @@ public class Main extends XMLBenchmark {
            };
     
     public static void setupBenchmark() {
+        XMLBenchmark.setupBenchmark();
         String dirName = Util.getProperty(Constants.XML_VALIDATION_INPUT_DIR_PROP, null);
         try {
             allInstanceBytes = new FileCache.CachedFile[XSD_NUMBER];
@@ -145,22 +150,29 @@ public class Main extends XMLBenchmark {
 
     private void executeWorkload() throws
             ParserConfigurationException, IOException, SAXException {
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         for (int i = 0; i < XSD_NUMBER; i++) {
             Context.getOut().println("Validating " + instanceNames[i]);
             doValidationTests(loops[i], allInstanceBytes[i], schemaBoundValidator[i]);
+            event.eventEndBegin(Profiler.VALIDATE, i);
         }
+        event.dispose();
     }
 
     private void doValidationTests(int loops, FileCache.CachedFile file,
             Validator schemaValidator) throws
             ParserConfigurationException, IOException, SAXException {
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         for (int i = loops - 1; i >= 0; i--) {
             validateSource(i, createDomSource(file), schemaValidator);
             validateSource(i, createSaxSource(file), schemaValidator);
+            event.eventEndBegin(Profiler.VALIDATION_TESTS, i);
         }
+        event.dispose();
     }
 
     private void validateSource(int loop, Source source, Validator schemaValidator) {
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         schemaValidator.reset();
         schemaValidator.setErrorHandler(null);
         try {
@@ -176,5 +188,6 @@ public class Main extends XMLBenchmark {
         } catch (IOException e) {
             Context.getOut().println("Unable to validate due to IOException.");
         }
+        event.eventEnd(Profiler.VALIDATE_SOURCE, 0, true);
     }
 }

@@ -6,6 +6,8 @@
  */
 package spec.benchmarks.xml;
 
+import edu.uchicago.cs.heprofiler.HEProfiler;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -54,6 +56,14 @@ public abstract class XMLBenchmark extends SpecJVMBenchmarkBase {
         } catch (SAXException e) {
             e.printStackTrace(Context.getOut());
         }
+    }
+
+    public static void setupBenchmark() {
+        HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "XML", null);
+    }
+
+    public static void tearDownBenchmark() {
+        HEProfiler.dispose();
     }
     
     public Source createDomSource(FileCache.CachedFile cachedInput)

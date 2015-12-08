@@ -7,6 +7,10 @@
 
 package spec.benchmarks.crypto.rsa;
 
+import edu.uchicago.cs.heprofiler.HEProfiler;
+import edu.uchicago.cs.heprofiler.HEProfilerEvent;
+import edu.uchicago.cs.heprofiler.HEProfilerEventFactory;
+
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.PrivateKey;
@@ -37,14 +41,14 @@ public class Main extends SpecJVMBenchmarkBase {
     }
     
     public byte [] encrypt(byte[] indata, String algorithm) {
-        
         try {
+            HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
             Cipher c = Cipher.getInstance(algorithm);
             byte[] result = indata;
             
             c.init(Cipher.ENCRYPT_MODE, rsaPub);
             result = c.doFinal(result);
-            
+            event.eventEnd(Profiler.ENCRYPT, 0, true);
             return result;
             
         } catch (Exception e) {
@@ -53,15 +57,15 @@ public class Main extends SpecJVMBenchmarkBase {
     }
     
     public byte[] decrypt(byte[] indata, String algorithm) {
-        
         try {
+            HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
             Cipher c = Cipher.getInstance(algorithm);
             
             byte[] result = indata;
             
             c.init(Cipher.DECRYPT_MODE, rsaPriv);
             result = c.doFinal(result);
-            
+            event.eventEnd(Profiler.DECRYPT, 0, true);
             return result;
             
         } catch (Exception e) {
@@ -72,8 +76,10 @@ public class Main extends SpecJVMBenchmarkBase {
     public void runSingleEncryptDecrypt(String algorithm, String inputFile) {
         byte [] indata = Util.getTestData(inputFile);
         Context.getOut().println("Algorithm=" + algorithm + " indata length=" + indata.length);
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         byte [] cipher = encrypt(indata, algorithm);
         byte [] plain = decrypt(cipher, algorithm);
+        event.eventEnd(Profiler.SINGLE_ENCRYPT_DECRYPT, 0, true);
         boolean match = Util.check(indata, plain);
         Context.getOut().println(algorithm + ":"
                 + " plaincheck=" + Util.checkSum(plain)
@@ -88,6 +94,7 @@ public class Main extends SpecJVMBenchmarkBase {
         int fail = 0;
         int check = 0;
         Context.getOut().println("Algorithm=" + algorithm + " indata length=" + fullIndata.length);
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         for (int i = 0; i + blockSize < fullIndata.length; i+= blockSize) {
             System.arraycopy(fullIndata, i, indata, 0, blockSize);
             byte [] cipher = encrypt(indata, algorithm);
@@ -98,7 +105,9 @@ public class Main extends SpecJVMBenchmarkBase {
             } else {
                 fail++;
             }
+            event.eventEndBegin(Profiler.MULTI_ENCRYPT_DECRYPT, 0);
         }
+        event.dispose();
         Context.getOut().println(algorithm + ":"
                 + " checksum=" + check
                 + " pass=" + pass
@@ -116,6 +125,7 @@ public class Main extends SpecJVMBenchmarkBase {
     
     public static void setupBenchmark() {
         try {
+            HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "RSA", null);
             Context.getFileCache().loadFile(Util.TEST_DATA_3);
             Context.getFileCache().loadFile(Util.TEST_DATA_5);
             
@@ -131,6 +141,10 @@ public class Main extends SpecJVMBenchmarkBase {
         } catch (Exception e) {
             throw new StopBenchmarkException("Error in setup of crypto.aes." + e);
         }
+    }
+
+    public static void tearDownBenchmark() {
+        HEProfiler.dispose();
     }
     
     public static void main(String[] args) throws Exception {

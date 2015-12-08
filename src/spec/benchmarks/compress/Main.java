@@ -9,6 +9,8 @@
 
 package spec.benchmarks.compress;
 
+import edu.uchicago.cs.heprofiler.HEProfiler;
+
 import spec.harness.SpecJVMBenchmarkBase;
 import spec.harness.results.BenchmarkResult;
 
@@ -45,6 +47,11 @@ public class Main extends SpecJVMBenchmarkBase {
     }
     
     public static void setupBenchmark() {
+        HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "COMPRESS", null);
         HB.prepareBuffers();
+    }
+
+    public static void tearDownBenchmark() {
+        HEProfiler.dispose();
     }
 }

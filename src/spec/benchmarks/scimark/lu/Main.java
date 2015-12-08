@@ -7,6 +7,10 @@
 
 package spec.benchmarks.scimark.lu;
 
+import edu.uchicago.cs.heprofiler.HEProfiler;
+import edu.uchicago.cs.heprofiler.HEProfilerEvent;
+import edu.uchicago.cs.heprofiler.HEProfilerEventFactory;
+
 import spec.benchmarks.scimark.utils.kernel;
 import spec.harness.SpecJVMBenchmarkBase;
 import spec.harness.results.BenchmarkResult;
@@ -19,9 +23,12 @@ public class Main extends SpecJVMBenchmarkBase {
     }
     static void runBenchmark() {
         // Loop a few times, to create some more work in each ops.
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         for (int i = kernel.LU_LOOPS; i > 0; i --) {
             LU.main(i);
+            event.eventEndBegin(Profiler.LU, i);
         }
+        event.dispose();
     }
     
     public static void Main() {
@@ -37,7 +44,12 @@ public class Main extends SpecJVMBenchmarkBase {
     }
     
     public static void setupBenchmark() {
+        HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "LU", null);
         kernel.init();
+    }
+
+    public static void tearDownBenchmark() {
+        HEProfiler.dispose();
     }
 
     public static void main(String[] args) throws Exception {

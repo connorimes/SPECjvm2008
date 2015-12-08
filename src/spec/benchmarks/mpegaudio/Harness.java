@@ -8,6 +8,9 @@
  */
 package spec.benchmarks.mpegaudio;
 
+import edu.uchicago.cs.heprofiler.HEProfilerEvent;
+import edu.uchicago.cs.heprofiler.HEProfilerEventFactory;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.zip.CRC32;
@@ -32,14 +35,17 @@ public class Harness {
     }
     
     public void run(int id) {
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         try {
             for (int i = id; i < id + TRACKS_NUMBER; i++) {
                 int ind = i % TRACKS_NUMBER;
                 result[ind] = decode(getName(ind));
+                event.eventEndBegin(Profiler.DECODE, i);
             }
         } catch (Exception e) {
             e.printStackTrace(Context.getOut());
         }
+        event.dispose();
     }
     
     private void updateCRC32(CRC32 crc32, short[] buffer) {

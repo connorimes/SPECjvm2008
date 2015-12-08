@@ -6,6 +6,10 @@
  */
 package spec.benchmarks.serial;
 
+import edu.uchicago.cs.heprofiler.HEProfiler;
+import edu.uchicago.cs.heprofiler.HEProfilerEvent;
+import edu.uchicago.cs.heprofiler.HEProfilerEventFactory;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectInputStream;
@@ -52,6 +56,7 @@ public class Main extends SpecJVMBenchmarkBase {
     }
     
     public static void setupBenchmark(){    	
+        HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "SERIAL", null);
         int threads = Launch.currentNumberBmThreads;
         instances = new Object[threads][Utils.classesNumber];
         streams = new ByteArrayOutputStream[threads];       
@@ -69,18 +74,24 @@ public class Main extends SpecJVMBenchmarkBase {
         	throw new StopBenchmarkException("error in setupBenchmark of serial workload");
         }
     }
+
+    public static void tearDownBenchmark() {
+        HEProfiler.dispose();
+    }
     
     
     public void serialize() throws Exception {    	
     	BitSet result = Utils.createBitSet();
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
     	bos.reset();
-    	ObjectOutputStream oos = new ObjectOutputStream(bos);    	
+    	ObjectOutputStream oos = new ObjectOutputStream(bos);
     	for (int i = 0; i < Utils.singleLoop; i ++) {
     	    for (int j = 0; j < threadInstances.length; j ++) {
     	    	oos.writeObject(threadInstances[j]);
     	    }
     	    oos.flush();
     	    oos.reset();
+            event.eventEndBegin(Profiler.LOOP_SERIALIZE, i);
     	}   	
     	
     	ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray(), 0, bos.size());
@@ -92,8 +103,10 @@ public class Main extends SpecJVMBenchmarkBase {
     	    	    result.set(j, result.get(j) && obj.equals(threadInstances[j]));
     	    	}    
     	    }
+            event.eventEndBegin(Profiler.LOOP_DESERIALIZE, i);
     	    
     	}
+        event.dispose();
     	oos.close();
     	ois.close();    	
     	Utils.printResult(Context.getOut(), result);

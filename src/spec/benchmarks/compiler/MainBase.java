@@ -9,6 +9,8 @@
 
 package spec.benchmarks.compiler;
 
+import edu.uchicago.cs.heprofiler.HEProfiler;
+
 import java.io.File;
 
 import spec.harness.Context;
@@ -35,6 +37,7 @@ public class MainBase extends SpecJVMBenchmarkBase {
     }   
         
     public static void preSetupBenchmark(Class cl) {
+        HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "COMPILER", null);
     	SpecFileManager.reset();
     	resDir = new File(Context.getResourceDirFor(cl));
     	tmpDir = Util.getTmpDir(resDir, false);
@@ -47,6 +50,7 @@ public class MainBase extends SpecJVMBenchmarkBase {
     public static void tearDownBenchmark() {    	
         Util.recursiveRemoveDir(tmpDir.getParentFile());
         SpecFileManager.reset();       
+        HEProfiler.dispose();
     }
     
     public void harnessMain() {    	

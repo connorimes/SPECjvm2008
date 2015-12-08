@@ -7,6 +7,10 @@
 
 package spec.benchmarks.crypto.signverify;
 
+import edu.uchicago.cs.heprofiler.HEProfiler;
+import edu.uchicago.cs.heprofiler.HEProfilerEvent;
+import edu.uchicago.cs.heprofiler.HEProfilerEventFactory;
+
 import java.io.IOException;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
@@ -40,7 +44,7 @@ public class Main extends SpecJVMBenchmarkBase {
     }
     
     public byte [] sign(byte[] indata, String algorithm, PrivateKey privKey) {
-        
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         try {
             Signature signature = Signature.getInstance(algorithm);
             signature.initSign(privKey);
@@ -48,13 +52,14 @@ public class Main extends SpecJVMBenchmarkBase {
             return signature.sign();
         } catch (Exception e) {
             throw new StopBenchmarkException("Exception in verify for " + algorithm + ".", e);
+        } finally {
+            event.eventEnd(Profiler.SIGN, 0, true);
         }
     }
     
     public boolean verify(byte[] indata, String algorithm, byte [] signed, PublicKey pubKey) {
-        
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         try {
-            
             Signature signature = Signature.getInstance(algorithm);
             signature.initVerify(pubKey);
             
@@ -64,16 +69,18 @@ public class Main extends SpecJVMBenchmarkBase {
             
         } catch (Exception e) {
             throw new StopBenchmarkException("Exception in verify for " + algorithm + ".", e);
+        } finally {
+            event.eventEnd(Profiler.VERIFY, 0, true);
         }
     }
     
     
     
     public void runSignVerify(byte[] indata, String algorithm, PrivateKey privKey, PublicKey pubKey) {
-        
+        HEProfilerEvent event = HEProfilerEventFactory.createHEProfilerEvent(true);
         byte [] signed = sign(indata, algorithm, privKey);
         boolean verification = verify(indata, algorithm, signed, pubKey);
-        
+        event.eventEnd(Profiler.SIGNVERIFY, 0, true);
         if (verification) {
             spec.harness.Context.getOut().println(algorithm + " Verification PASS");
         } else {
@@ -105,6 +112,7 @@ public class Main extends SpecJVMBenchmarkBase {
     public static void setupBenchmark() {
         
         try {
+            HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "SIGNVERIFY", null);
             Context.getFileCache().loadFile(Util.TEST_DATA_4);
             Context.getFileCache().loadFile(Util.TEST_DATA_5);
             Context.getFileCache().loadFile(Util.TEST_DATA_6);
@@ -128,6 +136,10 @@ public class Main extends SpecJVMBenchmarkBase {
         } catch (Exception e) {
             throw new StopBenchmarkException("Error in setup of crypto.aes." + e);
         }
+    }
+
+    public static void tearDownBenchmark() {
+        HEProfiler.dispose();
     }
     
     public static void createTestData() throws IOException {

@@ -8,6 +8,8 @@
  */
 package spec.benchmarks.mpegaudio;
 
+import edu.uchicago.cs.heprofiler.HEProfiler;
+
 import spec.harness.Context;
 import spec.harness.SpecJVMBenchmarkBase;
 import spec.harness.results.BenchmarkResult;
@@ -41,5 +43,13 @@ public class Main extends SpecJVMBenchmarkBase {
     
     public void harnessMain() {
         runBenchmark(super.getThreadId());
+    }
+
+    public static void setupBenchmark() {
+        HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "MPEGAUDIO", null);
+    }
+
+    public static void tearDownBenchmark() {
+        HEProfiler.dispose();
     }
 }
