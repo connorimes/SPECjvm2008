@@ -56,7 +56,7 @@ public class Main extends SpecJVMBenchmarkBase {
     }
     
     public static void setupBenchmark(){    	
-        HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "SERIAL", null);
+        HEProfiler.init(Profiler.class, null, 20, Profiler.APPLICATION, 20, null);
         int threads = Launch.currentNumberBmThreads;
         instances = new Object[threads][Utils.classesNumber];
         streams = new ByteArrayOutputStream[threads];       

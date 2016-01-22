@@ -37,7 +37,7 @@ public class MainBase extends SpecJVMBenchmarkBase {
     }   
         
     public static void preSetupBenchmark(Class cl) {
-        HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "COMPILER", null);
+        HEProfiler.init(Profiler.class, null, 20, Profiler.APPLICATION, 20, null);
     	SpecFileManager.reset();
     	resDir = new File(Context.getResourceDirFor(cl));
     	tmpDir = Util.getTmpDir(resDir, false);

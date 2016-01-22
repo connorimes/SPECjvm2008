@@ -47,7 +47,7 @@ public class Main extends SpecJVMBenchmarkBase {
     }
     
     public static void setupBenchmark() {
-        HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "COMPRESS", null);
+        HEProfiler.init(Profiler.class, null, 20, Profiler.APPLICATION, 20, null);
         HB.prepareBuffers();
     }
 

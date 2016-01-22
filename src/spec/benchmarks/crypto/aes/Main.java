@@ -163,7 +163,7 @@ public class Main extends SpecJVMBenchmarkBase {
     
     public static void setupBenchmark() {
         try {
-            HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "AES", null);
+            HEProfiler.init(Profiler.class, null, 20, Profiler.APPLICATION, 20, null);
             byte [] seed =  {0x4, 0x7, 0x1, 0x1};
             SecureRandom random = new SecureRandom(seed);
             Context.getFileCache().loadFile(Util.TEST_DATA_1);

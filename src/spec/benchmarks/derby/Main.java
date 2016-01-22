@@ -72,7 +72,7 @@ public class Main extends SpecJVMBenchmarkBase {
     }
     
     public static void setupBenchmark() {
-        HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "DERBY", null);
+        HEProfiler.init(Profiler.class, null, 20, Profiler.APPLICATION, 20, null);
         configure();
         clientsNumber = new int[DATABASES_NUM];
         dataBaseNum = new int[HWTFACTOR];

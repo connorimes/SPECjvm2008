@@ -125,7 +125,7 @@ public class Main extends SpecJVMBenchmarkBase {
     
     public static void setupBenchmark() {
         try {
-            HEProfiler.init(Profiler.class, Profiler.APPLICATION, 20, "RSA", null);
+            HEProfiler.init(Profiler.class, null, 20, Profiler.APPLICATION, 20, null);
             Context.getFileCache().loadFile(Util.TEST_DATA_3);
             Context.getFileCache().loadFile(Util.TEST_DATA_5);
             
